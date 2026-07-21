@@ -30,7 +30,7 @@ export default function Footer() {
         {/* Massive Call to Action */}
         <div className="mb-24 flex flex-col xl:flex-row xl:items-end justify-between gap-12 border-b border-white/10 pb-20">
           <div className="max-w-5xl">
-            <h2 className="text-6xl md:text-8xl lg:text-[100px] font-black tracking-tighter leading-[0.85] uppercase mb-8">
+            <h2 className="text-5xl md:text-8xl lg:text-[100px] font-black tracking-tighter leading-[0.85] uppercase mb-8">
               Got an idea? <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B00] to-[#FFD700]">Let's build it.</span>
             </h2>

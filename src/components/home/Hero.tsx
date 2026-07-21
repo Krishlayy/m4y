@@ -41,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black text-[#0A0A0A] leading-[1.05] tracking-tight pointer-events-none"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-[#0A0A0A] leading-[1.05] tracking-tight pointer-events-none"
           >
             We are M4Y, <br className="hidden md:block"/>
             digital <span className="text-[#FF3B00]">marketing</span> <br className="hidden md:block"/>
