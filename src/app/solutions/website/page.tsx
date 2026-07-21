@@ -97,7 +97,7 @@ export default function WebsiteSolutionsPage() {
         </section>
 
         <section className="py-24">
-          <div className="container mx-auto px-6">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto">
             <SectionHeading title="End-to-End Excellence" subtitle="Everything you need for a dominant digital presence." />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
               {services.map((service, idx) => (
@@ -129,7 +129,7 @@ export default function WebsiteSolutionsPage() {
         </section>
 
         <section className="py-24 bg-gradient-to-b from-transparent to-[#6C4DFF]/10">
-          <div className="container mx-auto px-6 text-center">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto text-center">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}

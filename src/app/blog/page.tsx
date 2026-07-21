@@ -28,7 +28,7 @@ export default function BlogPage() {
       <main className="min-h-screen bg-[#09090B] text-white overflow-hidden relative">
         <AuroraBackground />
         
-        <section className="relative pt-16 pb-12 md:pt-24 md:pb-16 z-10">
+        <section className="relative pt-40 pb-12 md:pt-24 md:pb-16 z-10">
           <div className="container mx-auto px-4 text-center max-w-4xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export default function BlogPage() {
                 >
                   <GlassCard className="h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-[#00D9FF] text-xs font-bold uppercase tracking-wider">{post.category}</span>
+                      <span className="text-[#00D9FF] text-xs font-black uppercase tracking-tighter tracking-wider">{post.category}</span>
                       <span className="text-white/40 text-xs">• {post.date}</span>
                     </div>
                     <h3 className="text-2xl font-bold mb-3 hover:text-[#6C4DFF] transition-colors">

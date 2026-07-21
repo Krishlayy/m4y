@@ -45,7 +45,7 @@ export default function PricingPage() {
             >
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
                 Transparent Pricing. <br/>
-                <span className="text-gradient bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Real Results.</span>
+                <span className="text-gradient bg-gradient-to-r from-[#FF3B00] to-[#FFD700] bg-clip-text text-transparent">Real Results.</span>
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
                 Choose the perfect growth plan for your business. No hidden fees, just predictable ROI and dedicated partnership.
@@ -55,14 +55,14 @@ export default function PricingPage() {
         </section>
 
         <section className="py-24 relative z-10 border-t border-black/5">
-          <div className="container mx-auto px-6 max-w-7xl">
+          <div className="w-full px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto">
             
             <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`game-btn ${
+                  className={`btn-primary ${
                     activeCategory === category ? 'bg-pink-100' : ''
                   }`}
                 >
@@ -88,7 +88,7 @@ export default function PricingPage() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="w-full h-full"
                   >
-                    <div className={`game-card game-card-pink relative h-full flex flex-col p-8 md:p-10 ${pkg.isRecommended ? 'border-2 border-pink-500' : ''}`}>
+                    <div className={`modern-card relative h-full flex flex-col p-8 md:p-10 ${pkg.isRecommended ? 'border-2 border-pink-500' : ''}`}>
                       {pkg.isRecommended && (
                         <div className="absolute top-0 right-0 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-20">
                           <Star className="w-3 h-3 inline mr-1" /> Most Recommended
@@ -152,7 +152,7 @@ export default function PricingPage() {
 
                         <Link 
                           href="/book-call" 
-                          className="game-btn w-full text-center text-sm flex items-center justify-center gap-2 group mt-auto"
+                          className="btn-primary w-full text-center text-sm flex items-center justify-center gap-2 group mt-auto"
                         >
                           Book Strategy Call
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

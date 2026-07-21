@@ -35,7 +35,7 @@ export default function ServicesPage() {
     <>
       <Navbar />
       <main className="min-h-screen selection:bg-purple-500/30">
-        <section className="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
+        <section className="relative pt-40 pb-20 md:pt-24 md:pb-28 overflow-hidden">
           <div className="container relative z-10 mx-auto px-6 max-w-7xl">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                 <span className="text-sm font-medium">Our Capabilities</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
-                Every Service Your <span className="text-gradient bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Business Needs</span>
+                Every Service Your <span className="text-gradient bg-gradient-to-r from-[#FF3B00] to-[#FFD700] bg-clip-text text-transparent">Business Needs</span>
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
                 As a full-service digital marketing agency, we provide end-to-end solutions designed to elevate your brand, drive targeted traffic, and maximize your ROI.
@@ -58,12 +58,12 @@ export default function ServicesPage() {
         </section>
 
         <section className="py-24 relative z-10 border-t border-black/5">
-          <div className="container mx-auto px-6 max-w-7xl">
+          <div className="w-full px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto">
             
             <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
               <button
                 onClick={() => setActiveCategory('All')}
-                className={`game-btn ${
+                className={`btn-primary ${
                   activeCategory === 'All' ? 'bg-purple-100' : ''
                 }`}
               >
@@ -73,7 +73,7 @@ export default function ServicesPage() {
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`game-btn ${
+                  className={`btn-primary ${
                     activeCategory === category.id ? 'bg-purple-100' : ''
                   }`}
                 >
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                     exit="exit"
                     className="h-full"
                   >
-                    <div className="game-card game-card-purple h-full flex flex-col p-8 group transition-colors duration-500">
+                    <div className="modern-card h-full flex flex-col p-8 group transition-colors duration-500">
                       <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                         {/* Assuming service has an icon, else placeholder */}
                         <div className="w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-400 rounded-md shadow-[0_0_15px_rgba(168,85,247,0.5)]" />
@@ -129,10 +129,10 @@ export default function ServicesPage() {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                        <Link href="/book-call" className="game-btn flex-1 text-center text-sm">
+                        <Link href="/book-call" className="btn-primary flex-1 text-center text-sm">
                           Book Consultation
                         </Link>
-                        <Link href={`/services/${service.slug || '#'}`} className="game-btn flex-1 text-center text-sm flex items-center justify-center gap-2 group/btn">
+                        <Link href={`/services/${service.slug || '#'}`} className="btn-primary flex-1 text-center text-sm flex items-center justify-center gap-2 group/btn">
                           Learn More
                           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                         </Link>

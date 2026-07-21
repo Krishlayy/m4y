@@ -103,11 +103,11 @@ export function SectionHeading({
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[1.1] mb-6"
       >
         {title}{" "}
         {titleHighlight && (
-          <span className="text-gradient">{titleHighlight}</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B00] to-[#FFD700]">{titleHighlight}</span>
         )}
       </motion.h2>
       {desc && (
@@ -169,7 +169,7 @@ export function AnimatedGradientText({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <span className={`text-gradient ${className}`}>{children}</span>;
+  return <span className={`text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B00] to-[#FFD700] ${className}`}>{children}</span>;
 }
 
 interface MarqueeProps {

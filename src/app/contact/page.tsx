@@ -28,7 +28,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#F4F4F5] pt-16 pb-24">
+      <main className="min-h-screen bg-[#F4F4F5] pt-40 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

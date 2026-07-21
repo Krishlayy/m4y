@@ -17,7 +17,7 @@ export default function CaseStudiesPage() {
       <main className="min-h-screen bg-[#09090B] text-white overflow-hidden relative">
         <AuroraBackground />
         
-        <section className="relative pt-16 pb-16 md:pt-24 md:pb-24 z-10">
+        <section className="relative pt-40 pb-16 md:pt-24 md:pb-24 z-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -117,7 +117,7 @@ export default function CareersPage() {
         <AuroraBackground className="absolute top-0 left-0 right-0 h-[800px] z-0 opacity-30" />
         
         {/* Hero Section */}
-        <section className="relative z-10 w-full mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-24 text-center">
+        <section className="relative z-10 w-full mx-auto px-4 md:px-6 pt-40 md:pt-24 pb-24 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

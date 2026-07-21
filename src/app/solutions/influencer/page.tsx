@@ -90,7 +90,7 @@ export default function InfluencerPage() {
         </section>
 
         <section className="py-24">
-          <div className="container mx-auto px-6">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto">
             <SectionHeading title="Creator Tiers" subtitle="The perfect influencer size for every objective." />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
               {tiers.map((tier, idx) => (
@@ -118,7 +118,7 @@ export default function InfluencerPage() {
         </section>
 
         <section className="py-24 bg-white/5 border-t border-b border-white/10">
-          <div className="container mx-auto px-6 text-center">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto text-center">
             <SectionHeading title="Niche Expertise" subtitle="We have creators in every industry." />
             <div className="flex flex-wrap justify-center gap-4 mt-12 max-w-4xl mx-auto">
               {niches.map((niche, idx) => (
@@ -138,7 +138,7 @@ export default function InfluencerPage() {
         </section>
 
         <section className="py-24">
-          <div className="container mx-auto px-6">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto">
             <SectionHeading title="Campaign Workflow" subtitle="From concept to viral success in 5 steps." />
             <div className="max-w-5xl mx-auto mt-16">
               {workflow.map((step, idx) => (

@@ -130,7 +130,7 @@ export default function AISolutionsPage() {
         </section>
 
         <section className="py-24">
-          <div className="container mx-auto px-6">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto">
             <SectionHeading title="Our AI Services" subtitle="Next-generation automation for modern enterprises." />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
               {aiSolutions.map((solution, idx) => (
@@ -164,7 +164,7 @@ export default function AISolutionsPage() {
         </section>
 
         <section className="py-24 bg-white/5 border-t border-b border-white/10">
-          <div className="container mx-auto px-6">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto">
             <SectionHeading title="How It Works" subtitle="Our proven process to implement AI seamlessly." />
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16 relative">
               <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#6C4DFF] to-transparent -translate-y-1/2 opacity-20"></div>
@@ -189,7 +189,7 @@ export default function AISolutionsPage() {
         </section>
 
         <section className="py-24">
-          <div className="container mx-auto px-6 text-center">
+          <div className="w-full px-6 md:px-12 lg:px-24 mx-auto text-center">
             <h3 className="text-2xl font-bold mb-10 text-gray-300">Integrates Seamlessly With Your Tools</h3>
             <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
               {['Salesforce', 'HubSpot', 'Zendesk', 'Slack', 'Shopify', 'Stripe'].map((logo, idx) => (
