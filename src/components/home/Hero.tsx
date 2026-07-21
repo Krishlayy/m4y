@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import InteractiveGrid from "@/components/ui/InteractiveGrid";
-import Hero3D from "@/components/home/Hero3D";
 import DiagonalMarquee from "@/components/ui/DiagonalMarquee";
 
 const testimonials = [
@@ -43,7 +42,6 @@ export default function Hero() {
     <section ref={targetRef} className="relative w-full min-h-[90vh] flex items-center bg-[#D0E5FF] overflow-hidden py-24 md:py-32">
       <InteractiveGrid />
       <DiagonalMarquee />
-      <Hero3D />
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 pointer-events-none flex flex-col lg:flex-row items-center gap-12">
         
         {/* Headline */}
