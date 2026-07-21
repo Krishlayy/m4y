@@ -6,7 +6,6 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FloatingCTA from '@/components/ui/FloatingCTA';
 import { SectionHeading } from '@/components/ui/Shared';
-import { faqs } from '@/data/faqs';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -184,50 +183,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-32 relative z-10 border-t border-black/10">
-          <div className="w-full px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
-            <SectionHeading 
-              title="Frequently Asked Questions" 
-              subtitle="Everything you need to know about working with us."
-            />
-            
-            <div className="mt-16 space-y-4">
-              {faqs.map((faq) => (
-                <div 
-                  key={faq.id} 
-                  className="modern-card overflow-hidden"
-                >
-                  <button
-                    onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
-                    className="w-full flex items-center justify-between p-6 text-left"
-                  >
-                    <span className="text-lg font-medium pr-8">{faq.question}</span>
-                    {openFaq === faq.id ? (
-                      <ChevronUp className="w-5 h-5 shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 shrink-0" />
-                    )}
-                  </button>
-                  <AnimatePresence>
-                    {openFaq === faq.id && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="p-6 pt-0 font-medium leading-relaxed border-t border-black/10 mt-2">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
       </main>
       <Footer />

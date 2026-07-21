@@ -53,7 +53,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li><Link href="/about" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">About Us</Link></li>
               <li><Link href="/founders" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Meet the Founders</Link></li>
-              <li><Link href="/careers" className="text-xl font-medium hover:text-[#FF3B00] transition-colors flex items-center gap-3">Careers <span className="text-xs bg-[#FF3B00] text-white px-2 py-1 uppercase tracking-widest font-bold">Hiring</span></Link></li>
+              <li><Link href="/faq" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">FAQs</Link></li>
               <li><Link href="/blog" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Blog & Insights</Link></li>
             </ul>
           </div>
