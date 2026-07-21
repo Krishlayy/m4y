@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import InteractiveGrid from "@/components/ui/InteractiveGrid";
+import Hero3D from "@/components/home/Hero3D";
+import DiagonalMarquee from "@/components/ui/DiagonalMarquee";
 
 const testimonials = [
   {
@@ -22,6 +24,9 @@ const testimonials = [
 
 export default function Hero() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const { scrollY } = useScroll();
+  const yParallax = useTransform(scrollY, [0, 1000], [0, 300]);
+  const skewParallax = useTransform(scrollY, [0, 1000], [0, -10]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -33,6 +38,8 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-[90vh] flex items-center bg-[#D0E5FF] overflow-hidden py-24 md:py-32">
       <InteractiveGrid />
+      <DiagonalMarquee />
+      <Hero3D />
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 pointer-events-none flex flex-col lg:flex-row items-center gap-12">
         
         {/* Headline */}
@@ -40,6 +47,7 @@ export default function Hero() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            style={{ y: yParallax, skewY: skewParallax }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-[#0A0A0A] leading-[1.05] tracking-tight pointer-events-none"
           >

@@ -4,10 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Terminal, PhoneForwarded, MessageSquare, ArrowUp, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
+import useSound from "use-sound";
 
 export default function FloatingCTA() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [playHover] = useSound("https://actions.google.com/sounds/v1/ui/button_click.ogg", { volume: 0.25 });
+  const [playClick] = useSound("https://actions.google.com/sounds/v1/impacts/mechanical_switch_click.ogg", { volume: 0.5 });
 
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 500);
@@ -43,7 +46,7 @@ export default function FloatingCTA() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
-        onHoverStart={() => setIsExpanded(true)}
+        onHoverStart={() => { setIsExpanded(true); playHover(); }}
         onHoverEnd={() => setIsExpanded(false)}
         className="relative flex flex-col items-end"
       >
@@ -78,6 +81,7 @@ export default function FloatingCTA() {
 
         {/* The "Trigger" Button */}
         <button 
+          onClick={() => playClick()}
           className={`flex items-center gap-3 px-6 py-4 border-4 border-black shadow-[6px_6px_0_0_#000] transition-all duration-300 ${isExpanded ? 'bg-black text-[#FFD700]' : 'bg-[#FFD700] text-black hover:bg-black hover:text-[#FFD700]'}`}
         >
           <div className="flex items-center gap-2">

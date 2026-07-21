@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "@studio-freight/lenis": "^1.0.42",
+    "@types/three": "^0.185.1",
     "chart.js": "^4.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.2",
@@ -22,6 +25,8 @@
     "react-dom": "19.2.4",
     "react-hook-form": "^7.82.0",
     "tailwind-merge": "^3.6.0",
+    "three": "^0.185.1",
+    "use-sound": "^5.0.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
