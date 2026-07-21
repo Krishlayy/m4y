@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import InteractiveGrid from "@/components/ui/InteractiveGrid";
@@ -24,9 +24,13 @@ const testimonials = [
 
 export default function Hero() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const { scrollY } = useScroll();
-  const yParallax = useTransform(scrollY, [0, 1000], [0, 300]);
-  const skewParallax = useTransform(scrollY, [0, 1000], [0, -10]);
+  const targetRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"]
+  });
+  const yParallax = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const skewParallax = useTransform(scrollYProgress, [0, 1], [0, -15]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -36,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center bg-[#D0E5FF] overflow-hidden py-24 md:py-32">
+    <section ref={targetRef} className="relative w-full min-h-[90vh] flex items-center bg-[#D0E5FF] overflow-hidden py-24 md:py-32">
       <InteractiveGrid />
       <DiagonalMarquee />
       <Hero3D />
