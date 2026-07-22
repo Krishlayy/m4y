@@ -65,56 +65,63 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* Full-Screen Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/20 z-[60] backdrop-blur-sm md:hidden"
-            />
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-white z-[70] shadow-2xl flex flex-col md:hidden"
-            >
-              <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                <span className="text-2xl font-extrabold tracking-tighter">M4Y</span>
-                <button onClick={() => setMobileMenuOpen(false)} className="p-2">
-                  <X className="w-8 h-8 text-[#0A0A0A]" />
-                </button>
-              </div>
-              
-              <div className="flex flex-col gap-2 p-6 flex-grow overflow-y-auto">
-                {navLinks.map((link) => (
+          <motion.div
+            initial={{ y: "-100%" }}
+            animate={{ y: "0%" }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+            className="fixed inset-0 z-[100] bg-[#FFD700] flex flex-col md:hidden border-b-8 border-black"
+          >
+            <div className="flex items-center justify-between p-6 px-6 border-b-4 border-black bg-white">
+              <span className="text-3xl font-black tracking-tighter text-black uppercase">M4Y</span>
+              <button 
+                onClick={() => setMobileMenuOpen(false)} 
+                className="p-2 border-4 border-black bg-white hover:bg-black hover:text-white transition-colors"
+              >
+                <X className="w-8 h-8" />
+              </button>
+            </div>
+            
+            <div className="flex flex-col gap-6 p-10 flex-grow justify-center">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
+                >
                   <Link
-                    key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-3xl font-extrabold text-[#0A0A0A] py-4 border-b border-gray-100 hover:text-[#FF3B00] transition-colors"
+                    className="text-5xl sm:text-7xl font-black text-black uppercase tracking-tighter hover:text-white hover:pl-4 transition-all duration-300 block"
+                    style={{ textShadow: "4px 4px 0px #FF3B00" }}
                   >
                     {link.name}
                   </Link>
-                ))}
-              </div>
+                </motion.div>
+              ))}
+            </div>
 
-              <div className="p-6">
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="btn-accent w-full text-lg justify-between group"
-                >
-                  Let's talk
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </Link>
-              </div>
+            <motion.div 
+              className="p-10"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="btn-primary w-full text-2xl py-6 justify-between group bg-black text-white hover:bg-white hover:text-black border-none shadow-[8px_8px_0_0_#FF3B00]"
+              >
+                Let's talk
+                <ArrowRight className="w-8 h-8 group-hover:translate-x-4 transition-transform" />
+              </Link>
             </motion.div>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

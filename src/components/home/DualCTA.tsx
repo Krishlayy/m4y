@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function DualCTA() {
@@ -8,10 +9,11 @@ export default function DualCTA() {
         {/* Our Story */}
         <Link href="/about" className="group relative block aspect-square md:aspect-auto md:h-[700px] overflow-hidden bg-black text-white cursor-pointer">
           <div className="absolute inset-0 bg-[#FF3B00] opacity-0 group-hover:opacity-90 transition-opacity duration-700 z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" 
+          <Image 
+            src="/agency-office.png" 
             alt="Join our Team" 
-            className="w-full h-full object-cover filter grayscale group-hover:scale-110 transition-transform duration-1000"
+            fill
+            className="object-cover filter grayscale group-hover:scale-110 transition-transform duration-1000"
           />
           <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700" />
           
@@ -28,10 +30,11 @@ export default function DualCTA() {
         {/* Get in touch */}
         <Link href="/contact" className="group relative block aspect-square md:aspect-auto md:h-[700px] overflow-hidden bg-gray-100 text-black cursor-pointer">
           <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-90 transition-opacity duration-700 z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1200" 
-            alt="Get in touch" 
-            className="w-full h-full object-cover filter grayscale group-hover:scale-110 transition-transform duration-1000"
+          <Image 
+            src="/contact-device.png" 
+            alt="Get in touch"
+            fill 
+            className="object-cover filter grayscale group-hover:scale-110 transition-transform duration-1000"
           />
           <div className="absolute inset-0 bg-white/40 group-hover:bg-transparent transition-colors duration-700" />
           

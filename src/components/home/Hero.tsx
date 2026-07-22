@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import MagneticButton from "@/components/ui/MagneticButton";
 import InteractiveGrid from "@/components/ui/InteractiveGrid";
 import DiagonalMarquee from "@/components/ui/DiagonalMarquee";
 
@@ -64,8 +65,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="mt-10 flex flex-wrap gap-4 pointer-events-auto"
           >
-            <Link href="/work" className="btn-primary">View Our Work</Link>
-            <Link href="/contact" className="btn-outline">Get in Touch</Link>
+            <MagneticButton>
+              <Link href="/book-call" className="btn-primary text-xl">Book a Call</Link>
+            </MagneticButton>
+            <MagneticButton>
+              <Link href="/contact" className="btn-outline text-xl">Get in Touch</Link>
+            </MagneticButton>
           </motion.div>
         </div>
 

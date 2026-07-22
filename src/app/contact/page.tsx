@@ -103,7 +103,7 @@ export default function ContactPage() {
                       <input
                         required
                         type="text"
-                        className="w-full border border-gray-300 rounded-none px-4 py-3 focus:outline-none focus:border-[#FF3B00] focus:ring-1 focus:ring-[#FF3B00] transition-all bg-gray-50/50"
+                        className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
                         placeholder="Jane Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -114,7 +114,7 @@ export default function ContactPage() {
                       <input
                         required
                         type="email"
-                        className="w-full border border-gray-300 rounded-none px-4 py-3 focus:outline-none focus:border-[#FF3B00] focus:ring-1 focus:ring-[#FF3B00] transition-all bg-gray-50/50"
+                        className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
                         placeholder="jane@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -127,7 +127,7 @@ export default function ContactPage() {
                       <label className="block text-sm font-bold text-gray-700 mb-2">Company</label>
                       <input
                         type="text"
-                        className="w-full border border-gray-300 rounded-none px-4 py-3 focus:outline-none focus:border-[#FF3B00] focus:ring-1 focus:ring-[#FF3B00] transition-all bg-gray-50/50"
+                        className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
                         placeholder="Acme Corp"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -136,7 +136,7 @@ export default function ContactPage() {
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2">Est. Budget</label>
                       <select
-                        className="w-full border border-gray-300 rounded-none px-4 py-3 focus:outline-none focus:border-[#FF3B00] focus:ring-1 focus:ring-[#FF3B00] transition-all bg-gray-50/50"
+                        className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       >
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     <textarea
                       required
                       rows={5}
-                      className="w-full border border-gray-300 rounded-none px-4 py-3 focus:outline-none focus:border-[#FF3B00] focus:ring-1 focus:ring-[#FF3B00] transition-all bg-gray-50/50 resize-none"
+                      className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1 resize-none"
                       placeholder="Tell us about your goals, current challenges, and timeline..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}

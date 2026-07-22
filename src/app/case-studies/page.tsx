@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FloatingCTA from '@/components/ui/FloatingCTA';
+import BrutalistChart from '@/components/ui/BrutalistChart';
 import { caseStudies } from '@/data/case-studies';
 
 export default function CaseStudiesPage() {
@@ -72,6 +73,10 @@ export default function CaseStudiesPage() {
                           <div className="text-xs font-bold uppercase tracking-widest text-gray-500">{result.metric}</div>
                         </div>
                       ))}
+                    </div>
+
+                    <div className="mb-10 -mx-6 px-6">
+                      <BrutalistChart />
                     </div>
                     
                     <div className="mt-auto pt-8 border-t-2 border-black">

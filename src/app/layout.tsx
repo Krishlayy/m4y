@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import SplashScreen from "@/components/ui/SplashScreen";
 import SmoothScroll from "@/components/ui/SmoothScroll";
+import EasterEgg from "@/components/ui/EasterEgg";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,6 +32,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen font-sans bg-white text-[#000000] selection:bg-[#FFD700] selection:text-[#000000] overflow-x-hidden">
         <SplashScreen />
+        <EasterEgg />
         <SmoothScroll>
           {children}
         </SmoothScroll>
