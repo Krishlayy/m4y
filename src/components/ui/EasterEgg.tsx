@@ -14,6 +14,8 @@ export default function EasterEgg() {
       // Ignore if typing in an input
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 
+      if (e.key.length !== 1) return; // ignore shift, ctrl, caps lock, etc.
+
       sequence += e.key.toLowerCase();
       
       // Keep sequence to the last 3 characters

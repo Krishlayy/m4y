@@ -69,9 +69,9 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ y: "-100%" }}
-            animate={{ y: "0%" }}
-            exit={{ y: "-100%" }}
+            initial={{ y: "-100vh" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100vh" }}
             transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 z-[100] bg-[#FFD700] flex flex-col md:hidden border-b-8 border-black"
           >

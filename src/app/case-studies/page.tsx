@@ -6,8 +6,10 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FloatingCTA from '@/components/ui/FloatingCTA';
-import BrutalistChart from '@/components/ui/BrutalistChart';
+import dynamic from 'next/dynamic';
 import { caseStudies } from '@/data/case-studies';
+
+const BrutalistChart = dynamic(() => import('@/components/ui/BrutalistChart'), { ssr: false });
 
 export default function CaseStudiesPage() {
   return (
