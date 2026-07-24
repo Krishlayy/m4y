@@ -1,0 +1,266 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+// ---------------------------------------------
+// ENUMS
+// ---------------------------------------------
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL_SENT
+  WON
+  LOST
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+// ---------------------------------------------
+// MODELS
+// ---------------------------------------------
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      UserRole @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  Media     Media[]
+  LeadNotes LeadNote[]
+}
+
+model Lead {
+  id              String     @id @default(cuid())
+  name            String
+  email           String
+  phone           String?
+  company         String?
+  serviceInterest String?
+  budget          String?
+  message         String?
+  source          String?
+  status          LeadStatus @default(NEW)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+
+  ContactInquiry  ContactInquiry[]
+  Notes           LeadNote[]
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model LeadNote {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  leadId    String
+  lead      Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  authorId  String?
+  author    User?    @relation(fields: [authorId], references: [id], onDelete: SetNull)
+}
+
+model ContactInquiry {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  subject    String?
+  message    String
+  isRead     Boolean  @default(false)
+  isResolved Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  leadId     String?
+  lead       Lead?    @relation(fields: [leadId], references: [id], onDelete: SetNull)
+
+  @@index([isRead])
+  @@index([isResolved])
+  @@index([createdAt])
+}
+
+model Project {
+  id           String        @id @default(cuid())
+  title        String
+  slug         String        @unique
+  client       String?
+  category     String?
+  description  String
+  coverImage   String?
+  gallery      Json?
+  techStack    Json?
+  results      String?
+  url          String?
+  isFeatured   Boolean       @default(false)
+  status       ContentStatus @default(DRAFT)
+  displayOrder Int           @default(0)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([status])
+  @@index([displayOrder])
+}
+
+model CaseStudy {
+  id             String        @id @default(cuid())
+  title          String
+  slug           String        @unique
+  client         String
+  industry       String?
+  problem        String
+  strategy       String
+  solution       String
+  results        String
+  metrics        Json?
+  images         Json?
+  testimonial    String?
+  seoTitle       String?
+  seoDescription String?
+  isFeatured     Boolean       @default(false)
+  status         ContentStatus @default(DRAFT)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([status])
+}
+
+model BlogPost {
+  id             String        @id @default(cuid())
+  title          String
+  slug           String        @unique
+  featuredImage  String?
+  content        String
+  excerpt        String?
+  categories     Json?
+  tags           Json?
+  authorName     String?
+  status         ContentStatus @default(DRAFT)
+  publishDate    DateTime?
+  seoTitle       String?
+  seoDescription String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([status])
+  @@index([publishDate])
+}
+
+model Service {
+  id               String   @id @default(cuid())
+  name             String
+  slug             String   @unique
+  shortDescription String
+  fullDescription  String?
+  icon             String?
+  image            String?
+  features         Json?
+  ctaText          String?
+  ctaLink          String?
+  isActive         Boolean  @default(true)
+  displayOrder     Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([displayOrder])
+}
+
+model PricingPlan {
+  id           String   @id @default(cuid())
+  name         String
+  price        String
+  billingLabel String?
+  description  String?
+  features     Json?
+  ctaText      String?
+  ctaLink      String?
+  isPopular    Boolean  @default(false)
+  isActive     Boolean  @default(true)
+  displayOrder Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([displayOrder])
+}
+
+model Testimonial {
+  id           String   @id @default(cuid())
+  clientName   String
+  company      String?
+  role         String?
+  content      String
+  image        String?
+  rating       Int?     @default(5)
+  isFeatured   Boolean  @default(false)
+  displayOrder Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([displayOrder])
+}
+
+model TeamMember {
+  id           String   @id @default(cuid())
+  name         String
+  role         String
+  bio          String?
+  profileImage String?
+  socialLinks  Json?
+  isActive     Boolean  @default(true)
+  displayOrder Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([displayOrder])
+}
+
+model Media {
+  id           String   @id @default(cuid())
+  name         String
+  url          String
+  type         String
+  size         Int
+  altText      String?
+  storageKey   String   @unique
+  
+  uploadedById String?
+  uploadedBy   User?    @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SiteSettings {
+  id               String   @id @default("singleton")
+  agencyName       String   @default("Marketing 4 You")
+  contactEmail     String?
+  contactPhone     String?
+  address          String?
+  socialLinks      Json?
+  defaultSeoTitle  String?
+  defaultSeoMeta   String?
+  footerText       String?
+  ctaHeading       String?
+  ctaSubheading    String?
+  updatedAt        DateTime @updatedAt
+}
