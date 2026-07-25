@@ -59,6 +59,33 @@ export default function HeroSection() {
         </motion.div>
       ))}
 
+      {/* Mobile Interactive Physics Stickers */}
+      <div className="absolute inset-0 z-20 md:hidden overflow-hidden pointer-events-none">
+        <motion.div
+          drag
+          dragConstraints={{ left: -100, right: 150, top: -150, bottom: 300 }}
+          dragElastic={0.6}
+          whileDrag={{ scale: 1.15, rotate: 0 }}
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[15%] left-[5%] w-20 h-20 bg-[#FF3B00] rounded-full flex items-center justify-center text-white font-black text-xl shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] pointer-events-auto border-2 border-white rotate-12 cursor-grab active:cursor-grabbing"
+        >
+          ROI
+        </motion.div>
+        
+        <motion.div
+          drag
+          dragConstraints={{ left: -150, right: 100, top: -300, bottom: 150 }}
+          dragElastic={0.6}
+          whileDrag={{ scale: 1.15, rotate: 0 }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[65%] right-[5%] px-5 py-3 bg-black flex items-center justify-center text-[#FF3B00] font-black text-xl shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] pointer-events-auto border-2 border-white -rotate-12 cursor-grab active:cursor-grabbing"
+        >
+          #M4Y
+        </motion.div>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="text-center">
           {/* Badge */}
