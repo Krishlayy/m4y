@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, BarChart, Zap, Code, Shield } from "lucide-react";
 import { useHaptic } from "@/hooks/useHaptic";
@@ -40,6 +40,14 @@ const mockServices = [
 export default function MobileServiceCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
   const triggerHaptic = useHaptic();
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="md:hidden py-16 bg-white border-t-2 border-b-2 border-black overflow-hidden relative">
@@ -55,7 +63,7 @@ export default function MobileServiceCarousel() {
       >
         <motion.div 
           drag="x"
-          dragConstraints={{ right: 0, left: -((mockServices.length * 300) - window.innerWidth + 48) }}
+          dragConstraints={{ right: 0, left: -((mockServices.length * 300) - (windowWidth || 400) + 48) }}
           className="flex gap-6 px-6"
           onDragStart={() => triggerHaptic("light")}
           onDragEnd={() => triggerHaptic("medium")}
