@@ -71,10 +71,10 @@ export default function ExperienceWarning() {
 
               <ul className="space-y-3 mb-6 font-bold text-xs uppercase tracking-wider">
                 <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  <Smartphone className="w-5 h-5 text-[#FF3B00]" /> Tilt your phone
+                  <Hand className="w-5 h-5 text-blue-600" /> Fling the joystick
                 </li>
                 <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  <Hand className="w-5 h-5 text-blue-600" /> Fling the joystick
+                  <Smartphone className="w-5 h-5 text-[#FF3B00]" /> Slide the services
                 </li>
                 <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   <Sparkles className="w-5 h-5 text-purple-600" /> Scratch the footer

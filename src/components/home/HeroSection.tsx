@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,8 +14,6 @@ import {
 } from "lucide-react";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 import { AnimatedCounter } from "@/components/ui/Shared";
-import { useDeviceOrientation } from "@/hooks/useDeviceOrientation";
-
 const floatingIcons = [
   { icon: BarChart3, x: "10%", y: "20%", delay: 0, color: "text-primary" },
   { icon: TrendingUp, x: "85%", y: "15%", delay: 1, color: "text-accent-green" },
@@ -34,16 +32,32 @@ const stats = [
 ];
 
 export default function HeroSection() {
-  const { orientation } = useDeviceOrientation();
-  
-  // Calculate a slight shift based on device tilt (for mobile)
-  // gamma is left/right (-90 to 90), beta is front/back (-180 to 180)
-  const tiltX = Math.min(Math.max(orientation.gamma || 0, -45), 45) * 0.5;
-  const tiltY = Math.min(Math.max((orientation.beta || 0) - 45, -45), 45) * 0.5;
+  const { scrollY } = useScroll();
+  const yParallax = useTransform(scrollY, [0, 1000], [0, 200]);
+  const opacityParallax = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32 bg-black">
       <AuroraBackground />
+
+      {/* Infinite Brutalist Marquee Background */}
+      <div className="absolute inset-0 z-0 flex flex-col justify-center overflow-hidden opacity-5 pointer-events-none rotate-[-10deg] scale-150">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 15, repeat: Infinity }}
+          className="whitespace-nowrap font-black text-[15vw] leading-none text-white tracking-tighter"
+        >
+          WE SCALE BRANDS • WE SCALE BRANDS • WE SCALE BRANDS • WE SCALE BRANDS •
+        </motion.div>
+        <motion.div
+          animate={{ x: ["-50%", "0%"] }}
+          transition={{ ease: "linear", duration: 20, repeat: Infinity }}
+          className="whitespace-nowrap font-black text-[15vw] leading-none text-transparent border-text tracking-tighter mt-4"
+          style={{ WebkitTextStroke: "2px white" }}
+        >
+          NOT JUST AN AGENCY • NOT JUST AN AGENCY • NOT JUST AN AGENCY • NOT JUST AN AGENCY •
+        </motion.div>
+      </div>
 
       {/* Floating marketing icons */}
       {floatingIcons.map((item, i) => (
@@ -70,8 +84,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <motion.div 
           className="text-center"
-          animate={{ x: tiltX * 0.3, y: tiltY * 0.3 }}
-          transition={{ type: "spring", stiffness: 100, damping: 30 }}
+          style={{ y: yParallax, opacity: opacityParallax }}
         >
           {/* Badge */}
           <motion.div

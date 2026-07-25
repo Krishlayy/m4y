@@ -7,8 +7,8 @@ import ServicesFunnel from '@/components/home/ServicesFunnel';
 import Approach from '@/components/home/Approach';
 import Culture from '@/components/home/Culture';
 import DualCTA from '@/components/home/DualCTA';
-import TinderSwipeCards from '@/components/ui/TinderSwipeCards';
 import ExperienceWarning from '@/components/ui/ExperienceWarning';
+import MobileServiceCarousel from '@/components/ui/MobileServiceCarousel';
 
 export default function Home() {
   return (
@@ -20,10 +20,7 @@ export default function Home() {
         <LeadMagnet />
         <Advantages />
         <ServicesFunnel />
-        <div className="md:hidden py-12 bg-white border-t-2 border-black">
-          <h2 className="text-4xl font-black uppercase text-center mb-8 tracking-tighter">Swipe Services</h2>
-          <TinderSwipeCards />
-        </div>
+        <MobileServiceCarousel />
         <Approach />
         <Culture />
         <DualCTA />
