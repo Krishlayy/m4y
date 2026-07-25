@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 import { AnimatedCounter } from "@/components/ui/Shared";
+import { useDeviceOrientation } from "@/hooks/useDeviceOrientation";
 
 const floatingIcons = [
   { icon: BarChart3, x: "10%", y: "20%", delay: 0, color: "text-primary" },
@@ -33,6 +34,13 @@ const stats = [
 ];
 
 export default function HeroSection() {
+  const { orientation } = useDeviceOrientation();
+  
+  // Calculate a slight shift based on device tilt (for mobile)
+  // gamma is left/right (-90 to 90), beta is front/back (-180 to 180)
+  const tiltX = Math.min(Math.max(orientation.gamma || 0, -45), 45) * 0.5;
+  const tiltY = Math.min(Math.max((orientation.beta || 0) - 45, -45), 45) * 0.5;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32">
       <AuroraBackground />
@@ -60,7 +68,11 @@ export default function HeroSection() {
       ))}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="text-center">
+        <motion.div 
+          className="text-center"
+          animate={{ x: tiltX * 0.3, y: tiltY * 0.3 }}
+          transition={{ type: "spring", stiffness: 100, damping: 30 }}
+        >
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,9 +157,8 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
-            </div>
-          </motion.div>
-        </div>
+            </motion.div>
+        </motion.div>
       </div>
 
       {/* Bottom gradient fade */}

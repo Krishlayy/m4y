@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Phone, MessageCircle } from "lucide-react";
+import ScratchCard from "@/components/ui/ScratchCard";
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -79,6 +80,17 @@ export default function Footer() {
             </div>
           </div>
 
+        </div>
+
+        {/* Mobile Easter Egg */}
+        <div className="md:hidden flex flex-col items-center py-8 border-t-2 border-white/10 mb-12">
+          <p className="font-bold mb-4 uppercase tracking-wider text-sm text-gray-500">Find the secret discount</p>
+          <ScratchCard width={280} height={120}>
+            <div className="text-center">
+              <h4 className="font-black text-[#FF3B00] text-2xl uppercase">M4Y-SECRET-25</h4>
+              <p className="text-xs font-bold mt-1 text-black">25% OFF FIRST MONTH</p>
+            </div>
+          </ScratchCard>
         </div>
 
         {/* Bottom Bar with Huge Logo */}

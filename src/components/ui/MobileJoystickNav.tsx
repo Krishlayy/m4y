@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useDragControls } from "framer-motion";
 import { Grip, X, Home, Briefcase, DollarSign, Info, FileText, Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useHaptic } from "@/hooks/useHaptic";
 
 const navLinks = [
   { name: "Home", href: "/", icon: <Home className="w-5 h-5" /> },
@@ -30,6 +31,7 @@ export default function MobileJoystickNav() {
   const containerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
+  const triggerHaptic = useHaptic();
 
   useEffect(() => {
     setMounted(true);
@@ -128,7 +130,10 @@ export default function MobileJoystickNav() {
           className="absolute bottom-8 right-6 pointer-events-auto shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-shadow rounded-full"
         >
           <motion.button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              triggerHaptic(isOpen ? "light" : "medium");
+              setIsOpen(!isOpen);
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
             className={`w-16 h-16 rounded-full flex items-center justify-center border-4 border-black transition-colors duration-300 ${
