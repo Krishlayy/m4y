@@ -6,6 +6,11 @@ import { getActiveServices } from '@/lib/public-data';
 
 export const revalidate = 60;
 
+export const metadata = {
+  title: 'Our Services | M4Y Digital Agency',
+  description: 'Explore our full suite of premium digital marketing, development, and AI automation services.',
+};
+
 export default async function ServicesPage() {
   const services = await getActiveServices();
 
@@ -31,16 +36,16 @@ export default async function ServicesPage() {
       <main className="min-h-screen selection:bg-purple-500/30">
         <section className="relative pt-40 pb-20 md:pt-24 md:pb-28 overflow-hidden">
           <div className="container relative z-10 mx-auto px-6 max-w-7xl">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/10 mb-8 bg-white/50">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                <span className="text-sm font-medium">Our Capabilities</span>
+            <div className="max-w-5xl">
+              <div className="inline-block px-4 py-2 bg-black text-white text-xs font-black uppercase tracking-widest mb-8 border-4 border-black">
+                Our Capabilities
               </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
-                Every Service Your <span className="text-gradient bg-gradient-to-r from-[#FF3B00] to-[#FFD700] bg-clip-text text-transparent">Business Needs</span>
+              <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+                Everything Your <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B00] to-[#FFD700]">Business Needs.</span>
               </h1>
-              <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                As a full-service digital marketing agency, we provide end-to-end solutions designed to elevate your brand, drive targeted traffic, and maximize your ROI.
+              <p className="text-xl md:text-2xl font-bold text-gray-800 max-w-3xl leading-relaxed">
+                As a premium digital agency, we provide end-to-end solutions designed to elevate your brand, drive targeted traffic, and maximize your ROI. No fluff. Just results.
               </p>
             </div>
           </div>

@@ -41,3 +41,21 @@ export async function getActivePricingPlans() {
     orderBy: { displayOrder: "asc" },
   });
 }
+
+export async function getServiceBySlug(slug: string) {
+  return prisma.service.findUnique({
+    where: { slug }
+  });
+}
+
+export async function getCaseStudyBySlug(slug: string) {
+  return prisma.caseStudy.findUnique({
+    where: { slug }
+  });
+}
+
+export async function getBlogBySlug(slug: string) {
+  return prisma.blogPost.findUnique({
+    where: { slug }
+  });
+}

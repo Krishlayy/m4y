@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import SplashScreen from "@/components/ui/SplashScreen";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import EasterEgg from "@/components/ui/EasterEgg";
+import MobileJoystickNav from "@/components/ui/MobileJoystickNav";
 import "./globals.css";
 
 const inter = Inter({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <MobileJoystickNav />
       </body>
     </html>
   );

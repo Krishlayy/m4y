@@ -47,12 +47,14 @@ export default function Footer() {
         {/* Clean Link Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
 
-          {/* Company */}
+          {/* Company & Services */}
           <div>
-            <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Company</h4>
+            <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Navigation</h4>
             <ul className="flex flex-col gap-4">
+              <li><Link href="/services" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Services</Link></li>
+              <li><Link href="/case-studies" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Case Studies</Link></li>
+              <li><Link href="/pricing" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Pricing & Packages</Link></li>
               <li><Link href="/about" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">About Us</Link></li>
-              <li><Link href="/founders" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Meet the Founders</Link></li>
               <li><Link href="/faq" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">FAQs</Link></li>
               <li><Link href="/blog" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Blog & Insights</Link></li>
             </ul>
@@ -80,19 +82,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar with Huge Logo */}
-        <div className="pt-8 border-t border-white/10 flex flex-col gap-8 relative overflow-hidden">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-            <p className="text-gray-500 text-sm font-bold tracking-widest uppercase">
+        <div className="pt-8 border-t border-white/10 flex flex-col relative">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 mb-8 md:mb-0">
+            <p className="text-gray-500 text-sm font-bold tracking-widest uppercase text-center md:text-left">
               &copy; {currentYear} M4Y Digital Agency. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500 font-bold uppercase tracking-widest">
               <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
             </div>
           </div>
           
-          <h1 className="text-[12vw] md:text-[18vw] leading-none font-black tracking-tight text-white/5 select-none text-center -mb-8 md:-mb-16">
+          <h1 className="text-[15vw] leading-[0.75] font-black tracking-tighter text-white/5 select-none text-center w-full overflow-hidden whitespace-nowrap mt-4">
             M4Y AGENCY
           </h1>
         </div>

@@ -129,10 +129,15 @@ model CaseStudy {
   client         String
   industry       String?
   problem        String
+  research       String?
   strategy       String
+  execution      String?
   solution       String
   results        String
+  timeline       String?
+  servicesUsed   Json?
   metrics        Json?
+  beforeAndAfter Json?
   images         Json?
   testimonial    String?
   seoTitle       String?
@@ -155,6 +160,7 @@ model BlogPost {
   categories     Json?
   tags           Json?
   authorName     String?
+  readingTime    String?
   status         ContentStatus @default(DRAFT)
   publishDate    DateTime?
   seoTitle       String?
@@ -170,11 +176,18 @@ model Service {
   id               String   @id @default(cuid())
   name             String
   slug             String   @unique
+  category         String?
   shortDescription String
   fullDescription  String?
   icon             String?
   image            String?
   features         Json?
+  deliverables     Json?
+  process          Json?
+  benefits         Json?
+  faq              Json?
+  relatedServices  Json?
+  startingPrice    String?
   ctaText          String?
   ctaLink          String?
   isActive         Boolean  @default(true)
@@ -190,8 +203,13 @@ model PricingPlan {
   name         String
   price        String
   billingLabel String?
+  category     String?
   description  String?
   features     Json?
+  deliverables Json?
+  idealClient  String?
+  timeline     String?
+  addOns       Json?
   ctaText      String?
   ctaLink      String?
   isPopular    Boolean  @default(false)
@@ -226,6 +244,10 @@ model TeamMember {
   bio          String?
   profileImage String?
   socialLinks  Json?
+  expertise    Json?
+  experience   String?
+  projects     Json?
+  achievements Json?
   isActive     Boolean  @default(true)
   displayOrder Int      @default(0)
   createdAt    DateTime @default(now())

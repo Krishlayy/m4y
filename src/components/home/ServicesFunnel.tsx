@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const funnelSteps = [
   {
@@ -36,10 +37,10 @@ export default function ServicesFunnel() {
               Full-funnel <br /> <span className="text-[#FF3B00] relative inline-block">marketing.<span className="absolute -bottom-2 left-0 w-full h-2 bg-black transform -skew-x-12"></span></span>
             </h2>
           </div>
-          <button className="group flex items-center gap-4 border-2 border-black bg-black text-white px-8 py-5 font-black uppercase tracking-widest hover:bg-[#FF3B00] hover:border-[#FF3B00] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 -translate-y-1">
+          <Link href="/services" className="group flex items-center gap-4 border-2 border-black bg-black text-white px-8 py-5 font-black uppercase tracking-widest hover:bg-[#FF3B00] hover:border-[#FF3B00] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 -translate-y-1">
             View all Services
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-2 border-black bg-black gap-px">

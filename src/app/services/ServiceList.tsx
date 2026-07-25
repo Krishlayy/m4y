@@ -9,6 +9,7 @@ type Service = {
   id: string;
   name: string;
   slug: string;
+  category: string | null;
   shortDescription: string | null;
 };
 
@@ -23,7 +24,14 @@ export default function ServiceList({ services }: { services: Service[] }) {
   const [activeCategory, setActiveCategory] = useState('All');
 
   // In a real implementation with relations we'd filter by category name
-  const filteredServices = services;
+  const filteredServices = activeCategory === 'All' 
+    ? services 
+    : services.filter(s => {
+        if (!s.category) return false;
+        // The seed data has categories like "Digital Marketing", "SEO", etc.
+        // We do a simple string inclusion check
+        return s.category.toLowerCase().includes(activeCategory.toLowerCase());
+      });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,8 +54,8 @@ export default function ServiceList({ services }: { services: Service[] }) {
       <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
         <button
           onClick={() => setActiveCategory('All')}
-          className={`btn-primary ${
-            activeCategory === 'All' ? 'bg-purple-100' : ''
+          className={`px-6 py-3 font-black uppercase tracking-widest text-sm border-4 border-black transition-all ${
+            activeCategory === 'All' ? 'bg-black text-white' : 'bg-white text-black hover:bg-[#FFD700]'
           }`}
         >
           All Services
@@ -56,8 +64,8 @@ export default function ServiceList({ services }: { services: Service[] }) {
           <button
             key={category.id}
             onClick={() => setActiveCategory(category.id)}
-            className={`btn-primary ${
-              activeCategory === category.id ? 'bg-purple-100' : ''
+            className={`px-6 py-3 font-black uppercase tracking-widest text-sm border-4 border-black transition-all ${
+              activeCategory === category.id ? 'bg-black text-white' : 'bg-white text-black hover:bg-[#FFD700]'
             }`}
           >
             {category.name}

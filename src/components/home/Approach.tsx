@@ -2,27 +2,28 @@
 
 import { motion } from 'framer-motion';
 import { Target, Zap, Activity, Repeat, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const approaches = [
   {
     icon: <Zap className="w-10 h-10" />,
     title: 'Sprint-based campaigns',
-    description: 'We deploy marketing initiatives in 2-week sprints, ensuring rapid execution and continuous alignment with your business goals.'
+    description: 'We run 2-week sprints. Because in digital marketing, a 6-month plan is just a detailed roadmap to becoming obsolete. We move fast and break only the things holding your revenue back.'
   },
   {
     icon: <Activity className="w-10 h-10" />,
     title: 'Data-driven iteration',
-    description: 'Every decision is backed by analytics. We measure, analyze, and optimize relentlessly to improve ROI at every step.'
+    description: 'We trust data, not our gut feelings. Unless our gut says "check the data again." Every decision is backed by cold, hard numbers so we can optimize your ROI relentlessly.'
   },
   {
     icon: <Target className="w-10 h-10" />,
     title: 'Laser-focused targeting',
-    description: 'We don\'t believe in spray-and-pray. Our audience segmentation ensures your message reaches only those most likely to convert.'
+    description: 'Spray and pray is for amateur paintball, not marketing budgets. We segment your audience so tightly that your ads will feel like they\'re reading their minds.'
   },
   {
     icon: <Repeat className="w-10 h-10" />,
     title: 'Continuous feedback loop',
-    description: 'Transparent communication is our baseline. Regular retrospectives keep you informed and involved in the optimization process.'
+    description: 'We over-communicate. You\'ll never have to ask "what is the agency doing?" because we\'ll already be in your inbox telling you exactly how we\'re growing your business.'
   }
 ];
 
@@ -61,10 +62,10 @@ export default function Approach() {
               <p className="text-gray-700 mb-10 flex-grow leading-relaxed font-bold text-lg">
                 {item.description}
               </p>
-              <a href="#" className="flex items-center gap-3 font-black uppercase tracking-widest text-sm hover:text-[#FF3B00] transition-colors w-fit border-b-2 border-black hover:border-[#FF3B00] pb-1">
+              <Link href="/about" className="flex items-center gap-3 font-black uppercase tracking-widest text-sm hover:text-[#FF3B00] transition-colors w-fit border-b-2 border-black hover:border-[#FF3B00] pb-1">
                 Read more
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

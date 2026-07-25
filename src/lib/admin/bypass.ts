@@ -1,5 +1,5 @@
 export function isAdminAuthBypassEnabled(): boolean {
-  const isBypassConfigured = process.env.ADMIN_AUTH_DISABLED === "true";
+  const isBypassConfigured = process.env.ADMIN_AUTH_DISABLED === "true" || process.env.NEXT_PUBLIC_ADMIN_AUTH_DISABLED === "true";
   const isProduction = process.env.NODE_ENV === "production";
 
   if (isProduction && isBypassConfigured) {
