@@ -1,6 +1,6 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/home/Hero';
+import HeroSection from '@/components/home/HeroSection';
 import LeadMagnet from '@/components/home/LeadMagnet';
 import Advantages from '@/components/home/Advantages';
 import ServicesFunnel from '@/components/home/ServicesFunnel';
@@ -16,7 +16,7 @@ export default function Home() {
       <ExperienceWarning />
       <Navbar />
       <main className="min-h-screen bg-white text-[#0A0A0A] overflow-hidden">
-        <Hero />
+        <HeroSection />
         <LeadMagnet />
         <Advantages />
         <ServicesFunnel />
