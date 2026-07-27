@@ -1,168 +1,214 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
 
-import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { motion } from "framer-motion";
-import { ArrowRight, Clock, Video, CheckCircle2 } from "lucide-react";
-import { submitLead } from "@/lib/public-actions";
+export const metadata = {
+  title: "Book a Free Strategy Call — M4Y",
+  description: "30 minutes. Brutally honest audit of your marketing. Zero obligation. Book your free strategy call with M4Y's 5 founding team members.",
+};
+
+const steps = [
+  { step: "01", title: "You book the call", desc: "Pick a time that works. Takes 30 seconds." },
+  { step: "02", title: "We prepare for YOU", desc: "We research your brand, your competitors, your market before we even say hello." },
+  { step: "03", title: "Honest audit. Clear plan.", desc: "No pitch deck. No pressure. Just a real conversation about what's holding your growth back — and how to fix it." },
+];
+
+const inclusions = [
+  "Full audit of your current social media presence",
+  "Competitor analysis — what they're doing that you're not",
+  "1 growth channel recommendation specific to your business",
+  "Clear pricing if you want to work together",
+  "Zero obligation — even if you don't hire us, you leave with value",
+];
 
 export default function BookCallPage() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-
-  const handleSubmit = async (formData: FormData) => {
-    setStatus("submitting");
-    const result = await submitLead(formData);
-    if (result.success) {
-      setStatus("success");
-    } else {
-      setStatus("error");
-    }
-  };
-
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-[#F4F4F5] pt-40 pb-24 border-b-8 border-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16"
-          >
-            {/* Left Col: Info */}
-            <div>
-              <div className="inline-block bg-[#FFD700] text-black font-black uppercase tracking-widest px-4 py-2 border-4 border-black mb-6 transform -rotate-2">
-                Free Consultation
-              </div>
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tight mb-8 leading-[0.9]">
-                Book Your <br />
-                <span className="text-[#FF3B00] sticker-shadow">Strategy Call</span>
-              </h1>
-              <p className="text-xl font-bold text-gray-800 mb-12 max-w-md">
-                30 minutes. Zero fluff. We'll audit your current marketing and show you exactly how to scale.
-              </p>
+    <main className="min-h-screen bg-white text-black">
 
-              <div className="modern-card bg-white mb-8">
-                <h3 className="text-2xl font-black uppercase mb-6 border-b-4 border-black pb-4">Meeting Details</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-[#00E676] border-4 border-black flex items-center justify-center shrink-0">
-                      <Clock className="w-6 h-6 text-black" />
-                    </div>
-                    <div>
-                      <div className="font-black text-xl uppercase">Duration</div>
-                      <div className="font-bold text-gray-600">30 Minutes</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-[#FFD700] border-4 border-black flex items-center justify-center shrink-0">
-                      <Video className="w-6 h-6 text-black" />
-                    </div>
-                    <div>
-                      <div className="font-black text-xl uppercase">Format</div>
-                      <div className="font-bold text-gray-600">Google Meet / Zoom</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      {/* Hero */}
+      <section className="border-b-4 border-black py-32 md:py-40 bg-black text-white">
+        <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 border-4 border-[#FF3B00] bg-[#FF3B00] text-white font-black uppercase text-xs tracking-widest mb-8">
+              <span className="w-2 h-2 bg-white animate-pulse" />
+              Free. No Obligation. 30 Minutes.
             </div>
-
-            {/* Right Col: Form */}
-            <div className="modern-card bg-white relative overflow-hidden">
-              {status === "success" ? (
-                <div className="absolute inset-0 bg-[#00E676] z-10 flex flex-col items-center justify-center text-center p-8 border-4 border-black m-2">
-                  <CheckCircle2 size={80} className="text-black mb-6" />
-                  <h3 className="text-4xl font-black uppercase mb-4 text-black">Call Requested!</h3>
-                  <p className="font-bold text-xl text-black">
-                    Check your email for the calendar invitation. Prepare to grow.
-                  </p>
-                </div>
-              ) : (
-                <form action={handleSubmit} className="space-y-6">
-                  {status === "error" && (
-                    <div className="bg-red-50 text-red-600 p-4 font-bold border-l-4 border-red-600">
-                      There was an error submitting your request. Please try again.
-                    </div>
-                  )}
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-black uppercase tracking-widest text-black">Name *</label>
-                    <input
-                      required
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
-                      placeholder="Jane Doe"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-black uppercase tracking-widest text-black">Work Email *</label>
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      id="email"
-                      className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
-                      placeholder="jane@company.com"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="company" className="block text-sm font-black uppercase tracking-widest text-black">Company</label>
-                      <input
-                        type="text"
-                        name="company"
-                        id="company"
-                        className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
-                        placeholder="Acme Corp"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="revenue" className="block text-sm font-black uppercase tracking-widest text-black">Revenue</label>
-                      <select 
-                        name="revenue"
-                        id="revenue"
-                        className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1"
-                      >
-                        <option value="">Select revenue...</option>
-                        <option value="Under $10K">Under $10K / mo</option>
-                        <option value="$10K-50K">$10K - $50K / mo</option>
-                        <option value="$50K-200K">$50K - $200K / mo</option>
-                        <option value="$200K+">$200K+ / mo</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="goal" className="block text-sm font-black uppercase tracking-widest text-black">Primary Goal *</label>
-                    <textarea
-                      required
-                      name="goal"
-                      id="goal"
-                      rows={4}
-                      className="w-full px-4 py-3 transition-transform duration-200 focus:-translate-y-1 focus:-translate-x-1 resize-none"
-                      placeholder="What is your biggest bottleneck right now?"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={status === "submitting"}
-                    className="btn-accent w-full justify-between group disabled:opacity-50 text-xl py-4 mt-4"
-                  >
-                    {status === "submitting" ? "Processing..." : "Book Strategy Call"}
-                    <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
-                  </button>
-                </form>
-              )}
-            </div>
-          </motion.div>
+            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
+              Book Your<br />
+              <span className="text-black bg-[#FFD700] px-3 py-2 border-4 border-white inline-block mt-2">
+                Free Call.
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl font-bold text-white/60 max-w-2xl">
+              30 minutes with the actual founders. We&apos;ll audit your marketing, identify your biggest leak, and show you exactly how we&apos;d fix it.
+            </p>
+          </div>
         </div>
-      </main>
-      <Footer />
-    </>
+      </section>
+
+      {/* What happens section */}
+      <section className="border-b-4 border-black py-24 bg-white">
+        <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-16">
+            What Happens<br />On The Call?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 border-4 border-black bg-black">
+            {steps.map((s, i) => (
+              <div key={i} className="bg-white p-10 flex flex-col gap-4 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_#000] transition-all duration-150">
+                <span className="text-7xl font-black text-black/10 leading-none">{s.step}</span>
+                <h3 className="text-2xl font-black uppercase tracking-tight">{s.title}</h3>
+                <p className="font-bold text-black/60 leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Form + inclusions */}
+      <section className="py-24 bg-white border-b-4 border-black">
+        <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+            {/* What's included */}
+            <div>
+              <h2 className="text-4xl font-black uppercase tracking-tighter mb-10">
+                What&apos;s Included,<br />Free.
+              </h2>
+              <ul className="space-y-5">
+                {inclusions.map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 group">
+                    <div className="w-8 h-8 border-4 border-black flex items-center justify-center flex-shrink-0 bg-[#FF3B00] mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="font-bold text-lg leading-snug">{item}</p>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Contact alternatives */}
+              <div className="mt-16 border-t-4 border-black pt-10 space-y-4">
+                <p className="font-black text-xs uppercase tracking-widest text-black/40 mb-6">Prefer to reach out directly?</p>
+                <a href="mailto:support.m4y@gmail.com" className="flex items-center gap-4 group hover:text-[#FF3B00] transition-colors">
+                  <div className="w-12 h-12 border-4 border-black flex items-center justify-center group-hover:bg-[#FF3B00] group-hover:border-[#FF3B00] group-hover:text-white transition-all">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <span className="font-black text-xl">support.m4y@gmail.com</span>
+                </a>
+                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group hover:text-[#FF3B00] transition-colors">
+                  <div className="w-12 h-12 border-4 border-black flex items-center justify-center group-hover:bg-[#FF3B00] group-hover:border-[#FF3B00] group-hover:text-white transition-all">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <span className="font-black text-xl">WhatsApp Us</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Form */}
+            <div className="border-4 border-black shadow-[8px_8px_0_#000]">
+              <div className="bg-black px-8 py-5 flex items-center gap-3">
+                <Clock className="w-5 h-5 text-[#FFD700]" />
+                <p className="text-white font-black text-sm uppercase tracking-wider">
+                  Book Your 30-Min Free Call
+                </p>
+              </div>
+              <form
+                action={`https://formsubmit.co/support.m4y@gmail.com`}
+                method="POST"
+                className="p-8 space-y-6 bg-white"
+              >
+                <input type="hidden" name="_subject" value="New Strategy Call Request — M4Y" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
+                <div>
+                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Your Name *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Rahul Sharma"
+                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow"
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Business / Brand Name *</label>
+                  <input
+                    type="text"
+                    name="business"
+                    required
+                    placeholder="Your Brand"
+                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow"
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-black text-xs uppercase tracking-widest mb-2">WhatsApp Number *</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="+91 98765 43210"
+                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow"
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Your Industry</label>
+                  <select
+                    name="industry"
+                    className="w-full border-4 border-black px-4 py-3 font-bold text-black focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow bg-white"
+                  >
+                    <option value="">Select industry...</option>
+                    <option>Restaurant / Food & Beverage</option>
+                    <option>D2C / E-commerce</option>
+                    <option>Fitness / Wellness</option>
+                    <option>Real Estate</option>
+                    <option>Fashion / Apparel</option>
+                    <option>Tech / SaaS</option>
+                    <option>Education / Coaching</option>
+                    <option>Healthcare / Clinic</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Biggest Marketing Challenge</label>
+                  <textarea
+                    name="challenge"
+                    rows={3}
+                    placeholder="e.g. We get website visitors but no one converts..."
+                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn-primary w-full justify-center group text-lg"
+                >
+                  Request My Free Call
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <p className="text-center text-xs font-bold text-black/40 uppercase tracking-wider">
+                  We&apos;ll WhatsApp you within 24 hours to confirm.
+                </p>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Founding Client note */}
+      <section className="py-16 bg-[#FFD700] border-b-4 border-black">
+        <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 text-center">
+          <p className="font-black text-2xl md:text-3xl uppercase tracking-tight text-black">
+            🔥 Founding Client Rates Active — Only For The Next{" "}
+            <span className="bg-black text-[#FFD700] px-2 py-1">10 Businesses</span>{" "}
+            We Take On.
+          </p>
+        </div>
+      </section>
+
+    </main>
   );
 }
