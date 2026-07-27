@@ -89,9 +89,10 @@ export default function FoundersSection() {
                 {f.initial}
               </div>
 
-              {/* Avatar */}
-              <div className={`w-16 h-16 border-4 ${f.textColor === 'text-white' ? 'border-white' : 'border-black'} flex items-center justify-center font-black text-2xl mb-6 relative z-10 ${f.textColor === 'text-white' ? 'bg-white/20' : 'bg-black/10'}`}>
-                {f.initial}
+              {/* Avatar Placeholder */}
+              <div className={`w-20 h-20 border-4 ${f.textColor === 'text-white' ? 'border-white' : 'border-black'} overflow-hidden mb-6 relative z-10 ${f.textColor === 'text-white' ? 'bg-white/20' : 'bg-black/10'}`}>
+                {/* Replace with actual founder image */}
+                <img src="/placeholder-avatar.png" alt={f.name} className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all" />
               </div>
 
               <div className="relative z-10 flex-1">

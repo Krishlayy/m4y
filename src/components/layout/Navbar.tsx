@@ -11,10 +11,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Services", href: "/services" },
-    { name: "Work", href: "/case-studies" },
-    { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
   ];
 
   return (
@@ -27,8 +24,8 @@ export default function Navbar() {
         <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-3xl font-black tracking-tight text-black uppercase">M4Y</span>
+            <Link href="/" className="flex items-center gap-2 -ml-4">
+              <img src="/logo.png" alt="M4Y Marketing You" className="h-28 md:h-36 w-auto object-contain transform scale-[1.5]" />
             </Link>
 
             {/* Desktop Nav */}

@@ -49,9 +49,15 @@ export default function ServicesFunnel() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ 
+                scale: 1.02, 
+                rotate: index % 2 === 0 ? -1 : 1,
+                y: -5,
+                transition: { type: "spring", stiffness: 300, damping: 15 } 
+              }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 hover:bg-white transition-colors duration-150 group flex flex-col relative overflow-hidden hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_#000]"
+              className="bg-white p-8 hover:bg-white transition-colors duration-150 group flex flex-col relative overflow-hidden shadow-[4px_4px_0_#000] border-2 border-black"
             >
               {/* Brutalist corner accent */}
               <div className="absolute -right-0 -top-0 w-16 h-16 bg-[#FF3B00] opacity-0 group-hover:opacity-100 transition-opacity duration-150 border-l-4 border-b-4 border-black"></div>
@@ -67,10 +73,16 @@ export default function ServicesFunnel() {
               
               <ul className="space-y-5 flex-grow relative z-10">
                 {step.services.map((service, sIndex) => (
-                  <li key={sIndex} className="flex items-start gap-3 group/item cursor-pointer">
+                  <motion.li 
+                    key={sIndex}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * sIndex }}
+                    className="flex items-start gap-3 group/item cursor-pointer"
+                  >
                     <span className="text-[#FF3B00] font-black mt-1 group-hover/item:translate-x-1 transition-transform">↳</span>
                     <span className="font-bold text-gray-800 uppercase text-sm tracking-wide group-hover/item:text-black transition-colors">{service}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </motion.div>

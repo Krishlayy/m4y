@@ -1,19 +1,24 @@
+"use client";
+
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-export const metadata = {
-  title: 'About Us | M4Y - Marketing 4 You',
-  description: 'Meet the 5 BTech CS founders who chose marketing over MNCs to build M4Y.',
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-100px" },
+  transition: { duration: 0.5 }
 };
 
 export default function AboutPage() {
   const founders = [
-    { name: 'Krishlay', role: 'Tech & AI', color: 'bg-[#FF3B00]' },
-    { name: 'Ayushman', role: 'Engineering', color: 'bg-[#FFD700]' },
-    { name: 'Arpit', role: 'Brand & Strategy', color: 'bg-white' },
-    { name: 'Priyanshu', role: 'Performance Marketing', color: 'bg-[#FF3B00]' },
-    { name: 'Bhavya', role: 'Influencer & Content', color: 'bg-[#FFD700]' },
+    { name: 'Krishlay', role: 'Tech & AI', color: 'bg-[#FF3B00]', avatar: '/founder-krishlay.png' },
+    { name: 'Ayushman', role: 'Engineering', color: 'bg-[#FFD700]', avatar: '/founder-ayushman.png' },
+    { name: 'Arpit', role: 'Brand & Strategy', color: 'bg-white', avatar: '/founder-arpit.png' },
+    { name: 'Priyanshu', role: 'Performance Marketing', color: 'bg-[#FF3B00]', avatar: '/founder-priyanshu.png' },
+    { name: 'Bhavya', role: 'Influencer & Content', color: 'bg-[#FFD700]', avatar: '/founder-bhavya.png' },
   ];
 
   const values = [
@@ -23,32 +28,59 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-24 flex flex-col">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-24 flex flex-col overflow-hidden">
       <Navbar />
       
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="px-6 py-24 md:py-32 border-b-4 border-black bg-[#FFD700]">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 shadow-text">
+            <motion.h1 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 shadow-text"
+            >
               We Chose Marketing Over MNCs.
-            </h1>
-            <p className="text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 border-4 border-black shadow-[8px_8px_0_#000]">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 border-4 border-black shadow-[8px_8px_0_#000]"
+            >
               We are 5 BTech CS graduates who realized traditional agencies don't get tech, data, or fast execution. So we built M4Y.
-            </p>
+            </motion.p>
           </div>
         </section>
 
         {/* Founders Grid */}
         <section className="px-6 py-24 border-b-4 border-black bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">The Founders</h2>
+            <motion.h2 {...fadeUp} className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">
+              The Founders
+            </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {founders.map((founder, i) => (
-                <div key={i} className={`p-8 border-4 border-black shadow-[8px_8px_0_#000] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[12px_12px_0_#000] transition-all ${founder.color}`}>
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  whileHover={{ y: -8, x: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                  className={`p-8 border-4 border-black shadow-[8px_8px_0_#000] hover:shadow-[16px_16px_0_#000] transition-shadow ${founder.color} flex flex-col items-center text-center`}
+                >
+                  <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden mb-4 bg-white shadow-[4px_4px_0_#000]">
+                    <img
+                      src={founder.avatar}
+                      alt={`${founder.name} avatar`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-3xl font-black uppercase mb-2">{founder.name}</h3>
                   <p className="text-xl font-bold bg-black text-white inline-block px-3 py-1">{founder.role}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -57,7 +89,7 @@ export default function AboutPage() {
         {/* Mission & Values */}
         <section className="px-6 py-24 border-b-4 border-black bg-[#FF3B00]">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="bg-white p-10 border-4 border-black shadow-[8px_8px_0_#000]">
+            <motion.div {...fadeUp} className="bg-white p-10 border-4 border-black shadow-[8px_8px_0_#000]">
               <h2 className="text-4xl font-black uppercase tracking-tighter mb-6">Our Mission</h2>
               <p className="text-2xl font-bold leading-tight">
                 Make world-class marketing accessible to every Indian business.
@@ -65,13 +97,21 @@ export default function AboutPage() {
               <p className="text-lg font-medium mt-4">
                 No jargon, no fluff, just measurable results driven by engineering principles and creative strategy.
               </p>
-            </div>
+            </motion.div>
             <div className="grid gap-6">
               {values.map((val, i) => (
-                <div key={i} className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0_#fff] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[12px_12px_0_#fff] transition-all">
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  whileHover={{ y: -4, x: -4, transition: { type: "spring", stiffness: 300 } }}
+                  className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0_#fff] hover:shadow-[12px_12px_0_#fff] transition-shadow"
+                >
                   <h3 className="text-2xl font-black uppercase mb-2 text-[#FFD700]">{val.title}</h3>
                   <p className="font-bold">{val.desc}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -79,15 +119,18 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section className="px-6 py-24 text-center bg-white">
-          <div className="max-w-4xl mx-auto">
+          <motion.div {...fadeUp} className="max-w-4xl mx-auto flex flex-col items-center">
             <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8">Ready to grow?</h2>
-            <Link 
-              href="/book-call" 
-              className="inline-block bg-[#FFD700] text-black text-2xl font-black uppercase px-12 py-6 border-4 border-black shadow-[8px_8px_0_#000] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[12px_12px_0_#000] transition-all"
-            >
-              Work With The Founders
+            <Link href="/book-call" passHref legacyBehavior>
+              <motion.a 
+                whileHover={{ y: -4, x: -4, transition: { type: "spring", stiffness: 300 } }}
+                whileTap={{ y: 0, x: 0 }}
+                className="inline-block bg-[#FFD700] text-black text-2xl font-black uppercase px-12 py-6 border-4 border-black shadow-[8px_8px_0_#000] hover:shadow-[12px_12px_0_#000] transition-shadow"
+              >
+                Work With The Founders
+              </motion.a>
             </Link>
-          </div>
+          </motion.div>
         </section>
       </main>
 

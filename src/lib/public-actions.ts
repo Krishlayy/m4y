@@ -95,3 +95,27 @@ export async function submitLead(formData: FormData) {
     return { success: false, error: "Failed to submit lead" };
   }
 }
+
+export async function submitEmailCapture(formData: FormData) {
+  try {
+    const email = formData.get("email") as string;
+    
+    if (!email || !email.includes("@")) {
+      return { success: false, error: "Invalid email" };
+    }
+
+    await prisma.lead.create({
+      data: {
+        name: "Lead Magnet Download",
+        email: email,
+        source: "Lead Magnet (Playbook)",
+        status: "NEW",
+      },
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to submit email capture", error);
+    return { success: false, error: "Failed to submit email capture" };
+  }
+}

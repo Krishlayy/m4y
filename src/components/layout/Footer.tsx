@@ -10,14 +10,6 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const LinkedinIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-  </svg>
-);
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -53,11 +45,7 @@ export default function Footer() {
             <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-8">Navigation</h4>
             <ul className="flex flex-col gap-4">
               <li><Link href="/services" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Services</Link></li>
-              <li><Link href="/case-studies" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Case Studies</Link></li>
-              <li><Link href="/pricing" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Pricing & Packages</Link></li>
               <li><Link href="/about" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">About Us</Link></li>
-              <li><Link href="/faq" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">FAQs</Link></li>
-              <li><Link href="/blog" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Blog & Insights</Link></li>
             </ul>
           </div>
 
@@ -66,9 +54,8 @@ export default function Footer() {
             <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-8">Connect</h4>
             <div className="flex flex-wrap gap-4">
               {[
-                { href: 'https://wa.me/919999999999', Icon: Phone, label: 'WhatsApp' },
-                { href: 'https://www.instagram.com/marketing4you', Icon: InstagramIcon, label: 'Instagram' },
-                { href: 'https://www.linkedin.com/company/marketing4you', Icon: LinkedinIcon, label: 'LinkedIn' },
+                { href: 'https://wa.me/919258735381', Icon: Phone, label: 'WhatsApp' },
+                { href: 'https://www.instagram.com/m4y.agency', Icon: InstagramIcon, label: 'Instagram' },
                 { href: 'https://www.youtube.com/@marketing4you', Icon: MessageCircle, label: 'YouTube' },
               ].map(({ href, Icon, label }, i) => (
                 <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-14 h-14 bg-black border-4 border-white hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] flex items-center justify-center transition-all duration-300 shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-y-1 hover:translate-x-1">

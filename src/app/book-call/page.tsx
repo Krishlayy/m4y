@@ -93,11 +93,11 @@ export default function BookCallPage() {
                   </div>
                   <span className="font-black text-xl">support.m4y@gmail.com</span>
                 </a>
-                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group hover:text-[#FF3B00] transition-colors">
+                <a href="https://wa.me/919258735381" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group hover:text-[#FF3B00] transition-colors">
                   <div className="w-12 h-12 border-4 border-black flex items-center justify-center group-hover:bg-[#FF3B00] group-hover:border-[#FF3B00] group-hover:text-white transition-all">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <span className="font-black text-xl">WhatsApp Us</span>
+                  <span className="font-black text-xl">+91 92587 35381</span>
                 </a>
               </div>
             </div>

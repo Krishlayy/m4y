@@ -31,6 +31,8 @@ const founders = [
   { name: "Bhavya", role: "Influencer" },
 ];
 
+import AnimatedTextBackground from "@/components/ui/AnimatedTextBackground";
+
 export default function HeroSection() {
   const { scrollY } = useScroll();
   const yParallax = useTransform(scrollY, [0, 1000], [0, 200]);
@@ -39,24 +41,8 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32 bg-white text-black border-b-4 border-black">
 
-      {/* Infinite Brutalist Marquee Background */}
-      <div className="absolute inset-0 z-0 flex flex-col justify-center overflow-hidden opacity-5 pointer-events-none rotate-[-10deg] scale-150">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ ease: "linear", duration: 15, repeat: Infinity }}
-          className="whitespace-nowrap font-black text-[15vw] leading-none text-black tracking-tighter"
-        >
-          M4Y — MARKETING 4 YOU • M4Y — MARKETING 4 YOU • M4Y — MARKETING 4 YOU •
-        </motion.div>
-        <motion.div
-          animate={{ x: ["-50%", "0%"] }}
-          transition={{ ease: "linear", duration: 20, repeat: Infinity }}
-          className="whitespace-nowrap font-black text-[15vw] leading-none tracking-tighter mt-4"
-          style={{ WebkitTextStroke: "2px black", color: "transparent" }}
-        >
-          CREATORS & CONSULTANTS • CREATORS & CONSULTANTS • CREATORS & CONSULTANTS •
-        </motion.div>
-      </div>
+      {/* Dynamic Animated Text Background */}
+      <AnimatedTextBackground />
 
       {/* Floating icons */}
       {floatingIcons.map((item, i) => (
@@ -92,11 +78,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-black"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-white"
           >
             Your Brand.
             <br />
-            <span className="text-black bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">
+            <span className="text-black bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#FF3B00]">
               Built Right.
             </span>
             <br />
@@ -108,7 +94,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-black font-bold leading-relaxed mb-12"
+            className="max-w-2xl mx-auto text-lg md:text-xl text-white font-bold leading-relaxed mb-12 drop-shadow-md"
           >
             5 BTech CS founders who chose marketing over MNCs. We bring engineering precision to every campaign — no fluff, no juniors, just founders doing the work.
           </motion.p>
