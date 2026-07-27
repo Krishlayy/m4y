@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const founders = [
   {
@@ -112,8 +112,8 @@ export default function FoundersSection() {
                 rel="noopener noreferrer"
                 className={`mt-8 flex items-center gap-2 font-black text-xs uppercase tracking-wider ${f.textColor === 'text-white' ? 'opacity-50 hover:opacity-100' : 'opacity-40 hover:opacity-100'} transition-opacity group/link w-fit relative z-10`}
               >
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
+                <ExternalLink className="w-4 h-4" />
+                LinkedIn ↗
               </a>
             </motion.div>
           ))}
