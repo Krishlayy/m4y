@@ -110,16 +110,14 @@ export default function WhatWeDoSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
               <Link href={cap.href}>
-                <GlassCard gradient={`bg-gradient-to-b ${cap.gradient}`}>
-                  <div
-                    className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${cap.gradient} flex items-center justify-center mb-5`}
-                  >
-                    <cap.icon className={`w-6 h-6 ${cap.color}`} />
+                <GlassCard className="group cursor-pointer h-full">
+                  <div className="w-12 h-12 border-4 border-black flex items-center justify-center mb-5 bg-[#FFD700]">
+                    <cap.icon className="w-6 h-6 text-black" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-white transition-colors">
+                  <h3 className="text-lg font-black uppercase tracking-tight mb-3 group-hover:text-[#FF3B00] transition-colors">
                     {cap.title}
                   </h3>
-                  <p className="text-sm text-white/40 leading-relaxed">
+                  <p className="text-sm font-bold text-black/60 leading-relaxed">
                     {cap.description}
                   </p>
                 </GlassCard>
