@@ -18,7 +18,7 @@ export default function DualCTA() {
           <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-700" />
           
           <div className="absolute inset-0 p-10 md:p-16 lg:p-24 xl:p-32 flex flex-col justify-between z-20">
-            <div className="w-20 h-20 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-[#FF3B00] transition-colors duration-500 self-end">
+            <div className="w-20 h-20 border-4 border-white flex items-center justify-center group-hover:bg-white group-hover:text-[#FF3B00] transition-colors duration-500 self-end shadow-[4px_4px_0px_white] group-hover:shadow-[4px_4px_0px_black]">
               <ArrowUpRight className="w-10 h-10 group-hover:rotate-45 transition-transform duration-500" />
             </div>
             <h2 className="text-5xl md:text-7xl lg:text-8xl xl:text-[90px] font-black uppercase tracking-tight max-w-[400px] leading-[0.9] break-words">
@@ -39,10 +39,10 @@ export default function DualCTA() {
           <div className="absolute inset-0 bg-white/40 group-hover:bg-transparent transition-colors duration-700" />
           
           <div className="absolute inset-0 p-10 md:p-16 lg:p-24 xl:p-32 flex flex-col justify-between z-20">
-            <div className="w-20 h-20 rounded-full border-2 border-black group-hover:border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-500 self-end text-black group-hover:text-black">
+            <div className="w-20 h-20 border-4 border-black group-hover:border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-500 self-end text-black shadow-[4px_4px_0px_black] group-hover:shadow-[4px_4px_0px_white]">
               <ArrowUpRight className="w-10 h-10 group-hover:rotate-45 transition-transform duration-500" />
             </div>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl xl:text-[90px] font-bold uppercase tracking-tight max-w-[300px] leading-[0.9] text-black group-hover:text-white transition-colors duration-500 break-words">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl xl:text-[90px] font-black uppercase tracking-tight max-w-[300px] leading-[0.9] text-black group-hover:text-white transition-colors duration-500 break-words">
               Get In <br /> Touch
             </h2>
           </div>

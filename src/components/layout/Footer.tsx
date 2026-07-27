@@ -22,18 +22,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0A0A0A] text-white pt-32 pb-8 overflow-hidden relative">
-      {/* Decorative top border */}
-      <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-[#FF3B00] via-[#FFD700] to-[#0044FF]"></div>
+    <footer className="bg-black text-white pt-32 pb-8 overflow-hidden relative border-t-8 border-[#FF3B00]">
+      {/* Removed gradient top border, replaced with solid border on footer tag */}
 
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 relative z-10">
         
         {/* Massive Call to Action */}
         <div className="mb-24 flex flex-col xl:flex-row xl:items-end justify-between flex-wrap gap-12 border-b border-white/10 pb-20">
           <div className="max-w-5xl">
-            <h2 className="text-5xl md:text-8xl lg:text-[100px] font-black tracking-tight leading-[0.85] uppercase mb-8 break-words w-full">
+            <h2 className="text-5xl md:text-8xl lg:text-[100px] font-black tracking-tighter leading-[0.85] uppercase mb-8 break-words w-full">
               Got an idea? <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B00] to-[#FFD700]">Let&apos;s build it.</span>
+              <span className="text-black bg-[#FFD700] px-4 py-2 border-4 border-white inline-block mt-4">Let&apos;s build it.</span>
             </h2>
             <a href="mailto:hello@m4y.com" className="text-3xl md:text-5xl font-bold tracking-tight hover:text-[#FF3B00] transition-colors">
               hello@m4y.com
@@ -66,7 +65,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Connect</h4>
             <div className="flex flex-wrap gap-4">
               {[Phone, MessageCircle, InstagramIcon, LinkedinIcon].map((Icon, i) => (
-                <a key={i} href="#" className="w-14 h-14 bg-white/5 border border-white/10 hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] flex items-center justify-center transition-all duration-300">
+                <a key={i} href="#" className="w-14 h-14 bg-black border-4 border-white hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] flex items-center justify-center transition-all duration-300 shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-y-1 hover:translate-x-1">
                   <Icon className="w-6 h-6" />
                 </a>
               ))}
@@ -83,7 +82,7 @@ export default function Footer() {
         </div>
 
         {/* Mobile Easter Egg */}
-        <div className="md:hidden flex flex-col items-center py-8 border-t-2 border-white/10 mb-12">
+        <div className="md:hidden flex flex-col items-center py-12 border-t-4 border-white mb-12">
           <p className="font-bold mb-4 uppercase tracking-wider text-sm text-gray-500">Find the secret discount</p>
           <ScratchCard width={280} height={120}>
             <div className="text-center">
@@ -94,7 +93,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar with Huge Logo */}
-        <div className="pt-8 border-t border-white/10 flex flex-col relative">
+        <div className="pt-8 border-t-4 border-white flex flex-col relative">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 mb-8 md:mb-0">
             <p className="text-gray-500 text-sm font-bold tracking-widest uppercase text-center md:text-left">
               &copy; {currentYear} M4Y Digital Agency. All rights reserved.

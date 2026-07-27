@@ -12,7 +12,7 @@ import {
   Users,
   Star,
 } from "lucide-react";
-import AuroraBackground from "@/components/ui/AuroraBackground";
+} from "lucide-react";
 import { AnimatedCounter } from "@/components/ui/Shared";
 const floatingIcons = [
   { icon: BarChart3, x: "10%", y: "20%", delay: 0, color: "text-primary" },
@@ -37,15 +37,14 @@ export default function HeroSection() {
   const opacityParallax = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32 bg-black">
-      <AuroraBackground />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32 bg-white text-black border-b-4 border-black">
 
       {/* Infinite Brutalist Marquee Background */}
       <div className="absolute inset-0 z-0 flex flex-col justify-center overflow-hidden opacity-5 pointer-events-none rotate-[-10deg] scale-150">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
-          className="whitespace-nowrap font-black text-[15vw] leading-none text-white tracking-tighter"
+          className="whitespace-nowrap font-black text-[15vw] leading-none text-black tracking-tighter"
         >
           WE SCALE BRANDS • WE SCALE BRANDS • WE SCALE BRANDS • WE SCALE BRANDS •
         </motion.div>
@@ -53,7 +52,7 @@ export default function HeroSection() {
           animate={{ x: ["-50%", "0%"] }}
           transition={{ ease: "linear", duration: 20, repeat: Infinity }}
           className="whitespace-nowrap font-black text-[15vw] leading-none text-transparent border-text tracking-tighter mt-4"
-          style={{ WebkitTextStroke: "2px white" }}
+          style={{ WebkitTextStroke: "2px black" }}
         >
           NOT JUST AN AGENCY • NOT JUST AN AGENCY • NOT JUST AN AGENCY • NOT JUST AN AGENCY •
         </motion.div>
@@ -91,9 +90,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-sm font-medium text-white/70 mb-8 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FF3B00] text-white font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+            <span className="w-2 h-2 bg-white animate-pulse" />
             Not another agency. A growth partner.
           </motion.div>
 
@@ -102,13 +101,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="hero-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight mb-8"
+            className="hero-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-black"
           >
             Marketing That
             <br />
-            <span className="text-gradient">Actually Moves</span>
+            <span className="text-[#0044FF] bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">Actually Moves</span>
             <br />
-            Businesses.
+            <span className="mt-2 inline-block">Businesses.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -116,7 +115,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-white/50 leading-relaxed mb-12"
+            className="max-w-2xl mx-auto text-lg md:text-xl text-black font-bold leading-relaxed mb-12"
           >
             We combine creativity, technology, AI, influencer power, branding
             and performance marketing to help businesses dominate their
@@ -128,24 +127,15 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
           >
-            <Link
-              href="/book-call"
-              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-primary to-primary-light text-white font-semibold text-lg overflow-hidden hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Book Free Strategy Call
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Link href="/book-call" className="btn-primary w-full sm:w-auto">
+              Book Free Strategy Call
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
 
-            <Link
-              href="/services"
-              className="group inline-flex items-center gap-2 px-8 py-4 rounded-2xl border border-white/10 text-white font-semibold text-lg hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300"
-            >
-              <Play className="w-5 h-5 text-primary" />
+            <Link href="/services" className="btn-accent w-full sm:w-auto">
+              <Play className="w-5 h-5 mr-2" fill="currentColor" />
               View Services
             </Link>
           </motion.div>
@@ -157,7 +147,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="relative"
           >
-            <div className="glass-card p-6 md:p-10 rounded-3xl max-w-5xl mx-auto">
+            <div className="modern-card max-w-5xl mx-auto">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8">
                 {stats.map((stat, i) => (
                   <div key={i}>
@@ -175,8 +165,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark to-transparent" />
+      {/* Removed bottom gradient fade for brutalist hard stop */}
     </section>
   );
 }

@@ -29,14 +29,14 @@ const approaches = [
 
 export default function Approach() {
   return (
-    <section className="bg-white text-black py-24 md:py-32 border-t-2 border-black overflow-hidden relative">
+    <section className="bg-white text-black py-32 md:py-40 border-t-4 border-black overflow-hidden relative">
       {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-50 border-l-2 border-black transform skew-x-12 translate-x-32 -z-10"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-50 border-l-4 border-black transform skew-x-12 translate-x-32 -z-10"></div>
       
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
         <div className="mb-20 max-w-3xl">
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 uppercase leading-tight">
-            Our <span className="text-[#FF3B00]">Methodology.</span>
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 uppercase leading-[0.9]">
+            Our <span className="text-white bg-[#FF3B00] px-3 py-1 border-4 border-black shadow-[4px_4px_0px_#000]">Methodology.</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-800 font-bold leading-relaxed border-l-4 border-[#FF3B00] pl-6">
             We operate like a tech company, applying agile principles to marketing to deliver measurable results faster.
@@ -51,18 +51,18 @@ export default function Approach() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border-2 border-black bg-white p-10 md:p-14 flex flex-col group hover:shadow-[12px_12px_0px_0px_rgba(255,59,0,1)] hover:-translate-y-2 hover:-translate-x-2 transition-all duration-300 relative"
+              className="border-4 border-black bg-white p-10 md:p-14 flex flex-col group shadow-[4px_4px_0px_#000] hover:shadow-[12px_12px_0px_#000] hover:-translate-y-2 hover:-translate-x-2 transition-all duration-300 relative"
             >
-              <div className="text-[#FF3B00] mb-8 bg-black group-hover:bg-[#FF3B00] group-hover:text-black transition-colors duration-300 inline-block p-5 border-2 border-black w-fit">
+              <div className="text-[#FF3B00] mb-8 bg-black group-hover:bg-[#FF3B00] group-hover:text-black transition-colors duration-300 inline-block p-5 border-4 border-black w-fit">
                 {item.icon}
               </div>
               <h3 className="text-3xl font-black uppercase tracking-tight mb-5 group-hover:text-[#FF3B00] transition-colors">
                 {item.title}
               </h3>
-              <p className="text-gray-700 mb-10 flex-grow leading-relaxed font-bold text-lg">
+              <p className="text-gray-800 mb-10 flex-grow leading-relaxed font-bold text-lg">
                 {item.description}
               </p>
-              <Link href="/about" className="flex items-center gap-3 font-black uppercase tracking-widest text-sm hover:text-[#FF3B00] transition-colors w-fit border-b-2 border-black hover:border-[#FF3B00] pb-1">
+              <Link href="/about" className="flex items-center gap-3 font-black uppercase tracking-widest text-sm hover:text-[#FF3B00] transition-colors w-fit border-b-4 border-black hover:border-[#FF3B00] pb-1">
                 Read more
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Link>

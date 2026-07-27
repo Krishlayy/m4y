@@ -29,7 +29,7 @@ const funnelSteps = [
 
 export default function ServicesFunnel() {
   return (
-    <section className="bg-white text-black border-t-2 border-black overflow-hidden relative py-24 md:py-32">
+    <section className="bg-white text-black border-t-4 border-black overflow-hidden relative py-32 md:py-40">
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
@@ -37,13 +37,13 @@ export default function ServicesFunnel() {
               Full-funnel <br /> <span className="text-[#FF3B00] relative inline-block">marketing.<span className="absolute -bottom-2 left-0 w-full h-2 bg-black transform -skew-x-12"></span></span>
             </h2>
           </div>
-          <Link href="/services" className="group flex items-center gap-4 border-2 border-black bg-black text-white px-8 py-5 font-black uppercase tracking-widest hover:bg-[#FF3B00] hover:border-[#FF3B00] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 -translate-y-1">
+          <Link href="/services" className="btn-primary group">
             View all Services
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300 ml-4" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-2 border-black bg-black gap-px">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-4 border-black bg-black gap-1">
           {funnelSteps.map((step, index) => (
             <motion.div
               key={index}

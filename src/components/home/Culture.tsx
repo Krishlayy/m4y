@@ -4,10 +4,10 @@ import { Check } from 'lucide-react';
 
 export default function Culture() {
   return (
-    <section className="bg-white text-black border-t border-black/10 py-24 md:py-32">
+    <section className="bg-white text-black border-t-4 border-black py-32 md:py-40">
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
-        <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tight mb-16 md:mb-24">
-          Our <span className="text-[#FF3B00]">Culture</span>
+        <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16 md:mb-24">
+          Our <span className="text-white bg-[#FF3B00] px-3 py-1 border-4 border-black shadow-[4px_4px_0px_#000]">Culture</span>
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -16,7 +16,7 @@ export default function Culture() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="relative aspect-square bg-gray-100 border-2 border-black overflow-hidden group"
+            className="relative aspect-square bg-gray-100 border-4 border-black shadow-[8px_8px_0px_#000] overflow-hidden group"
           >
             <div className="absolute inset-0 bg-[#FF3B00]/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
             <img 
@@ -32,10 +32,10 @@ export default function Culture() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight tracking-tight">
+            <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
               We build digital products, but our foundation is people.
             </h3>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+            <p className="text-xl font-bold text-gray-800 mb-12 leading-relaxed">
               We are a team of passionate creators, thinkers, and builders. We value transparency, continuous learning, and pushing the boundaries of what&apos;s possible in the digital space. Our remote-friendly environment ensures we work with the best talent, regardless of location.
             </p>
             
@@ -46,12 +46,12 @@ export default function Culture() {
                 { title: 'Remote-First', desc: 'Work from anywhere, collaborate seamlessly everywhere.' }
               ].map((val, idx) => (
                 <li key={idx} className="flex gap-6 items-start group">
-                  <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center group-hover:border-[#FF3B00] group-hover:bg-[#FF3B00] group-hover:text-white transition-colors duration-300 flex-shrink-0 mt-1">
-                    <Check size={16} strokeWidth={3} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="w-8 h-8 border-4 border-black flex items-center justify-center group-hover:bg-[#FF3B00] group-hover:text-white transition-colors duration-300 flex-shrink-0 mt-1">
+                    <Check size={20} strokeWidth={4} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-2xl mb-2 uppercase tracking-wide group-hover:text-[#FF3B00] transition-colors duration-300">{val.title}</h4>
-                    <p className="text-gray-600 text-lg">{val.desc}</p>
+                    <h4 className="font-black text-2xl mb-2 uppercase tracking-tight group-hover:text-[#FF3B00] transition-colors duration-300">{val.title}</h4>
+                    <p className="text-gray-800 font-bold text-lg">{val.desc}</p>
                   </div>
                 </li>
               ))}
