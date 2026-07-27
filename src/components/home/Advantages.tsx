@@ -6,24 +6,24 @@ import { ChevronDown } from 'lucide-react';
 
 const advantages = [
   {
-    title: 'We Move Fast, You Win Faster',
-    content: 'We run 2-week sprints. No quarterly reviews. No waiting for the "strategy deck" to be approved. If it works, we scale it. If it doesn\'t, we cut it — before it burns your budget.'
+    title: 'You Get Founders, Not Interns',
+    content: 'Every campaign, every strategy, every ad creative — done by the 5 founders personally. No handoffs to a junior. No account managers playing telephone. You get direct access to the people who built this agency.'
   },
   {
-    title: 'Zero Black-Box. Full Transparency.',
-    content: 'You own the accounts. You see every rupee spent and every result generated. Our dashboards are live. Our communication is daily. No surprises, ever.'
+    title: 'Engineers Who Understand Marketing',
+    content: 'We\'re BTech CS graduates who chose marketing over MNCs. That means we build automation nobody else does, analyse data at a depth most agencies can\'t, and code tools that give your campaigns an unfair advantage.'
   },
   {
-    title: 'Creative That Actually Converts',
-    content: 'We don\'t make ads that win awards. We make ads that win customers. Every creative decision is backed by data, A/B tests, and a relentless obsession with your bottom line.'
+    title: 'Founder Pricing — For a Limited Time',
+    content: 'Our first 10 clients lock in the lowest rates we\'ll ever offer. As we grow and prove results, our prices go up. Right now, you get enterprise-level thinking at startup-friendly pricing. That window closes soon.'
   },
   {
-    title: 'One Team. Every Channel.',
-    content: 'SEO, paid ads, influencers, AI bots, content, design — all under one roof. No briefing 5 agencies. No coordination hell. Just one team that owns your entire growth engine.'
+    title: 'Obsessed With Your Category',
+    content: 'Before we touch your account, we spend 2 weeks studying your industry, your top competitors, and your target audience\'s actual behaviour. We don\'t wing it. We over-prepare, then we execute.'
   },
   {
-    title: 'Built to Scale With You',
-    content: 'Whether you\'re at ₹1L/month ad spend or ₹1Cr+, our infrastructure grows with you. We\'ve built frameworks that don\'t break when you go from 100 to 100,000 customers.'
+    title: 'Full Transparency. Always.',
+    content: 'You own every account, every asset, every password. We share dashboards weekly. We report even when the numbers aren\'t great — because that\'s when the best decisions get made. No smoke, no mirrors.'
   }
 ];
 

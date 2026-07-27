@@ -11,23 +11,24 @@ import {
   Target,
   Users,
   Star,
+  Code2,
 } from "lucide-react";
 
-import { AnimatedCounter } from "@/components/ui/Shared";
 const floatingIcons = [
-  { icon: BarChart3, x: "10%", y: "20%", delay: 0, color: "text-primary" },
-  { icon: TrendingUp, x: "85%", y: "15%", delay: 1, color: "text-accent-green" },
-  { icon: Target, x: "80%", y: "70%", delay: 2, color: "text-secondary" },
-  { icon: Zap, x: "5%", y: "75%", delay: 3, color: "text-accent-yellow" },
-  { icon: Star, x: "50%", y: "8%", delay: 1.5, color: "text-accent-cyan" },
-  { icon: Users, x: "15%", y: "55%", delay: 2.5, color: "text-primary-light" },
+  { icon: BarChart3, x: "10%", y: "20%", delay: 0 },
+  { icon: TrendingUp, x: "85%", y: "15%", delay: 1 },
+  { icon: Target, x: "80%", y: "70%", delay: 2 },
+  { icon: Zap, x: "5%", y: "75%", delay: 3 },
+  { icon: Star, x: "50%", y: "8%", delay: 1.5 },
+  { icon: Code2, x: "15%", y: "55%", delay: 2.5 },
 ];
 
-const stats = [
-  { end: 150, suffix: "+", label: "Brands Scaled" },
-  { end: 500, suffix: "+", label: "Campaigns Run" },
-  { end: 2, suffix: "B+", label: "Views Generated" },
-  { end: 98, suffix: "%", label: "Client Retention" },
+const founders = [
+  { name: "Krishlay", role: "Tech & AI" },
+  { name: "Ayushman", role: "Engineering" },
+  { name: "Arpit", role: "Strategy" },
+  { name: "Priyanshu", role: "Performance" },
+  { name: "Bhavya", role: "Influencer" },
 ];
 
 export default function HeroSection() {
@@ -45,46 +46,37 @@ export default function HeroSection() {
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
           className="whitespace-nowrap font-black text-[15vw] leading-none text-black tracking-tighter"
         >
-          WE SCALE BRANDS • WE SCALE BRANDS • WE SCALE BRANDS • WE SCALE BRANDS •
+          M4Y — MARKETING 4 YOU • M4Y — MARKETING 4 YOU • M4Y — MARKETING 4 YOU •
         </motion.div>
         <motion.div
           animate={{ x: ["-50%", "0%"] }}
           transition={{ ease: "linear", duration: 20, repeat: Infinity }}
-          className="whitespace-nowrap font-black text-[15vw] leading-none text-transparent border-text tracking-tighter mt-4"
-          style={{ WebkitTextStroke: "2px black" }}
+          className="whitespace-nowrap font-black text-[15vw] leading-none tracking-tighter mt-4"
+          style={{ WebkitTextStroke: "2px black", color: "transparent" }}
         >
-          NOT JUST AN AGENCY • NOT JUST AN AGENCY • NOT JUST AN AGENCY • NOT JUST AN AGENCY •
+          CREATORS & CONSULTANTS • CREATORS & CONSULTANTS • CREATORS & CONSULTANTS •
         </motion.div>
       </div>
 
-      {/* Floating marketing icons */}
+      {/* Floating icons */}
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
-          className={`absolute hidden md:block ${item.color} opacity-20`}
+          className="absolute hidden md:block text-black opacity-10"
           style={{ left: item.x, top: item.y }}
-          animate={{
-            y: [0, -20, 0],
-            rotate: [0, 10, -10, 0],
-            opacity: [0.15, 0.3, 0.15],
-          }}
-          transition={{
-            duration: 5 + i,
-            repeat: Infinity,
-            delay: item.delay,
-            ease: "easeInOut",
-          }}
+          animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
+          transition={{ duration: 5 + i, repeat: Infinity, delay: item.delay, ease: "easeInOut" }}
         >
           <item.icon className="w-8 h-8" />
         </motion.div>
       ))}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <motion.div 
+        <motion.div
           className="text-center"
           style={{ y: yParallax, opacity: opacityParallax }}
         >
-          {/* Badge */}
+          {/* Founding Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,7 +84,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FF3B00] text-white font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
           >
             <span className="w-2 h-2 bg-white animate-pulse" />
-            India&apos;s Most Aggressive Growth Agency
+            Now Accepting Founding Clients — Limited Spots
           </motion.div>
 
           {/* Main Heading */}
@@ -100,13 +92,15 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="hero-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-black"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-black"
           >
             Your Brand.
             <br />
-            <span className="text-[#0044FF] bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">Unstoppable</span>
+            <span className="text-black bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">
+              Built Right.
+            </span>
             <br />
-            <span className="mt-2 inline-block">Growth.</span>
+            <span className="mt-2 inline-block">From Day One.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -116,8 +110,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="max-w-2xl mx-auto text-lg md:text-xl text-black font-bold leading-relaxed mb-12"
           >
-            We don&apos;t just run campaigns. We engineer growth systems — blending
-            performance marketing, AI automation, and creative that converts.
+            5 BTech CS founders who chose marketing over MNCs. We bring engineering precision to every campaign — no fluff, no juniors, just founders doing the work.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -128,42 +121,43 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
           >
             <Link href="/book-call" className="btn-primary w-full sm:w-auto">
-              Book Free Strategy Call
+              Claim Your Founding Spot
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
 
             <Link href="/services" className="btn-accent w-full sm:w-auto">
               <Play className="w-5 h-5 mr-2" fill="currentColor" />
-              View Services
+              See What We Do
             </Link>
           </motion.div>
 
-          {/* Animated Stats */}
+          {/* Founders Strip */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="relative"
+            className="border-4 border-black shadow-[8px_8px_0px_#000] max-w-4xl mx-auto bg-white"
           >
-            <div className="modern-card max-w-5xl mx-auto">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8">
-                {stats.map((stat, i) => (
-                  <div key={i}>
-                    <AnimatedCounter
-                      end={stat.end}
-                      suffix={stat.suffix}
-                      label={stat.label}
-                      duration={2 + i * 0.3}
-                    />
+            <div className="border-b-4 border-black px-6 py-3 bg-black">
+              <p className="text-white font-black text-xs uppercase tracking-widest text-center">
+                👥 Meet The 5 Founders — BTech CS — No Juniors. No Outsourcing.
+              </p>
+            </div>
+            <div className="grid grid-cols-5 divide-x-4 divide-black">
+              {founders.map((f, i) => (
+                <div key={i} className="p-4 md:p-6 text-center group hover:bg-[#FF3B00] hover:text-white transition-colors duration-150">
+                  <div className="w-10 h-10 md:w-14 md:h-14 border-4 border-black mx-auto mb-3 flex items-center justify-center font-black text-lg md:text-xl bg-[#FFD700] group-hover:bg-white group-hover:text-black transition-colors">
+                    {f.name[0]}
                   </div>
-                ))}
-              </div>
+                  <p className="font-black text-xs md:text-sm uppercase tracking-wider leading-tight">{f.name}</p>
+                  <p className="font-bold text-xs opacity-60 uppercase tracking-wider mt-1 hidden md:block">{f.role}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
+
         </motion.div>
       </div>
-
-      {/* Removed bottom gradient fade for brutalist hard stop */}
     </section>
   );
 }

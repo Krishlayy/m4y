@@ -31,16 +31,16 @@ export default function Footer() {
         <div className="mb-24 flex flex-col xl:flex-row xl:items-end justify-between flex-wrap gap-12 border-b border-white/10 pb-20">
           <div className="max-w-5xl">
             <h2 className="text-5xl md:text-8xl lg:text-[100px] font-black tracking-tighter leading-[0.85] uppercase mb-8 break-words w-full">
-              Let&apos;s build
+              10 Spots.
               <br />
-              <span className="text-black bg-[#FFD700] px-4 py-2 border-4 border-white inline-block mt-4">Something Real.</span>
+              <span className="text-black bg-[#FFD700] px-4 py-2 border-4 border-white inline-block mt-4">Who&apos;s First?</span>
             </h2>
-            <a href="mailto:support.m4y@gmail.com" className="text-3xl md:text-5xl font-bold tracking-tight hover:text-[#FF3B00] transition-colors">
+            <a href="mailto:support.m4y@gmail.com" className="text-2xl md:text-4xl font-bold tracking-tight hover:text-[#FF3B00] transition-colors">
               support.m4y@gmail.com
             </a>
           </div>
-          <Link href="/contact" className="group inline-flex items-center justify-center gap-6 bg-white text-black font-black text-2xl uppercase tracking-widest py-6 px-14 border-4 border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[8px_8px_0_0_#FF3B00] hover:shadow-none hover:translate-x-2 hover:translate-y-2">
-            Start a project
+          <Link href="/book-call" className="group inline-flex items-center justify-center gap-6 bg-white text-black font-black text-xl uppercase tracking-widest py-6 px-10 border-4 border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[8px_8px_0_0_#FF3B00] hover:shadow-none hover:translate-x-2 hover:translate-y-2">
+            Claim a Founding Spot
             <ArrowRight className="w-8 h-8 group-hover:rotate-45 transition-transform" />
           </Link>
         </div>
