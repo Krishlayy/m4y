@@ -7,23 +7,23 @@ import Link from 'next/link';
 const approaches = [
   {
     icon: <Zap className="w-10 h-10" />,
-    title: 'Sprint-based campaigns',
-    description: 'We run 2-week sprints. Because in digital marketing, a 6-month plan is just a detailed roadmap to becoming obsolete. We move fast and break only the things holding your revenue back.'
+    title: 'Strategy First',
+    description: 'Before we spend a single rupee of your budget, we audit your market, your competitors, and your funnel. Then we build a growth strategy that\'s unique to your business — not a copy-paste template.'
   },
   {
     icon: <Activity className="w-10 h-10" />,
-    title: 'Data-driven iteration',
-    description: 'We trust data, not our gut feelings. Unless our gut says "check the data again." Every decision is backed by cold, hard numbers so we can optimize your ROI relentlessly.'
+    title: 'Data, Then Gut',
+    description: 'Every campaign decision is rooted in real numbers. CTR, ROAS, CPL, CAC — we obsess over the metrics that actually move your business, and we optimize weekly, not quarterly.'
   },
   {
     icon: <Target className="w-10 h-10" />,
-    title: 'Laser-focused targeting',
-    description: 'Spray and pray is for amateur paintball, not marketing budgets. We segment your audience so tightly that your ads will feel like they\'re reading their minds.'
+    title: 'Precision Targeting',
+    description: 'We find the exact people who will buy your product — by interest, behavior, income, location, and intent. Your ad budget stops funding irrelevance and starts funding revenue.'
   },
   {
     icon: <Repeat className="w-10 h-10" />,
-    title: 'Continuous feedback loop',
-    description: 'We over-communicate. You\'ll never have to ask "what is the agency doing?" because we\'ll already be in your inbox telling you exactly how we\'re growing your business.'
+    title: 'Iterate. Scale. Repeat.',
+    description: 'What works gets doubled. What doesn\'t gets killed. We test relentlessly and allocate budget with surgical precision. No guesswork. Just compounding growth.'
   }
 ];
 
@@ -36,8 +36,8 @@ export default function Approach() {
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 uppercase leading-[0.9]">
             Our <span className="text-white bg-[#FF3B00] px-3 py-1 border-4 border-black shadow-[4px_4px_0px_#000]">Methodology.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-800 font-bold leading-relaxed border-l-4 border-[#FF3B00] pl-6">
-            We operate like a tech company, applying agile principles to marketing to deliver measurable results faster.
+          <p className="text-xl md:text-2xl text-black font-bold leading-relaxed border-l-4 border-[#FF3B00] pl-6">
+            No fluff. No vague promises. Just a proven system that turns marketing spend into measurable business growth.
           </p>
         </div>
 

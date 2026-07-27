@@ -24,11 +24,10 @@ const floatingIcons = [
 ];
 
 const stats = [
-  { end: 500, suffix: "+", label: "Campaigns" },
-  { end: 150, suffix: "+", label: "Brands" },
+  { end: 150, suffix: "+", label: "Brands Scaled" },
+  { end: 500, suffix: "+", label: "Campaigns Run" },
   { end: 2, suffix: "B+", label: "Views Generated" },
-  { end: 500, suffix: "M+", label: "Reach" },
-  { end: 98, suffix: "%", label: "Client Satisfaction" },
+  { end: 98, suffix: "%", label: "Client Retention" },
 ];
 
 export default function HeroSection() {
@@ -93,7 +92,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FF3B00] text-white font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
           >
             <span className="w-2 h-2 bg-white animate-pulse" />
-            Not another agency. A growth partner.
+            India&apos;s Most Aggressive Growth Agency
           </motion.div>
 
           {/* Main Heading */}
@@ -103,11 +102,11 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="hero-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-black"
           >
-            Marketing That
+            Your Brand.
             <br />
-            <span className="text-[#0044FF] bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">Actually Moves</span>
+            <span className="text-[#0044FF] bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">Unstoppable</span>
             <br />
-            <span className="mt-2 inline-block">Businesses.</span>
+            <span className="mt-2 inline-block">Growth.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -117,9 +116,8 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="max-w-2xl mx-auto text-lg md:text-xl text-black font-bold leading-relaxed mb-12"
           >
-            We combine creativity, technology, AI, influencer power, branding
-            and performance marketing to help businesses dominate their
-            industry.
+            We don&apos;t just run campaigns. We engineer growth systems — blending
+            performance marketing, AI automation, and creative that converts.
           </motion.p>
 
           {/* CTA Buttons */}

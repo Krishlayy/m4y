@@ -7,23 +7,23 @@ import Link from 'next/link';
 const funnelSteps = [
   {
     number: '01',
-    title: 'Test your idea',
-    services: ['Market Research', 'Competitor Analysis', 'MVP Launch Strategy', 'Audience Profiling']
+    title: 'Get Found',
+    services: ['SEO & Technical SEO', 'Google Ads', 'Content Marketing', 'Local SEO']
   },
   {
     number: '02',
-    title: 'Build your presence',
-    services: ['Brand Identity', 'Website Development', 'SEO Setup', 'Social Media Strategy']
+    title: 'Look Premium',
+    services: ['Brand Identity & Design', 'Website Development', 'UI/UX Design', 'Reels & Video Production']
   },
   {
     number: '03',
-    title: 'Grow your reach',
-    services: ['Paid Advertising (PPC)', 'Content Marketing', 'Email Campaigns', 'Influencer Outreach']
+    title: 'Grow Revenue',
+    services: ['Meta & Google Ads', 'Influencer Marketing', 'Email Automation', 'WhatsApp Marketing']
   },
   {
     number: '04',
-    title: 'Support & scale',
-    services: ['Conversion Rate Optimization', 'Marketing Automation', 'Data Analytics', 'Loyalty Programs']
+    title: 'Scale Ruthlessly',
+    services: ['AI Bots & Automation', 'CRO & Funnel Optimization', 'Analytics & Dashboards', 'Performance Scaling']
   }
 ];
 
@@ -33,8 +33,8 @@ export default function ServicesFunnel() {
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
-            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight uppercase">
-              Full-funnel <br /> <span className="text-[#FF3B00] relative inline-block">marketing.<span className="absolute -bottom-2 left-0 w-full h-2 bg-black transform -skew-x-12"></span></span>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase">
+              Everything you need.<br /><span className="text-[#FF3B00]">Nothing you don&apos;t.</span>
             </h2>
           </div>
           <Link href="/services" className="btn-primary group">

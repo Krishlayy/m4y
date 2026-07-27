@@ -61,12 +61,12 @@ export default function ExperienceWarning() {
               <div className="flex items-center gap-3 mb-4">
                 <AlertTriangle className="w-8 h-8 text-black" fill="white" />
                 <h3 className="font-black uppercase text-xl tracking-tight leading-none">
-                  High Dopamine <br/> Warning
+                  Danger Zone.<br/>Enter Carefully.
                 </h3>
               </div>
 
               <p className="font-bold text-sm mb-4 leading-relaxed">
-                We built this mobile experience to be dangerously interactive.
+                This site is aggressively premium. Side effects include wanting to hire us immediately.
               </p>
 
               <ul className="space-y-3 mb-6 font-bold text-xs uppercase tracking-wider">
@@ -82,14 +82,14 @@ export default function ExperienceWarning() {
               </ul>
 
               <p className="text-xs font-black uppercase mb-6 text-black/60 italic">
-                *Warning: Do not get addicted to our website. Let your customers get addicted to your brand instead.*
+                *We are not responsible for impulsive strategy calls booked at 2am.*
               </p>
 
               <button
                 onClick={handleDismiss}
                 className="w-full bg-black text-white py-4 font-black uppercase tracking-widest border-2 border-black hover:bg-[#FF3B00] active:translate-y-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all"
               >
-                I Can Handle It
+                I&apos;m Ready To Grow
               </button>
             </div>
           </motion.div>

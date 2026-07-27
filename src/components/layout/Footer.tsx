@@ -31,11 +31,12 @@ export default function Footer() {
         <div className="mb-24 flex flex-col xl:flex-row xl:items-end justify-between flex-wrap gap-12 border-b border-white/10 pb-20">
           <div className="max-w-5xl">
             <h2 className="text-5xl md:text-8xl lg:text-[100px] font-black tracking-tighter leading-[0.85] uppercase mb-8 break-words w-full">
-              Got an idea? <br />
-              <span className="text-black bg-[#FFD700] px-4 py-2 border-4 border-white inline-block mt-4">Let&apos;s build it.</span>
+              Let&apos;s build
+              <br />
+              <span className="text-black bg-[#FFD700] px-4 py-2 border-4 border-white inline-block mt-4">Something Real.</span>
             </h2>
-            <a href="mailto:hello@m4y.com" className="text-3xl md:text-5xl font-bold tracking-tight hover:text-[#FF3B00] transition-colors">
-              hello@m4y.com
+            <a href="mailto:support.m4y@gmail.com" className="text-3xl md:text-5xl font-bold tracking-tight hover:text-[#FF3B00] transition-colors">
+              support.m4y@gmail.com
             </a>
           </div>
           <Link href="/contact" className="group inline-flex items-center justify-center gap-6 bg-white text-black font-black text-2xl uppercase tracking-widest py-6 px-14 border-4 border-white hover:bg-transparent hover:text-white transition-all duration-300 shadow-[8px_8px_0_0_#FF3B00] hover:shadow-none hover:translate-x-2 hover:translate-y-2">
@@ -64,8 +65,13 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-8">Connect</h4>
             <div className="flex flex-wrap gap-4">
-              {[Phone, MessageCircle, InstagramIcon, LinkedinIcon].map((Icon, i) => (
-                <a key={i} href="#" className="w-14 h-14 bg-black border-4 border-white hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] flex items-center justify-center transition-all duration-300 shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-y-1 hover:translate-x-1">
+              {[
+                { href: 'https://wa.me/919999999999', Icon: Phone, label: 'WhatsApp' },
+                { href: 'https://www.instagram.com/marketing4you', Icon: InstagramIcon, label: 'Instagram' },
+                { href: 'https://www.linkedin.com/company/marketing4you', Icon: LinkedinIcon, label: 'LinkedIn' },
+                { href: 'https://www.youtube.com/@marketing4you', Icon: MessageCircle, label: 'YouTube' },
+              ].map(({ href, Icon, label }, i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-14 h-14 bg-black border-4 border-white hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] flex items-center justify-center transition-all duration-300 shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-y-1 hover:translate-x-1">
                   <Icon className="w-6 h-6" />
                 </a>
               ))}
@@ -73,8 +79,8 @@ export default function Footer() {
             <div className="mt-12">
               <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-4">Location</h4>
               <p className="text-xl font-black text-white/70 max-w-sm">
-                123 Digital Ave, Suite 500<br />
-                New York, NY 10001
+                India — Remote & Global<br />
+                <a href="mailto:support.m4y@gmail.com" className="text-[#FF3B00] hover:text-white transition-colors">support.m4y@gmail.com</a>
               </p>
             </div>
           </div>

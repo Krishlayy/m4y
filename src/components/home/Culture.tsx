@@ -36,17 +36,17 @@ export default function Culture() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
-              We build digital products, but our foundation is people.
+              Founders who do the work.
             </h3>
-            <p className="text-xl font-bold text-gray-800 mb-12 leading-relaxed">
-              We are a team of passionate creators, thinkers, and builders. We value transparency, continuous learning, and pushing the boundaries of what&apos;s possible in the digital space. Our remote-friendly environment ensures we work with the best talent, regardless of location.
+            <p className="text-xl font-bold text-black/70 mb-12 leading-relaxed">
+              M4Y was built by 5 founders who refused to outsource what they pitch. Our strategists run live campaigns. Our engineers ship live products. We don&apos;t manage accounts — we grow businesses.
             </p>
             
             <ul className="space-y-8">
               {[
-                { title: 'Radical Transparency', desc: 'Honest communication at all levels. No hidden agendas.' },
-                { title: 'Continuous Growth', desc: 'Dedicated time and budget for learning and exploration.' },
-                { title: 'Remote-First', desc: 'Work from anywhere, collaborate seamlessly everywhere.' }
+                { title: 'We Own Results, Not Hours', desc: 'We\'re not billing you for time. We\'re accountable for your growth.' },
+                { title: 'Obsessively Curious', desc: 'The algorithm changes. We changed first. Always.' },
+                { title: 'Remote. Relentless.', desc: 'Distributed team, unified mission. 5 cities, 1 obsession.' }
               ].map((val, idx) => (
                 <li key={idx} className="flex gap-6 items-start group">
                   <div className="w-8 h-8 border-4 border-black flex items-center justify-center group-hover:bg-[#FF3B00] group-hover:text-white transition-colors duration-300 flex-shrink-0 mt-1">

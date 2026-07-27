@@ -6,24 +6,24 @@ import { ChevronDown } from 'lucide-react';
 
 const advantages = [
   {
-    title: 'Agile Marketing Execution',
-    content: 'We work in fast-paced sprints, adapting strategies based on real-time data to maximize your ROI without wasting budget on long-term assumptions.'
+    title: 'We Move Fast, You Win Faster',
+    content: 'We run 2-week sprints. No quarterly reviews. No waiting for the "strategy deck" to be approved. If it works, we scale it. If it doesn\'t, we cut it — before it burns your budget.'
   },
   {
-    title: 'Transparent Reporting',
-    content: 'Full access to our analytics dashboards. No black-box operations, just clear, actionable insights into where every dollar goes.'
+    title: 'Zero Black-Box. Full Transparency.',
+    content: 'You own the accounts. You see every rupee spent and every result generated. Our dashboards are live. Our communication is daily. No surprises, ever.'
   },
   {
-    title: 'Cross-functional Teams',
-    content: 'Your project gets a dedicated pod consisting of a strategist, copywriter, and performance expert working in sync.'
+    title: 'Creative That Actually Converts',
+    content: 'We don\'t make ads that win awards. We make ads that win customers. Every creative decision is backed by data, A/B tests, and a relentless obsession with your bottom line.'
   },
   {
-    title: 'Performance-Driven Creative',
-    content: 'Our creative decisions are backed by A/B testing and conversion rate optimization principles, ensuring ads don\'t just look good, they perform.'
+    title: 'One Team. Every Channel.',
+    content: 'SEO, paid ads, influencers, AI bots, content, design — all under one roof. No briefing 5 agencies. No coordination hell. Just one team that owns your entire growth engine.'
   },
   {
-    title: 'Scalable Infrastructure',
-    content: 'We build your marketing foundation to handle 10x growth, from technical SEO architecture to scalable paid media account structures.'
+    title: 'Built to Scale With You',
+    content: 'Whether you\'re at ₹1L/month ad spend or ₹1Cr+, our infrastructure grows with you. We\'ve built frameworks that don\'t break when you go from 100 to 100,000 customers.'
   }
 ];
 
@@ -34,8 +34,8 @@ export default function Advantages() {
     <section className="bg-white text-black border-t-4 border-black py-32 md:py-40">
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight uppercase">
-            Why choose M4Y?
+          <h2 className="text-5xl md:text-6xl font-black tracking-tighter leading-tight uppercase">
+            Why Brands<br/>Choose M4Y.
           </h2>
         </div>
         
