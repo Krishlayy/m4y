@@ -52,9 +52,9 @@ export default function ExperienceWarning() {
             
             <button 
               onClick={handleDismiss}
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center border-2 border-black bg-white rounded-full active:bg-gray-200"
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center border-4 border-black bg-white hover:bg-[#FF3B00] hover:text-white active:bg-[#FF3B00] transition-colors"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4" />
             </button>
 
             <div className="p-6">
@@ -70,14 +70,14 @@ export default function ExperienceWarning() {
               </p>
 
               <ul className="space-y-3 mb-6 font-bold text-xs uppercase tracking-wider">
-                <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  <Hand className="w-5 h-5 text-blue-600" /> Fling the joystick
+                <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_#000]">
+                  <Hand className="w-5 h-5 text-[#FF3B00]" /> Fling the joystick
                 </li>
-                <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_#000]">
                   <Smartphone className="w-5 h-5 text-[#FF3B00]" /> Slide the services
                 </li>
-                <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  <Sparkles className="w-5 h-5 text-purple-600" /> Scratch the footer
+                <li className="flex items-center gap-3 bg-white p-2 border-2 border-black shadow-[2px_2px_0px_#000]">
+                  <Sparkles className="w-5 h-5 text-[#FF3B00]" /> Scratch the footer
                 </li>
               </ul>
 

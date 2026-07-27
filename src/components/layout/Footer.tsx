@@ -22,7 +22,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white pt-32 pb-8 overflow-hidden relative border-t-8 border-[#FF3B00]">
+    <footer className="bg-black text-white pt-32 pb-8 overflow-hidden relative border-t-4 border-[#FF3B00]">
       {/* Removed gradient top border, replaced with solid border on footer tag */}
 
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 relative z-10">
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Company & Services */}
           <div>
-            <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Navigation</h4>
+            <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-8">Navigation</h4>
             <ul className="flex flex-col gap-4">
               <li><Link href="/services" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Services</Link></li>
               <li><Link href="/case-studies" className="text-xl font-medium hover:text-[#FF3B00] transition-colors">Case Studies</Link></li>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Socials */}
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Connect</h4>
+            <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-8">Connect</h4>
             <div className="flex flex-wrap gap-4">
               {[Phone, MessageCircle, InstagramIcon, LinkedinIcon].map((Icon, i) => (
                 <a key={i} href="#" className="w-14 h-14 bg-black border-4 border-white hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] flex items-center justify-center transition-all duration-300 shadow-[4px_4px_0px_white] hover:shadow-none hover:translate-y-1 hover:translate-x-1">
@@ -71,8 +71,8 @@ export default function Footer() {
               ))}
             </div>
             <div className="mt-12">
-              <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Location</h4>
-              <p className="text-xl font-medium text-gray-300 max-w-sm">
+              <h4 className="text-sm font-black text-white/50 uppercase tracking-widest mb-4">Location</h4>
+              <p className="text-xl font-black text-white/70 max-w-sm">
                 123 Digital Ave, Suite 500<br />
                 New York, NY 10001
               </p>

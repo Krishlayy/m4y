@@ -127,7 +127,7 @@ export default function ScratchCard({
   return (
     <div
       ref={containerRef}
-      className="relative select-none overflow-hidden rounded-xl border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+      className="relative select-none overflow-hidden border-4 border-black shadow-[4px_4px_0px_#000]"
       style={{ width, height }}
     >
       <div className="absolute inset-0 bg-white flex items-center justify-center p-4">

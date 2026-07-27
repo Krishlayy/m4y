@@ -30,8 +30,6 @@ const approaches = [
 export default function Approach() {
   return (
     <section className="bg-white text-black py-32 md:py-40 border-t-4 border-black overflow-hidden relative">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-50 border-l-4 border-black transform skew-x-12 translate-x-32 -z-10"></div>
       
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
         <div className="mb-20 max-w-3xl">
@@ -51,7 +49,7 @@ export default function Approach() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border-4 border-black bg-white p-10 md:p-14 flex flex-col group shadow-[4px_4px_0px_#000] hover:shadow-[12px_12px_0px_#000] hover:-translate-y-2 hover:-translate-x-2 transition-all duration-300 relative"
+              className="border-4 border-black bg-white p-10 md:p-14 flex flex-col group shadow-[4px_4px_0px_#000] hover:shadow-[8px_8px_0px_#000] hover:-translate-y-1 hover:-translate-x-1 transition-all duration-150 relative"
             >
               <div className="text-[#FF3B00] mb-8 bg-black group-hover:bg-[#FF3B00] group-hover:text-black transition-colors duration-300 inline-block p-5 border-4 border-black w-fit">
                 {item.icon}

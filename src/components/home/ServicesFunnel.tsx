@@ -51,10 +51,10 @@ export default function ServicesFunnel() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 hover:bg-gray-50 transition-colors duration-300 group flex flex-col relative overflow-hidden"
+              className="bg-white p-8 hover:bg-white transition-colors duration-150 group flex flex-col relative overflow-hidden hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_#000]"
             >
-              {/* Abstract decorative shape for that sharp modern feel */}
-              <div className="absolute -right-12 -top-12 w-32 h-32 bg-gray-100 rotate-45 group-hover:bg-[#FF3B00]/10 transition-colors duration-500"></div>
+              {/* Brutalist corner accent */}
+              <div className="absolute -right-0 -top-0 w-16 h-16 bg-[#FF3B00] opacity-0 group-hover:opacity-100 transition-opacity duration-150 border-l-4 border-b-4 border-black"></div>
 
               <div className="text-6xl font-black text-transparent mb-8 transition-all duration-300 relative z-10" 
                    style={{ WebkitTextStroke: '2px black', color: 'transparent' }}>

@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Check } from 'lucide-react';
 
 export default function Culture() {
@@ -18,11 +19,13 @@ export default function Culture() {
             transition={{ duration: 0.6 }}
             className="relative aspect-square bg-gray-100 border-4 border-black shadow-[8px_8px_0px_#000] overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-[#FF3B00]/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-            <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
-              alt="Team collaboration" 
-              className="w-full h-full object-cover filter grayscale group-hover:scale-105 transition-transform duration-700"
+            <div className="absolute inset-0 bg-[#FF3B00] opacity-0 group-hover:opacity-20 transition-opacity duration-200 z-10" />
+            <Image
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
+              alt="Team collaboration"
+              fill
+              className="object-cover filter grayscale group-hover:scale-105 transition-transform duration-300"
+              unoptimized
             />
           </motion.div>
           

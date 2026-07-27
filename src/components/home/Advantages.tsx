@@ -31,7 +31,7 @@ export default function Advantages() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="bg-white text-black border-t-2 border-black py-24 md:py-32">
+    <section className="bg-white text-black border-t-4 border-black py-32 md:py-40">
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight uppercase">
@@ -47,7 +47,7 @@ export default function Advantages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`border-4 border-black bg-white transition-all duration-300 ${openIndex === i ? 'shadow-[8px_8px_0px_0px_rgba(255,59,0,1)] -translate-y-1' : 'shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none'}`}
+              className={`border-4 border-black bg-white transition-all duration-150 ${openIndex === i ? 'shadow-[8px_8px_0px_#FF3B00] -translate-y-1 -translate-x-1' : 'shadow-[4px_4px_0px_#000] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_#000]'}`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
@@ -59,9 +59,10 @@ export default function Advantages() {
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === i ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  className="w-8 h-8 border-4 border-black flex items-center justify-center flex-shrink-0"
                 >
-                  <ChevronDown className="w-6 h-6 border-2 border-transparent group-hover:border-black rounded-full" />
+                  <ChevronDown className="w-5 h-5" />
                 </motion.div>
               </button>
               <AnimatePresence>
@@ -73,7 +74,7 @@ export default function Advantages() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 pt-2 text-gray-700 leading-relaxed font-bold">
+                    <div className="px-6 pb-6 pt-2 text-black/80 leading-relaxed font-bold">
                       {adv.content}
                     </div>
                   </motion.div>
