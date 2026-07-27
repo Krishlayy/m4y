@@ -12,7 +12,7 @@ import {
   Users,
   Star,
 } from "lucide-react";
-} from "lucide-react";
+
 import { AnimatedCounter } from "@/components/ui/Shared";
 const floatingIcons = [
   { icon: BarChart3, x: "10%", y: "20%", delay: 0, color: "text-primary" },
