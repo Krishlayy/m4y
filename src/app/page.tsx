@@ -1,19 +1,22 @@
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
-import LeadMagnet from '@/components/home/LeadMagnet';
-import Advantages from '@/components/home/Advantages';
-import ServicesFunnel from '@/components/home/ServicesFunnel';
-import Approach from '@/components/home/Approach';
-import Culture from '@/components/home/Culture';
-import DualCTA from '@/components/home/DualCTA';
-import ExperienceWarning from '@/components/ui/ExperienceWarning';
-import MobileServiceCarousel from '@/components/ui/MobileServiceCarousel';
 import AnnouncementBar from '@/components/ui/AnnouncementBar';
-import FoundersSection from '@/components/home/FoundersSection';
-import WhatWeBuild from '@/components/home/WhatWeBuild';
-import TechStack from '@/components/home/TechStack';
-import FloatingCTA from '@/components/ui/FloatingCTA';
+
+// Lazy-load everything below the fold for fast first paint
+const FoundersSection    = dynamic(() => import('@/components/home/FoundersSection'));
+const LeadMagnet         = dynamic(() => import('@/components/home/LeadMagnet'));
+const ServicesFunnel     = dynamic(() => import('@/components/home/ServicesFunnel'));
+const MobileServiceCarousel = dynamic(() => import('@/components/ui/MobileServiceCarousel'));
+const WhatWeBuild        = dynamic(() => import('@/components/home/WhatWeBuild'));
+const Advantages         = dynamic(() => import('@/components/home/Advantages'));
+const Approach           = dynamic(() => import('@/components/home/Approach'));
+const TechStack          = dynamic(() => import('@/components/home/TechStack'));
+const Culture            = dynamic(() => import('@/components/home/Culture'));
+const DualCTA            = dynamic(() => import('@/components/home/DualCTA'));
+const ExperienceWarning  = dynamic(() => import('@/components/ui/ExperienceWarning'));
+const FloatingCTA        = dynamic(() => import('@/components/ui/FloatingCTA'));
 
 export default function Home() {
   return (
@@ -22,7 +25,7 @@ export default function Home() {
       <AnnouncementBar />
       <Navbar />
       <main className="min-h-screen bg-white text-black overflow-hidden">
-        {/* 01 — Hero: Who we are */}
+        {/* 01 — Hero: critical path, NOT lazy-loaded */}
         <HeroSection />
 
         {/* 02 — Founders: Who you're working with */}
@@ -49,10 +52,10 @@ export default function Home() {
         {/* 09 — Tech Stack: CS credibility */}
         <TechStack />
 
-        {/* 10 — Culture: Who we really are */}
+        {/* 10 — Culture */}
         <Culture />
 
-        {/* 11 — Dual CTA: About + Contact panels */}
+        {/* 11 — Dual CTA */}
         <DualCTA />
       </main>
       <Footer />
