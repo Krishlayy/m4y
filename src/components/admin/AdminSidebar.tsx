@@ -4,7 +4,7 @@ import Link from "next/form"; // Wait, it's next/link
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import { 
-  LayoutDashboard, Users, Inbox, FolderKanban, 
+  LayoutDashboard, Users, Inbox, FileSpreadsheet, FolderKanban, 
   FileText, PenTool, Wrench, Tag, Star, UserCircle, 
   Image as ImageIcon, Settings, X 
 } from "lucide-react";
@@ -12,6 +12,7 @@ import LogoutButton from "./LogoutButton";
 
 const NAV_ITEMS = [
   { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
+  { name: "Excel Sheet", href: "/admin/spreadsheet", icon: FileSpreadsheet },
   { name: "Leads", href: "/admin/leads", icon: Users },
   { name: "Inquiries", href: "/admin/inquiries", icon: Inbox },
   { name: "Projects", href: "/admin/projects", icon: FolderKanban },
