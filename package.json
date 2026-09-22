@@ -35,10 +35,10 @@
     "three": "^0.185.1",
     "uploadthing": "^7.7.4",
     "use-sound": "^5.0.0",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "@prisma/client": "^5.22.0"
   },
   "devDependencies": {
-    "@prisma/client": "^5.22.0",
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",

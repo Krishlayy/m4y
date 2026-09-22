@@ -198,13 +198,13 @@ export default function BookCallPage() {
         </div>
       </section>
 
-      {/* Founding Client note */}
+      {/* Exclusive Roster Banner */}
       <section className="py-16 bg-[#FFD700] border-b-4 border-black">
         <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 text-center">
           <p className="font-black text-2xl md:text-3xl uppercase tracking-tight text-black">
-            🔥 Founding Client Rates Active — Only For The Next{" "}
-            <span className="bg-black text-[#FFD700] px-2 py-1">10 Businesses</span>{" "}
-            We Take On.
+            🔥 Exclusive Q3 Roster Active — Strictly{" "}
+            <span className="bg-black text-[#FFD700] px-2 py-1">2 Client Slots</span>{" "}
+            Open This Month.
           </p>
         </div>
       </section>

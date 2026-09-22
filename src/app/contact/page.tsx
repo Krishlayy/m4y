@@ -118,6 +118,15 @@ export default function ContactPage() {
               </div>
             ) : (
               <form action={handleSubmit} className="space-y-6">
+                {/* Honeypot field for bot protection */}
+                <input
+                  type="text"
+                  name="website_hp"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden pointer-events-none opacity-0 absolute -z-10"
+                />
                 <div>
                   <label htmlFor="name" className="block text-xl font-bold uppercase mb-2">Name</label>
                   <input type="text" name="name" id="name" required disabled={status === "loading"} className="w-full border-4 border-black p-4 text-lg font-medium focus:outline-none focus:ring-4 focus:ring-[#FFD700] transition-all bg-[#f0f0f0] disabled:opacity-50" placeholder="JOHN DOE" />
