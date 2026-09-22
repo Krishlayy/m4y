@@ -1,16 +1,18 @@
-﻿"use client";
+"use client";
 
 import { useEffect } from "react";
 
-export default function GlobalError({
+export default function GlobalErrorBoundary({
   error,
   reset,
 }: {
-  error: Error & { digest?: string };
+  error: globalThis.Error & { digest?: string };
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Global critical error caught:", error);
+    if (typeof window !== "undefined") {
+      console.error("Global critical error caught:", error);
+    }
   }, [error]);
 
   return (

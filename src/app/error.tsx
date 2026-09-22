@@ -1,19 +1,20 @@
-﻿"use client";
+"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { RefreshCw, ArrowLeft, MessageSquare } from "lucide-react";
 
-export default function Error({
+export default function ErrorBoundary({
   error,
   reset,
 }: {
-  error: Error & { digest?: string };
+  error: globalThis.Error & { digest?: string };
   reset: () => void;
 }) {
   useEffect(() => {
     // Log the error for production observability
-    console.error("Application error boundary triggered:", error);
+    if (typeof window !== "undefined") {
+      console.error("Application error boundary triggered:", error);
+    }
   }, [error]);
 
   return (
@@ -40,7 +41,9 @@ export default function Error({
             onClick={() => reset()}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FF5500] text-white px-6 py-3.5 font-black text-sm uppercase tracking-wider border-2 border-black shadow-[4px_4px_0_#000] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer"
           >
-            <RefreshCw className="w-4 h-4" />
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
             Try Again
           </button>
 
@@ -48,7 +51,9 @@ export default function Error({
             href="/"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FFD700] text-black px-6 py-3.5 font-black text-sm uppercase tracking-wider border-2 border-black shadow-[4px_4px_0_#000] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
             Return Home
           </Link>
 
@@ -58,7 +63,9 @@ export default function Error({
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3.5 font-black text-sm uppercase tracking-wider border-2 border-black shadow-[4px_4px_0_#000] hover:bg-[#25D366] hover:text-white transition-colors"
           >
-            <MessageSquare className="w-4 h-4" />
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
             WhatsApp Founders
           </a>
         </div>
