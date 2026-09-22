@@ -41,7 +41,7 @@ export default function SplashScreen() {
           initial={{ y: "0%" }}
           exit={{ y: "-100%" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#FF3B00] overflow-hidden border-b-8 border-black"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black overflow-hidden border-b-8 border-[#FFD700]"
         >
           <div className="relative flex flex-col items-center justify-center h-full w-full">
             

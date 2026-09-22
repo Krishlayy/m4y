@@ -64,9 +64,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FF3B00] text-white font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
+            className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FFD700] text-black font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
           >
-            <span className="w-2 h-2 bg-white animate-pulse" />
+            <span className="w-2 h-2 bg-black animate-pulse" />
             Now Accepting Founding Clients — 10 Spots Only
           </motion.div>
 
@@ -79,7 +79,7 @@ export default function HeroSection() {
           >
             Your Brand.
             <br />
-            <span className="text-black bg-[#FFD700] px-3 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#FF3B00]">
+            <span className="text-black bg-[#FFD700] px-3 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">
               Built Right.
             </span>
             <br />

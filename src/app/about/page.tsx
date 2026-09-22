@@ -14,7 +14,7 @@ const fadeUp = {
 
 export default function AboutPage() {
   const founders = [
-    { name: 'Krishlay', role: 'Tech & AI', color: 'bg-[#FF3B00]', avatar: '/founder-krishlay.png' },
+    { name: 'Krishlay', role: 'Tech & AI', color: 'bg-white', avatar: '/founder-krishlay.png' },
     { name: 'Ayushman', role: 'Engineering & Growth', color: 'bg-[#FFD700]', avatar: '/founder-ayushman.png' },
   ];
 
@@ -84,7 +84,7 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Values */}
-        <section className="px-6 py-24 border-b-4 border-black bg-[#FF3B00]">
+        <section className="px-6 py-24 border-b-4 border-black bg-black text-white">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeUp} className="bg-white p-10 border-4 border-black shadow-[8px_8px_0_#000]">
               <h2 className="text-4xl font-black uppercase tracking-tighter mb-6">Our Mission</h2>

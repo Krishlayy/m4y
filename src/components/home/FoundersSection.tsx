@@ -10,8 +10,8 @@ const founders = [
     name: "Krishlay",
     role: "Tech & AI",
     bio: "Architects the automation systems and AI pipelines that give M4Y campaigns an unfair edge. If it can be automated, he's already done it.",
-    color: "bg-[#FF3B00]",
-    textColor: "text-white",
+    color: "bg-[#FFD700]",
+    textColor: "text-black",
     linkedin: "https://linkedin.com/in/marketing4you",
     avatar: "/founder-krishlay.png",
   },
@@ -103,7 +103,7 @@ export default function FoundersSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 border-4 border-white p-8 shadow-[8px_8px_0_0_#FF3B00] max-w-5xl mx-auto"
+          className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 border-4 border-white p-8 shadow-[8px_8px_0_0_#FFD700] max-w-5xl mx-auto"
         >
           <p className="text-2xl font-black uppercase tracking-tight text-center md:text-left">
             Work directly with both of us. No middlemen.

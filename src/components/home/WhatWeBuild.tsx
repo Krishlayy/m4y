@@ -9,10 +9,9 @@ const campaigns = [
   {
     industry: "🍕 Restaurant in Delhi",
     challenge: "Local restaurant, zero online presence, losing to Zomato ads.",
-    bg: "bg-[#FF3B00]",
-    sectionBg: "#ffe8e0",
+    bg: "bg-black",
     text: "text-white",
-    accent: "bg-white text-black",
+    accent: "bg-[#FFD700] text-black",
     steps: [
       { label: "Week 1", action: "Google Business profile audit + 5-star review strategy. Target: 50 new reviews in 30 days." },
       { label: "Week 2", action: "3 Reels per week: behind-the-scenes kitchen, signature dish prep, owner story. Hook = nostalgia + local pride." },
@@ -25,7 +24,6 @@ const campaigns = [
     industry: "👗 D2C Fashion Brand",
     challenge: "Good product, bad Instagram, ₹0 in online sales.",
     bg: "bg-[#FFD700]",
-    sectionBg: "#fff9d6",
     text: "text-black",
     accent: "bg-black text-white",
     steps: [
@@ -40,9 +38,8 @@ const campaigns = [
     industry: "🏋️ Fitness Coach",
     challenge: "Expert coach, no leads, competing with free YouTube content.",
     bg: "bg-black",
-    sectionBg: "#f0f0f0",
     text: "text-white",
-    accent: "bg-[#FFD700] text-black",
+    accent: "bg-white text-black",
     steps: [
       { label: "Week 1", action: "Position as 'transformation specialist for working professionals'. Not a fitness coach — an accountability system." },
       { label: "Week 2", action: "Build lead magnet: '7-day meal plan for office workers' PDF. Run ₹3,000 LinkedIn ad targeting IT professionals." },
@@ -59,11 +56,7 @@ export default function WhatWeBuild() {
   const c = campaigns[active];
 
   return (
-    <motion.section 
-      animate={{ backgroundColor: c.sectionBg || "#ffffff" }}
-      transition={{ duration: 0.5 }}
-      className="border-t-4 border-black py-32 md:py-40 transition-colors"
-    >
+    <section className="bg-white border-t-4 border-black py-32 md:py-40">
       <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">
 
         {/* Heading */}
@@ -168,6 +161,6 @@ export default function WhatWeBuild() {
         </div>
 
       </div>
-    </motion.section>
+    </section>
   );
 }

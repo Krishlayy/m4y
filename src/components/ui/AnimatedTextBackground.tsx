@@ -40,13 +40,6 @@ export default function AnimatedTextBackground() {
       >
         SCALE RUTHLESSLY • SCALE RUTHLESSLY • SCALE RUTHLESSLY • SCALE RUTHLESSLY •
       </motion.div>
-
-      {/* Pulsing Accent Glow */}
-      <motion.div
-        animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.2, 1] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] bg-[#FF3B00] rounded-full blur-[120px] mix-blend-screen opacity-30 pointer-events-none"
-      />
     </div>
   );
 }
