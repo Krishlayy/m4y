@@ -4,12 +4,19 @@ import CaseStudyForm from "@/components/admin/CaseStudyForm";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditCaseStudyPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const caseStudy = await prisma.caseStudy.findUnique({
-    where: { id: resolvedParams.id }
-  });
+  let caseStudy = null;
+  try {
+    caseStudy = await prisma.caseStudy.findUnique({
+      where: { id: resolvedParams.id }
+    });
+  } catch (error) {
+    console.error("Database error fetching case study:", error);
+  }
 
   if (!caseStudy) {
     notFound();

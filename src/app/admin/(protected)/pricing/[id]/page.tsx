@@ -4,12 +4,19 @@ import PricingPlanForm from "@/components/admin/PricingPlanForm";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditPricingPlanPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const plan = await prisma.pricingPlan.findUnique({
-    where: { id: resolvedParams.id }
-  });
+  let plan = null;
+  try {
+    plan = await prisma.pricingPlan.findUnique({
+      where: { id: resolvedParams.id }
+    });
+  } catch (error) {
+    console.error("Database error fetching pricing plan:", error);
+  }
 
   if (!plan) {
     notFound();

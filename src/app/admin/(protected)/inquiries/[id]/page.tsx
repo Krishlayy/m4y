@@ -1,30 +1,37 @@
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
-import { ArrowLeft, User, Phone, Mail, Building2, Calendar, Link as LinkIcon } from "lucide-react";
+import { ArrowLeft, User, Phone, Mail, Calendar } from "lucide-react";
 import Link from "next/link";
 import { InquiryActions } from "@/components/admin/InquiryActions";
+
+export const dynamic = "force-dynamic";
 
 export default async function InquiryDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const inquiry = await prisma.contactInquiry.findUnique({
-    where: { id: resolvedParams.id },
-    include: {
-      lead: true
-    }
-  });
+  let inquiry = null;
+  try {
+    inquiry = await prisma.contactInquiry.findUnique({
+      where: { id: resolvedParams.id },
+      include: {
+        lead: true
+      }
+    });
+  } catch (error) {
+    console.error("Database error fetching inquiry:", error);
+  }
 
   if (!inquiry) {
     notFound();
   }
 
-  // Auto-mark as read when viewed
+  // Auto-mark as read when viewed safely
   if (!inquiry.isRead) {
-    await prisma.contactInquiry.update({
+    prisma.contactInquiry.update({
       where: { id: inquiry.id },
       data: { isRead: true }
-    });
+    }).catch(() => {});
   }
 
   return (
@@ -45,71 +52,65 @@ export default async function InquiryDetailPage({ params }: { params: Promise<{ 
           <div className="bg-white border-4 border-black hard-shadow p-6 lg:p-8">
             <div className="flex justify-between items-start mb-8">
               <div>
-                <h2 className="text-3xl font-black uppercase tracking-tighter mb-2">{inquiry.subject || "No Subject"}</h2>
+                <h2 className="text-2xl lg:text-3xl font-black uppercase tracking-tight mb-2">
+                  {inquiry.subject || "General Inquiry"}
+                </h2>
                 <div className="flex items-center gap-2 text-sm font-bold opacity-70">
                   <Calendar className="w-4 h-4" />
-                  <span>Submitted {format(new Date(inquiry.createdAt), "MMMM d, yyyy 'at' h:mm a")}</span>
+                  <span>
+                    {inquiry.createdAt ? format(new Date(inquiry.createdAt), "MMMM d, yyyy 'at' h:mm a") : "Recent"}
+                  </span>
                 </div>
               </div>
-              {inquiry.isResolved && (
-                <span className="px-4 py-2 bg-green-500 text-white text-sm font-bold uppercase tracking-widest border-2 border-black">
-                  RESOLVED
-                </span>
-              )}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 p-6 bg-gray-50 border-4 border-black">
-              <div className="flex items-start gap-3">
-                <User className="w-5 h-5 mt-1 text-[#FF3B00]" />
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">Name</p>
-                  <p className="font-black text-lg">{inquiry.name}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 mt-1 text-[#FF3B00]" />
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">Email</p>
-                  <p className="font-bold">{inquiry.email}</p>
-                </div>
-              </div>
+              <span className={`px-4 py-1 text-sm font-black uppercase tracking-widest border-2 border-black ${inquiry.isRead ? 'bg-gray-200 text-gray-700' : 'bg-[#FF5500] text-white'}`}>
+                {inquiry.isRead ? "Read" : "Unread"}
+              </span>
             </div>
 
             <div className="border-t-4 border-black pt-6">
-              <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Message Content</p>
-              <div className="font-medium leading-relaxed whitespace-pre-wrap text-lg">
+              <h3 className="text-sm font-black uppercase tracking-widest text-gray-500 mb-4">Message Content</h3>
+              <div className="bg-gray-50 border-2 border-black p-6 font-medium text-lg leading-relaxed whitespace-pre-wrap">
                 {inquiry.message}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Sidebar Actions */}
+        {/* Sidebar Info & Actions */}
         <div className="flex flex-col gap-6">
-          <div className="bg-[#FFD700] border-4 border-black hard-shadow p-6">
-            <h3 className="text-xl font-black uppercase tracking-tight mb-6">Manage Inquiry</h3>
+          <div className="bg-white border-4 border-black hard-shadow p-6">
+            <h3 className="text-lg font-black uppercase tracking-tight border-b-4 border-black pb-3 mb-6">Sender Details</h3>
             
-            <InquiryActions 
-              inquiryId={inquiry.id} 
-              isRead={true} // It's auto-read on view
-              isResolved={inquiry.isResolved}
-              hasLead={!!inquiry.leadId}
-            />
-            
-            {inquiry.leadId && inquiry.lead && (
-              <div className="mt-6 pt-6 border-t-4 border-black">
-                <p className="text-sm font-bold uppercase tracking-widest text-black/60 mb-2">Linked Lead</p>
-                <Link 
-                  href={`/admin/leads/${inquiry.leadId}`}
-                  className="flex items-center gap-2 font-black text-lg hover:underline decoration-2 underline-offset-4"
-                >
-                  <LinkIcon className="w-5 h-5" />
-                  {inquiry.lead.name}
-                </Link>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <User className="w-5 h-5 text-gray-400 shrink-0" />
+                <span className="font-bold text-lg">{inquiry.name}</span>
               </div>
-            )}
+              
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-gray-400 shrink-0" />
+                <a href={`mailto:${inquiry.email}`} className="font-medium text-blue-600 hover:underline break-all">
+                  {inquiry.email}
+                </a>
+              </div>
+
+              {inquiry.lead?.phone && (
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-gray-400 shrink-0" />
+                  <a href={`tel:${inquiry.lead.phone}`} className="font-medium hover:underline">
+                    {inquiry.lead.phone}
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
+
+          <InquiryActions 
+            inquiryId={inquiry.id} 
+            isRead={inquiry.isRead} 
+            isResolved={inquiry.isResolved}
+            hasLead={!!inquiry.leadId}
+          />
         </div>
       </div>
     </div>

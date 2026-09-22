@@ -2,16 +2,32 @@ import { prisma } from "@/lib/prisma";
 import MediaUploader from "@/components/admin/MediaUploader";
 import MediaCard from "@/components/admin/MediaCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function MediaPage() {
-  const mediaItems = await prisma.media.findMany({
-    orderBy: { createdAt: "desc" }
-  });
+  let mediaItems: Awaited<ReturnType<typeof prisma.media.findMany>> = [];
+  let dbError = false;
+
+  try {
+    mediaItems = await prisma.media.findMany({
+      orderBy: { createdAt: "desc" }
+    });
+  } catch (error) {
+    console.error("Database error fetching media:", error);
+    dbError = true;
+  }
 
   return (
     <div className="flex flex-col gap-6 max-w-7xl mx-auto">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl lg:text-4xl font-black uppercase tracking-tight">Media Library</h1>
       </div>
+
+      {dbError && (
+        <div className="p-4 bg-[#FF5500] text-white font-bold border-4 border-black">
+          ⚠️ Could not connect to database. Media uploads may not persist.
+        </div>
+      )}
 
       <MediaUploader />
 

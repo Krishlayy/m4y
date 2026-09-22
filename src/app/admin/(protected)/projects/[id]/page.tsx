@@ -4,12 +4,19 @@ import ProjectForm from "@/components/admin/ProjectForm";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const project = await prisma.project.findUnique({
-    where: { id: resolvedParams.id }
-  });
+  let project = null;
+  try {
+    project = await prisma.project.findUnique({
+      where: { id: resolvedParams.id }
+    });
+  } catch (error) {
+    console.error("Database error fetching project:", error);
+  }
 
   if (!project) {
     notFound();

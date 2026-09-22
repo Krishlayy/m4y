@@ -1,11 +1,20 @@
-﻿import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/auth";
+import { isAdminAuthBypassEnabled } from "@/lib/admin/bypass";
 import fs from "fs";
 import path from "path";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
+  // Auth check — this endpoint exposes sensitive lead data
+  const session = await auth();
+  const isBypass = isAdminAuthBypassEnabled();
+  if (!session?.user && !isBypass) {
+    return new NextResponse("Unauthorized", { status: 401 });
+  }
+
   try {
     const isDownload = req.nextUrl.searchParams.get("download") === "true";
 

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -11,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         '/api/',
       ],
     },
-    sitemap: 'https://marketing4you.in/sitemap.xml',
+    sitemap: `${getSiteUrl()}/sitemap.xml`,
   };
 }

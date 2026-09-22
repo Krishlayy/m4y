@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog';
 import { caseStudies } from '@/data/case-studies';
+import { getSiteUrl } from '@/lib/site-url';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://marketing4you.in';
+  const baseUrl = getSiteUrl();
 
   // Core public routes
   const staticRoutes = [

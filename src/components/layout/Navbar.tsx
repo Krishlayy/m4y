@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,16 +9,26 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const navLinks = [
     { name: "Services", href: "/services" },
+    { name: "Founders", href: "/founders" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Work", href: "/work" },
     { name: "About", href: "/about" },
   ];
 
   return (
     <>
       <header
-        className={`relative z-50 transition-all duration-300 bg-white border-b-4 border-black ${
-          scrolled ? "py-4" : "py-5"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b-4 border-black ${
+          scrolled ? "py-3 shadow-[0_4px_0_#000]" : "py-5"
         }`}
       >
         <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40">

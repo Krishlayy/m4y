@@ -5,18 +5,25 @@ import { ArrowLeft, User, Phone, Mail, Building2, Briefcase, Calendar } from "lu
 import Link from "next/link";
 import { LeadStatusSelector, LeadNoteForm } from "@/components/admin/LeadActions";
 
+export const dynamic = "force-dynamic";
+
 export default async function LeadDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const lead = await prisma.lead.findUnique({
-    where: { id: resolvedParams.id },
-    include: {
-      Notes: {
-        include: { author: true },
-        orderBy: { createdAt: 'desc' }
+  let lead = null;
+  try {
+    lead = await prisma.lead.findUnique({
+      where: { id: resolvedParams.id },
+      include: {
+        Notes: {
+          include: { author: true },
+          orderBy: { createdAt: 'desc' }
+        }
       }
-    }
-  });
+    });
+  } catch (error) {
+    console.error("Database error fetching lead:", error);
+  }
 
   if (!lead) {
     notFound();

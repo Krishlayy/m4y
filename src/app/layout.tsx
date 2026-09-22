@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 import { getSiteSettings } from "@/lib/public-data";
+import { getSiteUrl } from "@/lib/site-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
@@ -22,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const description = settings?.defaultSeoMeta || "M4Y is a premier digital marketing agency blending performance marketing, brand strategy, and AI solutions.";
   
   return {
-    metadataBase: new URL("https://marketing4you.in"),
+    metadataBase: new URL(getSiteUrl()),
     title: {
       default: title,
       template: `%s | ${settings?.agencyName || "M4Y"}`,
@@ -32,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: "https://marketing4you.in",
+      url: getSiteUrl(),
       siteName: settings?.agencyName || "M4Y",
       images: [
         {
@@ -70,8 +71,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "M4Y Digital Agency",
-              "url": "https://marketing4you.in",
-              "logo": "https://marketing4you.in/logo.png",
+              "url": getSiteUrl(),
+              "logo": `${getSiteUrl()}/logo.png`,
               "description": "Premier digital marketing agency blending performance marketing, brand strategy, and AI solutions.",
               "address": {
                 "@type": "PostalAddress",

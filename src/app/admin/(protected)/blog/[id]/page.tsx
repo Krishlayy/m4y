@@ -4,12 +4,19 @@ import BlogPostForm from "@/components/admin/BlogPostForm";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditBlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const post = await prisma.blogPost.findUnique({
-    where: { id: resolvedParams.id }
-  });
+  let post = null;
+  try {
+    post = await prisma.blogPost.findUnique({
+      where: { id: resolvedParams.id }
+    });
+  } catch (error) {
+    console.error("Database error fetching blog post:", error);
+  }
 
   if (!post) {
     notFound();

@@ -4,12 +4,19 @@ import ServiceForm from "@/components/admin/ServiceForm";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditServicePage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const service = await prisma.service.findUnique({
-    where: { id: resolvedParams.id }
-  });
+  let service = null;
+  try {
+    service = await prisma.service.findUnique({
+      where: { id: resolvedParams.id }
+    });
+  } catch (error) {
+    console.error("Database error fetching service:", error);
+  }
 
   if (!service) {
     notFound();

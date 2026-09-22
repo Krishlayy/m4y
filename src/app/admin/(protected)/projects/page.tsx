@@ -3,10 +3,17 @@ import Link from "next/link";
 import { Plus, Edit2 } from "lucide-react";
 import { format } from "date-fns";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProjectsPage() {
-  const projects = await prisma.project.findMany({
-    orderBy: { displayOrder: "asc" }
-  });
+  let projects: Awaited<ReturnType<typeof prisma.project.findMany>> = [];
+  try {
+    projects = await prisma.project.findMany({
+      orderBy: { displayOrder: "asc" }
+    });
+  } catch (error) {
+    console.error("Database error fetching projects:", error);
+  }
 
   return (
     <div className="flex flex-col gap-6 max-w-7xl mx-auto">
