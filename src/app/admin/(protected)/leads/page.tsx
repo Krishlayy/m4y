@@ -11,6 +11,13 @@ export default async function LeadsPage() {
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl lg:text-4xl font-black uppercase tracking-tight">Leads</h1>
+        <a
+          href="/api/admin/export/leads"
+          download
+          className="inline-flex items-center gap-2 bg-[#FFD700] text-black px-4 py-2 border-2 border-black font-black text-sm uppercase tracking-wider shadow-[3px_3px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+        >
+          📥 Export to Excel (CSV)
+        </a>
       </div>
 
       <div className="bg-white border-4 border-black hard-shadow overflow-x-auto">

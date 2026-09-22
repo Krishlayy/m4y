@@ -81,8 +81,8 @@ export default function ContactPage() {
               <h3 className="text-2xl font-black uppercase mb-4">WhatsApp</h3>
               <p className="font-bold text-xl">+91 92587 35381</p>
             </motion.a>
-            <Link href="/book-call" passHref legacyBehavior>
-              <motion.a 
+            <Link href="/book-call" className="block">
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -92,7 +92,7 @@ export default function ContactPage() {
               >
                 <h3 className="text-2xl font-black uppercase mb-4">Book A Call</h3>
                 <p className="font-bold text-xl">Schedule 30 mins</p>
-              </motion.a>
+              </motion.div>
             </Link>
           </div>
         </section>

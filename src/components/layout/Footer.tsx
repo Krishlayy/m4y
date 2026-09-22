@@ -20,12 +20,12 @@ export default function Footer() {
         <div className="mb-16 md:mb-24 flex flex-col xl:flex-row xl:items-end justify-between flex-wrap gap-8 border-b-4 border-white/20 pb-16">
           <div className="max-w-3xl">
             <span className="inline-block px-3 py-1 bg-[#FF5500] text-white font-black text-xs uppercase tracking-widest border-2 border-white mb-4">
-              Founding Client Window Closing
+              Exclusive Q3 Partnership Roster
             </span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
-              10 Spots.<br />
+              2 Spots.<br />
               <span className="text-black bg-[#FFD700] px-3 py-1 border-4 border-white inline-block mt-2">
-                Who&apos;s Next?
+                Scale With Us.
               </span>
             </h2>
             <p className="text-base sm:text-xl font-bold text-white/70 max-w-xl mb-6">

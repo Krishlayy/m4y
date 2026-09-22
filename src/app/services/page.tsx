@@ -117,14 +117,11 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-                <Link href="/book-call" passHref legacyBehavior>
-                  <motion.a 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`inline-block border-4 border-current py-3 px-6 text-center font-black uppercase tracking-wider hover:bg-white hover:text-black transition-colors ${svc.textColor === 'text-white' ? 'hover:border-white' : 'hover:border-black'}`}
-                  >
-                    Learn More →
-                  </motion.a>
+                <Link
+                  href="/book-call"
+                  className={`inline-block border-4 border-current py-3 px-6 text-center font-black uppercase tracking-wider hover:bg-white hover:text-black transition-colors ${svc.textColor === 'text-white' ? 'hover:border-white' : 'hover:border-black'}`}
+                >
+                  Learn More →
                 </Link>
               </motion.div>
             ))}
@@ -138,14 +135,11 @@ export default function ServicesPage() {
               Don't see what you need?
             </h2>
             <p className="text-2xl font-bold mb-10">We probably do it anyway.</p>
-            <Link href="/book-call" passHref legacyBehavior>
-              <motion.a 
-                whileHover={{ y: -4, x: -4, transition: { type: "spring", stiffness: 300 } }}
-                whileTap={{ y: 0, x: 0 }}
-                className="inline-block bg-[#FF3B00] text-white text-2xl font-black uppercase px-12 py-6 border-4 border-white shadow-[8px_8px_0_#fff] hover:shadow-[12px_12px_0_#fff] transition-shadow"
-              >
-                Let's Talk
-              </motion.a>
+            <Link
+              href="/book-call"
+              className="inline-block bg-[#FF3B00] text-white text-2xl font-black uppercase px-12 py-6 border-4 border-white shadow-[8px_8px_0_#fff] hover:shadow-[12px_12px_0_#fff] transition-shadow hover:-translate-y-1"
+            >
+              Let&apos;s Talk
             </Link>
           </motion.div>
         </section>

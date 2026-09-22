@@ -2,7 +2,74 @@
 
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
+import fs from "fs";
+import path from "path";
 
+// 1. Append lead to local leads_backup.csv for immediate zero-config Excel checking
+function appendToLocalCsv(row: {
+  date: string;
+  formType: string;
+  name: string;
+  email: string;
+  phone?: string;
+  company?: string;
+  budget?: string;
+  message?: string;
+}) {
+  try {
+    const filePath = path.join(process.cwd(), "leads_backup.csv");
+    const header = "Date,Form Type,Name,Email,Phone,Company,Budget / Revenue,Message / Goal\n";
+    if (!fs.existsSync(filePath)) {
+      fs.writeFileSync(filePath, header, "utf8");
+    }
+
+    const escapeCsv = (val?: string) =>
+      `"${(val || "").replace(/"/g, '""').replace(/\r?\n/g, " ")}"`;
+
+    const line =
+      [
+        escapeCsv(row.date),
+        escapeCsv(row.formType),
+        escapeCsv(row.name),
+        escapeCsv(row.email),
+        escapeCsv(row.phone),
+        escapeCsv(row.company),
+        escapeCsv(row.budget),
+        escapeCsv(row.message),
+      ].join(",") + "\n";
+
+    fs.appendFileSync(filePath, line, "utf8");
+  } catch (err) {
+    console.error("Local CSV append error (ignored):", err);
+  }
+}
+
+// 2. Google Sheets / Zapier / Make webhook sync
+async function dispatchGoogleSheet(row: {
+  date: string;
+  formType: string;
+  name: string;
+  email: string;
+  phone?: string;
+  company?: string;
+  budget?: string;
+  message?: string;
+}) {
+  const sheetWebhook = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+  if (!sheetWebhook) return;
+
+  try {
+    await fetch(sheetWebhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(row),
+    });
+  } catch (err) {
+    console.error("Google Sheet webhook error (ignored):", err);
+  }
+}
+
+// 3. Discord / Slack / Telegram Lead Alert
 async function dispatchLeadAlert(title: string, details: Record<string, string | undefined>) {
   const webhookUrl = process.env.LEAD_ALERT_WEBHOOK_URL;
   if (!webhookUrl) return;
@@ -59,6 +126,7 @@ export async function submitContactInquiry(formData: FormData) {
     };
 
     const data = contactSchema.parse(rawData);
+    const dateStr = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
 
     const fullMessage = `
 Phone: ${data.phone || 'N/A'}
@@ -70,6 +138,31 @@ Project Details:
 ${data.message}
     `.trim();
 
+    // 1. Local Excel/CSV File
+    appendToLocalCsv({
+      date: dateStr,
+      formType: "Contact Inquiry",
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      company: data.company,
+      budget: data.budget,
+      message: data.message,
+    });
+
+    // 2. Google Sheets Webhook
+    dispatchGoogleSheet({
+      date: dateStr,
+      formType: "Contact Inquiry",
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      company: data.company,
+      budget: data.budget,
+      message: data.message,
+    });
+
+    // 3. Database
     await prisma.contactInquiry.create({
       data: {
         name: data.name,
@@ -79,7 +172,7 @@ ${data.message}
       },
     });
 
-    // Fire & forget lead alert webhook
+    // 4. Real-time phone alert
     dispatchLeadAlert("New Contact Inquiry Received", {
       Name: data.name,
       Email: data.email,
@@ -110,7 +203,6 @@ const leadSchema = z.object({
 
 export async function submitLead(formData: FormData) {
   try {
-    // Honeypot spam check
     const honeypot = formData.get("website_hp") as string;
     if (honeypot && honeypot.trim().length > 0) {
       return { success: true };
@@ -125,6 +217,27 @@ export async function submitLead(formData: FormData) {
     };
 
     const data = leadSchema.parse(rawData);
+    const dateStr = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+    appendToLocalCsv({
+      date: dateStr,
+      formType: "Lead Form",
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      budget: data.revenue,
+      message: data.goal,
+    });
+
+    dispatchGoogleSheet({
+      date: dateStr,
+      formType: "Lead Form",
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      budget: data.revenue,
+      message: data.goal,
+    });
 
     await prisma.lead.create({
       data: {
@@ -156,6 +269,89 @@ export async function submitLead(formData: FormData) {
   }
 }
 
+const strategyCallSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(150),
+  business: z.string().trim().min(1, "Business name is required").max(150),
+  phone: z.string().trim().min(5, "WhatsApp number is required").max(50),
+  industry: z.string().trim().max(100).optional(),
+  challenge: z.string().trim().max(2000).optional(),
+});
+
+export async function submitStrategyCall(formData: FormData) {
+  try {
+    const honeypot = formData.get("website_hp") as string;
+    if (honeypot && honeypot.trim().length > 0) {
+      return { success: true };
+    }
+
+    const rawData = {
+      name: formData.get("name") as string,
+      business: formData.get("business") as string,
+      phone: formData.get("phone") as string,
+      industry: formData.get("industry") as string,
+      challenge: formData.get("challenge") as string,
+    };
+
+    const data = strategyCallSchema.parse(rawData);
+    const dateStr = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+    // 1. Local Excel/CSV File
+    appendToLocalCsv({
+      date: dateStr,
+      formType: "Strategy Call",
+      name: data.name,
+      email: "N/A",
+      phone: data.phone,
+      company: data.business,
+      budget: data.industry || "N/A",
+      message: data.challenge || "N/A",
+    });
+
+    // 2. Google Sheets Webhook
+    dispatchGoogleSheet({
+      date: dateStr,
+      formType: "Strategy Call",
+      name: data.name,
+      email: "N/A",
+      phone: data.phone,
+      company: data.business,
+      budget: data.industry || "N/A",
+      message: data.challenge || "N/A",
+    });
+
+    // 3. Database
+    await prisma.lead.create({
+      data: {
+        name: data.name,
+        email: `${data.phone.replace(/[^0-9]/g, "") || "client"}@call-request.m4y`,
+        phone: data.phone,
+        company: data.business,
+        budget: data.industry,
+        message: `Industry: ${data.industry || "N/A"} | Challenge: ${data.challenge || "N/A"}`,
+        source: "Strategy Call Booking",
+        status: "NEW",
+      },
+    });
+
+    // 4. Real-time phone alert
+    dispatchLeadAlert("New Strategy Call Booking", {
+      Name: data.name,
+      Phone: data.phone,
+      Business: data.business,
+      Industry: data.industry,
+      Challenge: data.challenge,
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to submit strategy call", error);
+    return {
+      success: false,
+      error: "Failed to submit request. Please WhatsApp founders at +91 92587 35381 directly.",
+    };
+  }
+}
+
 export async function submitEmailCapture(formData: FormData) {
   try {
     const email = formData.get("email") as string;
@@ -167,6 +363,22 @@ export async function submitEmailCapture(formData: FormData) {
     if (!email || !email.includes("@") || email.length > 255) {
       return { success: false, error: "Invalid email" };
     }
+
+    const dateStr = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+    appendToLocalCsv({
+      date: dateStr,
+      formType: "Lead Magnet Download",
+      name: "Lead Magnet Download",
+      email: email.trim(),
+    });
+
+    dispatchGoogleSheet({
+      date: dateStr,
+      formType: "Lead Magnet Download",
+      name: "Lead Magnet Download",
+      email: email.trim(),
+    });
 
     await prisma.lead.create({
       data: {

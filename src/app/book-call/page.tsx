@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
+import BookCallForm from "./BookCallForm";
 
 export const metadata = {
   title: "Book a Free Strategy Call — M4Y",
@@ -103,96 +104,7 @@ export default function BookCallPage() {
             </div>
 
             {/* Form */}
-            <div className="border-4 border-black shadow-[8px_8px_0_#000]">
-              <div className="bg-black px-8 py-5 flex items-center gap-3">
-                <Clock className="w-5 h-5 text-[#FFD700]" />
-                <p className="text-white font-black text-sm uppercase tracking-wider">
-                  Book Your 30-Min Free Call
-                </p>
-              </div>
-              <form
-                action={`https://formsubmit.co/support.m4y@gmail.com`}
-                method="POST"
-                className="p-8 space-y-6 bg-white"
-              >
-                <input type="hidden" name="_subject" value="New Strategy Call Request — M4Y" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-
-                <div>
-                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Your Name *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="Rahul Sharma"
-                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow"
-                  />
-                </div>
-
-                <div>
-                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Business / Brand Name *</label>
-                  <input
-                    type="text"
-                    name="business"
-                    required
-                    placeholder="Your Brand"
-                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow"
-                  />
-                </div>
-
-                <div>
-                  <label className="block font-black text-xs uppercase tracking-widest mb-2">WhatsApp Number *</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder="+91 98765 43210"
-                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow"
-                  />
-                </div>
-
-                <div>
-                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Your Industry</label>
-                  <select
-                    name="industry"
-                    className="w-full border-4 border-black px-4 py-3 font-bold text-black focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow bg-white"
-                  >
-                    <option value="">Select industry...</option>
-                    <option>Restaurant / Food & Beverage</option>
-                    <option>D2C / E-commerce</option>
-                    <option>Fitness / Wellness</option>
-                    <option>Real Estate</option>
-                    <option>Fashion / Apparel</option>
-                    <option>Tech / SaaS</option>
-                    <option>Education / Coaching</option>
-                    <option>Healthcare / Clinic</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block font-black text-xs uppercase tracking-widest mb-2">Biggest Marketing Challenge</label>
-                  <textarea
-                    name="challenge"
-                    rows={3}
-                    placeholder="e.g. We get website visitors but no one converts..."
-                    className="w-full border-4 border-black px-4 py-3 font-bold text-black placeholder:text-black/30 focus:outline-none focus:shadow-[4px_4px_0_#FF3B00] transition-shadow resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-primary w-full justify-center group text-lg"
-                >
-                  Request My Free Call
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <p className="text-center text-xs font-bold text-black/40 uppercase tracking-wider">
-                  We&apos;ll WhatsApp you within 24 hours to confirm.
-                </p>
-              </form>
-            </div>
+            <BookCallForm />
 
           </div>
         </div>
