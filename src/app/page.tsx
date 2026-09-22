@@ -17,14 +17,11 @@ const Approach           = dynamic(() => import('@/components/home/Approach'));
 const TechStack          = dynamic(() => import('@/components/home/TechStack'));
 const Culture            = dynamic(() => import('@/components/home/Culture'));
 const DualCTA            = dynamic(() => import('@/components/home/DualCTA'));
-const ExperienceWarning  = dynamic(() => import('@/components/ui/ExperienceWarning'));
-const FloatingCTA        = dynamic(() => import('@/components/ui/FloatingCTA'));
 const EmailCapture       = dynamic(() => import('@/components/shared/EmailCapture'));
 
 export default function Home() {
   return (
     <>
-      <ExperienceWarning />
       <AnnouncementBar />
       <Navbar />
       <main className="min-h-screen bg-white text-black overflow-hidden">
@@ -70,7 +67,6 @@ export default function Home() {
         <EmailCapture />
       </main>
       <Footer />
-      <FloatingCTA />
     </>
   );
 }
