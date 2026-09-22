@@ -24,11 +24,8 @@ const floatingIcons = [
 ];
 
 const founders = [
-  { name: "Krishlay", role: "Tech & AI" },
-  { name: "Ayushman", role: "Engineering" },
-  { name: "Arpit", role: "Strategy" },
-  { name: "Priyanshu", role: "Performance" },
-  { name: "Bhavya", role: "Influencer" },
+  { name: "Krishlay", role: "Tech & AI", avatar: "/founder-krishlay.png" },
+  { name: "Ayushman", role: "Engineering & Growth", avatar: "/founder-ayushman.png" },
 ];
 
 import AnimatedTextBackground from "@/components/ui/AnimatedTextBackground";
@@ -70,7 +67,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FF3B00] text-white font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
           >
             <span className="w-2 h-2 bg-white animate-pulse" />
-            Now Accepting Founding Clients — Limited Spots
+            Now Accepting Founding Clients — 10 Spots Only
           </motion.div>
 
           {/* Main Heading */}
@@ -78,11 +75,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-white"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tighter mb-8 text-white"
           >
             Your Brand.
             <br />
-            <span className="text-black bg-[#FFD700] px-2 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#FF3B00]">
+            <span className="text-black bg-[#FFD700] px-3 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#FF3B00]">
               Built Right.
             </span>
             <br />
@@ -94,9 +91,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-white font-bold leading-relaxed mb-12 drop-shadow-md"
+            className="max-w-2xl mx-auto text-lg md:text-xl text-white font-bold leading-relaxed mb-12 drop-shadow-md bg-black/40 backdrop-blur-sm p-4 border-2 border-white/20"
           >
-            5 BTech CS founders who chose marketing over MNCs. We bring engineering precision to every campaign — no fluff, no juniors, just founders doing the work.
+            2 BTech CS founders who chose marketing over MNCs. We bring engineering precision to every campaign — no fluff, no junior account managers, just founders doing the work.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -122,21 +119,21 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="border-4 border-black shadow-[8px_8px_0px_#000] max-w-4xl mx-auto bg-white"
+            className="border-4 border-black shadow-[8px_8px_0px_#000] max-w-xl mx-auto bg-white"
           >
             <div className="border-b-4 border-black px-6 py-3 bg-black">
               <p className="text-white font-black text-xs uppercase tracking-widest text-center">
-                👥 Meet The 5 Founders — BTech CS — No Juniors. No Outsourcing.
+                👥 Meet The 2 Founders — BTech CS — Zero Interns
               </p>
             </div>
-            <div className="grid grid-cols-5 divide-x-4 divide-black">
+            <div className="grid grid-cols-2 divide-x-4 divide-black">
               {founders.map((f, i) => (
-                <div key={i} className="p-4 md:p-6 text-center group hover:bg-[#FF3B00] hover:text-white transition-colors duration-150">
-                  <div className="w-10 h-10 md:w-14 md:h-14 border-4 border-black mx-auto mb-3 flex items-center justify-center font-black text-lg md:text-xl bg-[#FFD700] group-hover:bg-white group-hover:text-black transition-colors">
-                    {f.name[0]}
+                <div key={i} className="p-4 md:p-6 text-center group hover:bg-[#FFD700] transition-colors duration-150 flex flex-col items-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 border-4 border-black rounded-full overflow-hidden mx-auto mb-3 bg-white shadow-[3px_3px_0px_#000]">
+                    <img src={f.avatar} alt={f.name} className="w-full h-full object-cover" />
                   </div>
-                  <p className="font-black text-xs md:text-sm uppercase tracking-wider leading-tight">{f.name}</p>
-                  <p className="font-bold text-xs opacity-60 uppercase tracking-wider mt-1 hidden md:block">{f.role}</p>
+                  <p className="font-black text-sm md:text-base uppercase tracking-wider leading-tight text-black">{f.name}</p>
+                  <p className="font-bold text-xs bg-black text-white px-2 py-0.5 mt-1">{f.role}</p>
                 </div>
               ))}
             </div>

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { number: '5', label: 'CS Founders' },
+  { number: '2', label: 'CS Founders' },
   { number: '100%', label: 'Client Asset Ownership' },
   { number: '2 Hrs', label: 'Response Time' },
   { number: '₹0', label: 'Hidden Fees' },

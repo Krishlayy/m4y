@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 const advantages = [
   {
     title: 'You Get Founders, Not Interns',
-    content: 'Every campaign, every strategy, every ad creative — done by the 5 founders personally. No handoffs to a junior. No account managers playing telephone. You get direct access to the people who built this agency.'
+    content: 'Every campaign, every strategy, every ad creative — done by the 2 founders personally. No handoffs to a junior. No account managers playing telephone. You get direct access to the people who built this agency.'
   },
   {
     title: 'Engineers Who Understand Marketing',

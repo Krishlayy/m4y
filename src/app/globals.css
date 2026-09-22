@@ -46,11 +46,17 @@ html, body {
 }
 
 /* ===== Neo-Brutalist Typography ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 900; /* Maximum thickness */
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  text-transform: uppercase; /* Force uppercase for that sticker look */
+h1, h2 {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
 }
 
 /* The Sticker Text Effect */

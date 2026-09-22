@@ -3,7 +3,7 @@ import { ArrowRight, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
   title: "Book a Free Strategy Call — M4Y",
-  description: "30 minutes. Brutally honest audit of your marketing. Zero obligation. Book your free strategy call with M4Y's 5 founding team members.",
+  description: "30 minutes. Brutally honest audit of your marketing. Zero obligation. Book your free strategy call with M4Y's 2 founders.",
 };
 
 const steps = [

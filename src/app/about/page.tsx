@@ -15,10 +15,7 @@ const fadeUp = {
 export default function AboutPage() {
   const founders = [
     { name: 'Krishlay', role: 'Tech & AI', color: 'bg-[#FF3B00]', avatar: '/founder-krishlay.png' },
-    { name: 'Ayushman', role: 'Engineering', color: 'bg-[#FFD700]', avatar: '/founder-ayushman.png' },
-    { name: 'Arpit', role: 'Brand & Strategy', color: 'bg-white', avatar: '/founder-arpit.png' },
-    { name: 'Priyanshu', role: 'Performance Marketing', color: 'bg-[#FF3B00]', avatar: '/founder-priyanshu.png' },
-    { name: 'Bhavya', role: 'Influencer & Content', color: 'bg-[#FFD700]', avatar: '/founder-bhavya.png' },
+    { name: 'Ayushman', role: 'Engineering & Growth', color: 'bg-[#FFD700]', avatar: '/founder-ayushman.png' },
   ];
 
   const values = [
@@ -49,37 +46,37 @@ export default function AboutPage() {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 border-4 border-black shadow-[8px_8px_0_#000]"
             >
-              We are 5 BTech CS graduates who realized traditional agencies don't get tech, data, or fast execution. So we built M4Y.
+              We are 2 BTech CS graduates who realized traditional agencies don't get tech, data, or fast execution. So we built M4Y.
             </motion.p>
           </div>
         </section>
 
         {/* Founders Grid */}
         <section className="px-6 py-24 border-b-4 border-black bg-white">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.h2 {...fadeUp} className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">
               The Founders
             </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {founders.map((founder, i) => (
                 <motion.div 
                   key={i} 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  transition={{ duration: 0.5, delay: i * 0.15 }}
                   whileHover={{ y: -8, x: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                  className={`p-8 border-4 border-black shadow-[8px_8px_0_#000] hover:shadow-[16px_16px_0_#000] transition-shadow ${founder.color} flex flex-col items-center text-center`}
+                  className={`p-10 border-4 border-black shadow-[8px_8px_0_#000] hover:shadow-[16px_16px_0_#000] transition-shadow ${founder.color} flex flex-col items-center text-center`}
                 >
-                  <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden mb-4 bg-white shadow-[4px_4px_0_#000]">
+                  <div className="w-36 h-36 rounded-full border-4 border-black overflow-hidden mb-6 bg-white shadow-[4px_4px_0_#000]">
                     <img
                       src={founder.avatar}
                       alt={`${founder.name} avatar`}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-3xl font-black uppercase mb-2">{founder.name}</h3>
-                  <p className="text-xl font-bold bg-black text-white inline-block px-3 py-1">{founder.role}</p>
+                  <h3 className="text-3xl md:text-4xl font-black uppercase mb-2">{founder.name}</h3>
+                  <p className="text-xl font-bold bg-black text-white inline-block px-4 py-1">{founder.role}</p>
                 </motion.div>
               ))}
             </div>
