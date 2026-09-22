@@ -23,7 +23,7 @@ export default function AboutPage() {
       badgeColor: "bg-[#FF5500] text-white",
       avatar: "/founder-krishlay.png",
       linkedin: "https://www.linkedin.com/in/kishalay-sharma-35752b223/",
-      bio: "After 4 years grinding in hostel rooms and mastering modern AI architectures, Kishalay chose creative freedom over corporate bureaucracy. He designs the automation, funnels, and tech that power our client's growth."
+      bio: "Specializing in AI automation, scalable software platforms, and algorithmic growth systems, Kishalay leads engineering, web architecture, and automated conversion funnels that outperform traditional agency models."
     },
     {
       name: "Ayushman Singh",
@@ -33,7 +33,7 @@ export default function AboutPage() {
       badgeColor: "bg-black text-white",
       avatar: "/founder-ayushman.png",
       linkedin: "https://www.linkedin.com/in/ayushmansingh21/",
-      bio: "Engineered from hostel room debates to production software, Ayushman turns growth into a science. He handles backend systems, conversion engines, and paid marketing pipelines that deliver true ROI."
+      bio: "Combining software engineering precision with aggressive performance marketing, Ayushman architects backend data pipelines, conversion tracking, and high-ROI growth loops that turn customer acquisition into a predictable science."
     },
   ];
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF5500] text-white font-black text-xs sm:text-sm uppercase tracking-widest border-2 border-black mb-6 shadow-[3px_3px_0_#000]"
             >
-              <Flame className="w-4 h-4 fill-white" /> The Untold Story of M4Y
+              <Flame className="w-4 h-4 fill-white" /> The M4Y Origin & Mission
             </motion.div>
 
             <motion.h1 
@@ -60,9 +60,9 @@ export default function AboutPage() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.95]"
             >
-              4 Years in a Hostel.<br />
+              Two Engineers Who<br />
               <span className="text-white bg-black px-4 py-1 border-4 border-black inline-block mt-2">
-                Zero Desire for MNCs.
+                Refused To Settle.
               </span>
             </motion.h1>
 
@@ -72,12 +72,12 @@ export default function AboutPage() {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="text-lg sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 sm:p-8 border-4 border-black shadow-[8px_8px_0_#000] leading-relaxed text-black/90"
             >
-              We spent 4 years living together in college hostel rooms—coding till 4 AM, surviving on late-night chai, and realizing we had too much creative fire to waste our youth in corporate cubicles.
+              While most software graduates lined up for safe, slow corporate cubicles, we realized our technical depth and creative instincts could build something far more impactful: high-velocity growth engines for modern brands.
             </motion.p>
           </div>
         </section>
 
-        {/* The Motivational Story Section (Connecting with youth & founders) */}
+        {/* The Motivational Story Section */}
         <section className="px-5 sm:px-8 py-20 md:py-32 border-b-4 border-black bg-white">
           <div className="max-w-5xl mx-auto">
             <div className="border-4 border-black bg-[#FF5500] text-white p-6 sm:p-10 md:p-14 shadow-[10px_10px_0_#000] relative overflow-hidden">
@@ -85,25 +85,25 @@ export default function AboutPage() {
               
               <div className="relative z-10">
                 <span className="text-xs font-black uppercase tracking-widest px-3 py-1 bg-black text-[#FFD700] inline-block mb-6 border-2 border-white">
-                  Why Keep It To Ourselves?
+                  The Founder Manifesto
                 </span>
 
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-8">
-                  &ldquo;We realized we are insanely creative. So why just build side-projects when we can scale real brands?&rdquo;
+                  &ldquo;We have immense technical and creative horsepower. Why build legacy software when we can engineer growth for ambitious brands?&rdquo;
                 </h2>
 
                 <div className="space-y-6 text-base sm:text-lg md:text-xl font-bold text-white/95 leading-relaxed">
                   <p>
-                    In college, everyone around us had one script: memorize theory, prepare for campus placements, get a 9-to-5 MNC job, and fill Excel sheets.
+                    Most traditional agencies are completely disconnected from technology. They still operate like it’s 2015—relying on manual spreadsheets, slow turnarounds, and layers of account managers who don&apos;t know how to code, build automated funnels, or analyze data at scale.
                   </p>
                   <p>
-                    Every night in that hostel room, we chose a different path. We opened our laptops, engineered viral marketing scripts, broke APIs, built software, and watched online brands explode with the right blend of creative storytelling and tech automation.
+                    As engineers, we saw an enormous opportunity. By uniting modern AI workflows, custom-coded web platforms, and psychological performance marketing, we could build campaigns that don&apos;t just look pretty—they generate exponential, measurable returns.
                   </p>
                   <p>
-                    One night after our final exams, we asked ourselves the life-changing question: <span className="text-[#FFD700] underline decoration-4">Why let this creativity die in an office?</span> Why not take that raw hostel brotherhood, relentless work ethic, and tech intelligence to help real founders build empires?
+                    We founded M4Y with a clear standard: <span className="text-[#FFD700] underline decoration-4">Zero outsourcing. Zero junior handoffs. Total founder accountability.</span> When you work with us, you partner directly with the builders who engineer your growth.
                   </p>
                   <p className="text-[#FFD700] text-xl sm:text-2xl font-black">
-                    That is M4Y. 2 Founders. No excuses. Relentless growth.
+                    That is M4Y. 2 Founders. High-velocity execution. Uncompromising results.
                   </p>
                 </div>
               </div>

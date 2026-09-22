@@ -22,7 +22,7 @@ export const founders: Founder[] = [
     name: 'Kishalay Sharma',
     role: 'Co-Founder & Tech Lead',
     department: 'Technology & AI Automation',
-    bio: 'After 4 intense years in engineering hostel rooms coding till 4 AM, Kishalay realized that traditional corporate desks were a creative trap. He channeled that raw late-night hustle into M4Y—building AI automation, high-converting platforms, and scalable growth systems for ambitious brands.',
+    bio: 'Specializing in AI automation, scalable software platforms, and algorithmic growth systems, Kishalay ensures partner brands deploy modern technical infrastructure that outperforms traditional marketing agencies. He leads engineering, web architecture, and automated conversion funnels.',
     avatar: '/founder-krishlay.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/kishalay-sharma-35752b223/',
@@ -36,7 +36,7 @@ export const founders: Founder[] = [
     name: 'Ayushman Singh',
     role: 'Co-Founder & Growth Engineer',
     department: 'Backend Engineering & Strategy',
-    bio: 'From hostel room debates to scaling production software, Ayushman believed that marketing shouldn\'t just be fancy slogans—it must be engineered. He crafts backend engines, tracking infrastructure, and creative marketing systems that turn clicks into measurable revenue.',
+    bio: 'Ayushman combines software engineering precision with aggressive performance marketing. He architects backend data pipelines, conversion tracking, and high-ROI growth loops, transforming customer acquisition into an exact science that generates predictable business revenue.',
     avatar: '/founder-ayushman.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/ayushmansingh21/',

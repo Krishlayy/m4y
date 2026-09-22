@@ -59,7 +59,7 @@ export default function HeroSection() {
           className="text-center"
           style={{ y: yParallax, opacity: opacityParallax }}
         >
-          {/* Founding Badge with Hostel Story Hook */}
+          {/* Founding Badge with High-Status Positioning */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-1.5 border-4 border-black bg-[#FF5500] text-white font-black uppercase text-xs sm:text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-6 sm:mb-8"
           >
             <span className="w-2 h-2 bg-[#FFD700] animate-ping" />
-            🔥 4 Years in Hostel • 2 Founders • 10 Spots Only
+            ⚡ Engineering Precision • Creative Fire • Exclusive Q3 Roster
           </motion.div>
 
           {/* Main Heading: White + Orange + Black + Yellow */}
@@ -93,7 +93,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-white font-bold leading-relaxed mb-10 sm:mb-12 drop-shadow-md bg-black/50 backdrop-blur-sm p-4 sm:p-5 border-2 border-white/20"
           >
-            From 4 years in engineering hostel rooms to scaling modern brands. We combine hardcore software engineering with viral creative strategy — zero interns, zero corporate fluff.
+            Two software engineers building the next generation of marketing. We combine custom AI automation, high-converting platforms, and aggressive growth campaigns — zero junior account managers, zero corporate red tape.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -123,7 +123,7 @@ export default function HeroSection() {
           >
             <div className="border-b-4 border-black px-4 sm:px-6 py-2.5 bg-black">
               <p className="text-white font-black text-xs uppercase tracking-widest text-center">
-                👥 Meet Kishalay & Ayushman — 4 Yrs Hostel • Zero Interns
+                👥 Meet Kishalay & Ayushman — Technical Founders • Direct Execution
               </p>
             </div>
             <div className="grid grid-cols-2 divide-x-4 divide-black">

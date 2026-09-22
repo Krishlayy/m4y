@@ -33,7 +33,7 @@ export default function FoundersPage() {
         <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 border-b-4 border-black bg-[#FFD700]">
           <div className="max-w-5xl mx-auto px-5 sm:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF5500] text-white font-black text-xs sm:text-sm uppercase tracking-widest border-2 border-black mb-6 shadow-[3px_3px_0_#000]">
-              <Flame className="w-4 h-4 fill-white" /> 4 Years In Hostel • 0 MNC Desks
+              <Flame className="w-4 h-4 fill-white" /> Technical Leadership • Unmatched Speed
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-6 leading-[0.95]">
@@ -41,7 +41,7 @@ export default function FoundersPage() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 border-4 border-black shadow-[6px_6px_0_#000] text-black/90 leading-relaxed">
-              Two BTech engineers who realized 4 years of late-night hostel innovation was too powerful to waste in corporate cubicles. We build and scale brands with engineering discipline.
+              Two software engineers who combine deep technical architecture with high-converting creative strategy. We partner with ambitious brands to build predictable, scalable revenue engines.
             </p>
           </div>
         </section>

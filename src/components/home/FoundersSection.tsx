@@ -9,7 +9,7 @@ const founders = [
     initial: "K",
     name: "Kishalay Sharma",
     role: "Co-Founder & Tech Lead",
-    bio: "4 years in a hostel room coding AI tools and web engines taught Kishalay one thing: creative freedom beats corporate conformity. He builds the automated funnels, AI integrations, and tech stack that give M4Y brands an unfair edge in the market.",
+    bio: "Specializing in AI automation, programmatic growth engines, and high-performance web architecture, Kishalay builds the technical infrastructure that gives M4Y partner brands an unfair advantage in saturated markets.",
     color: "bg-white",
     textColor: "text-black",
     badgeBg: "bg-[#FF5500] text-white",
@@ -22,7 +22,7 @@ const founders = [
     initial: "A",
     name: "Ayushman Singh",
     role: "Co-Founder & Growth Engineer",
-    bio: "Passionate about scaling digital systems, Ayushman refused to let hostel creativity die inside a corporate cubicle. He architects backend data pipelines, conversion tracking, and high-ROI growth loops so every rupee you spend generates tangible returns.",
+    bio: "Combining deep backend engineering with rigorous performance marketing, Ayushman builds precision tracking pipelines, conversion systems, and paid acquisition loops that turn ad spend into predictable revenue.",
     color: "bg-[#FFD700]",
     textColor: "text-black",
     badgeBg: "bg-black text-white",
@@ -38,11 +38,11 @@ export default function FoundersSection() {
     <section className="bg-black text-white border-t-4 border-black py-20 md:py-36">
       <div className="w-full px-5 sm:px-8 md:px-16 lg:px-28 xl:px-40">
 
-        {/* Heading & Hostel Hustle Story */}
+        {/* Heading & High-Status Positioning */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-14 md:mb-20">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FF5500] text-white font-black text-xs uppercase tracking-widest border-2 border-white mb-4">
-              🔥 4 Years in Hostel • 0 Corporate MNCs
+              🔥 The Tech-First Marketing Agency • Elite Execution
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.95] text-white">
               2 Founders.<br />
@@ -52,7 +52,7 @@ export default function FoundersSection() {
             </h2>
           </div>
           <p className="text-base sm:text-lg md:text-xl font-bold text-white/70 max-w-lg leading-relaxed">
-            During 4 years living together in hostel rooms, we discovered we were obsessed with creating, coding, and building things that actually move people. Why lock that energy into a 9-to-5 cubicle? We created M4Y to help ambitious businesses scale ruthlessly.
+            We realized traditional agencies are broken: bloated account management, slow turnarounds, and zero technical depth. We built M4Y to bring engineering discipline and high-velocity creative testing directly to ambitious brands.
           </p>
         </div>
 

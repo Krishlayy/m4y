@@ -24,19 +24,19 @@ export default function LeadMagnet() {
                 <Flame className="w-5 h-5 text-[#FFD700]" />
               </div>
               <span className="font-black text-xs uppercase tracking-widest text-[#FFD700]">
-                Founding Client Offer
+                Exclusive Partnership Roster
               </span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-4 leading-[0.9]">
-              Be Our First.<br/>
-              <span className="text-[#FFD700]">Get Our Best.</span>
+              Scale Faster.<br/>
+              <span className="text-[#FFD700]">Partner With Builders.</span>
             </h2>
-            <p className="text-lg text-white/60 font-bold max-w-xl">
-              We&apos;re taking on our first 10 clients at founder rates. You get 5 minds fully dedicated to your growth — not an intern with a checklist.
+            <p className="text-lg text-white/70 font-bold max-w-xl">
+              We intentionally limit active partnerships to ensure obsessive founder-level execution. You get direct technical architecture and growth engineering from Kishalay and Ayushman — zero account managers, zero bureaucracy.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <Users className="w-5 h-5 text-[#FF3B00]" />
-              <span className="font-black text-white/80 text-sm uppercase tracking-wider">Only 10 spots. First come, first served.</span>
+              <span className="font-black text-white/80 text-sm uppercase tracking-wider">Strictly limited partner roster. Direct founder execution.</span>
             </div>
           </div>
 
@@ -45,10 +45,10 @@ export default function LeadMagnet() {
               href="/book-call"
               className="btn-accent w-full md:w-auto group flex items-center justify-center gap-2 !text-lg"
             >
-              Claim a Founding Spot
+              Apply For Partnership
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <p className="text-white/40 font-bold text-xs uppercase tracking-wider text-center">Free 30-min call. Zero obligation.</p>
+            <p className="text-white/40 font-bold text-xs uppercase tracking-wider text-center">Free 30-min growth audit. Zero obligation.</p>
           </div>
         </motion.div>
       </div>

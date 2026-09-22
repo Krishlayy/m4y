@@ -70,8 +70,8 @@ export default function WhatWeBuild() {
               Build For You.
             </span>
           </h2>
-          <p className="text-xl font-bold text-black/60 max-w-2xl">
-            No past clients to show yet — so here&apos;s our thinking instead. Pick an industry and see exactly how M4Y would approach your growth.
+          <p className="text-lg sm:text-xl font-bold text-black/70 max-w-2xl leading-relaxed">
+            Engineered growth frameworks over generic guesswork. Select an industry to see the exact 60-day roadmap M4Y deploys to generate predictable revenue.
           </p>
         </div>
 

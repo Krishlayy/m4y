@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-black text-white pt-20 md:pt-32 pb-12 overflow-hidden relative border-t-4 border-black">
       {/* Top Banner Accent */}
       <div className="w-full bg-[#FFD700] text-black border-b-4 border-black py-3 px-6 text-center font-black text-xs sm:text-sm uppercase tracking-widest">
-        ⚡ 4 Years of Engineering Passion • 2 Founders • Infinite Scale
+        ⚡ Engineering Precision • Creative Fire • Relentless Growth
       </div>
 
       <div className="w-full px-5 sm:px-8 md:px-16 lg:px-28 xl:px-40 pt-16 relative z-10">
@@ -73,7 +73,7 @@ export default function Footer() {
               <span className="text-xs font-black uppercase px-2 py-0.5 bg-white text-black border-2 border-black">Agency</span>
             </div>
             <p className="text-sm font-bold text-white/60 leading-relaxed max-w-xs mb-6">
-              Marketing 4 You — Founded by 2 BTech engineers after 4 years of hostel hustle. We bridge creative storytelling with hardcore tech automation.
+              Marketing 4 You — Founded by 2 software engineers. We combine high-converting creative storytelling with custom AI automation and scalable web architecture.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border-2 border-white/20 text-xs font-bold text-white/80">
               <Sparkles className="w-3.5 h-3.5 text-[#FFD700]" /> Remote & Global • HQ India

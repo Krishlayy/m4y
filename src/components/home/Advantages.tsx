@@ -10,12 +10,12 @@ const advantages = [
     content: 'Every campaign, every strategy, every ad creative — done by the 2 founders personally. No handoffs to a junior. No account managers playing telephone. You get direct access to the people who built this agency.'
   },
   {
-    title: 'Engineers Who Understand Marketing',
-    content: 'We\'re BTech CS graduates who chose marketing over MNCs. That means we build automation nobody else does, analyse data at a depth most agencies can\'t, and code tools that give your campaigns an unfair advantage.'
+    title: 'Engineered Growth, Not Generic Marketing',
+    content: 'We combine software engineering discipline with advanced performance marketing. We build custom automations, analyze user event data with forensic depth, and code conversion tools that traditional creative agencies simply cannot build.'
   },
   {
-    title: 'Founder Pricing — For a Limited Time',
-    content: 'Our first 10 clients lock in the lowest rates we\'ll ever offer. As we grow and prove results, our prices go up. Right now, you get enterprise-level thinking at startup-friendly pricing. That window closes soon.'
+    title: 'Dedicated Partner Roster & Direct Founder Focus',
+    content: 'We intentionally cap our client roster at 10 active partners at a time. This guarantees that Kishalay and Ayushman remain personally embedded in your strategy, delivering rapid technical sprints and unmatched strategic execution.'
   },
   {
     title: 'Obsessed With Your Category',
