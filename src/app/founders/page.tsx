@@ -1,205 +1,128 @@
-'use client';
-import { motion } from 'framer-motion';
-import { Globe, Share2, Mail, ExternalLink, Briefcase, Award, TrendingUp, Cpu, PenTool } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import FloatingCTA from '@/components/ui/FloatingCTA';
-import { SectionHeading } from '@/components/ui/Shared';
-import { founders } from '@/data/founders';
-import Link from 'next/link';
+"use client";
+
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { founders } from "@/data/founders";
+import { motion } from "framer-motion";
+import { ExternalLink, Flame, ArrowRight } from "lucide-react";
+import { LinkedinIcon } from "@/components/ui/BrandIcons";
+import Link from "next/link";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 export default function FoundersPage() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.7 } }
-  };
-
   return (
-    <>
+    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black pt-20 flex flex-col overflow-hidden">
       <Navbar />
-      <main className="min-h-screen selection:bg-yellow-500/30">
-        
-        <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-          <div className="container relative z-10 mx-auto px-6 max-w-7xl">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight tracking-tight mb-8">
-                Meet the <span className="text-gradient bg-gradient-to-r from-[#FF3B00] to-[#FFD700] bg-clip-text text-transparent">Founders</span>
-              </h1>
-              <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed">
-                Five visionaries building the future of marketing. Our diverse expertise combines to create a powerhouse of digital innovation.
-              </p>
-            </motion.div>
-          </div>
-        </section>
 
-        <section className="py-24 relative z-10 border-y border-black/10">
-          <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 max-w-[1400px] mx-auto">
-            {/* Tech & Engineering */}
-            <div className="mb-24">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-12 text-center">Tech & Engineering</h2>
-              <motion.div 
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: "-100px" }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto"
-              >
-                {founders.filter(f => f.name.includes('Krishlay') || f.name.includes('Ayushman')).map((founder, index) => (
-                  <motion.div key={founder.id || founder.name} variants={itemVariants} className="flex">
-                    <div className="modern-card p-8 w-full h-full flex flex-col group relative overflow-hidden">
-                      <div className="flex items-start justify-between mb-8 relative z-10">
-                        <div className="flex items-center gap-6">
-                          <div className="w-20 h-20 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-[4px_4px_0px_rgba(0,0,0,1)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
-                            <span className="text-2xl font-bold text-black tracking-widest">
-                              {founder.name.split(' ').map((n: string) => n[0]).join('')}
-                            </span>
-                          </div>
-                          <div>
-                            <h3 className="text-2xl font-bold mb-1">{founder.name}</h3>
-                            <p className="font-bold text-sm mb-1">{founder.role}</p>
-                            <span className="inline-block px-2 py-0.5 border-2 border-black bg-white rounded-full text-xs font-bold shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                              {founder.department}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="font-medium leading-relaxed mb-8 flex-grow relative z-10">
-                        {founder.bio}
-                      </p>
-                      
-                      <div className="mb-8 relative z-10">
-                        <h4 className="text-xs font-black uppercase tracking-tight tracking-wider mb-3">Superpowers</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {founder.skills?.map((skill: string) => (
-                            <span key={skill} className="px-3 py-1 border-2 border-black bg-white rounded-full text-xs font-bold shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-4 mt-auto pt-6 border-t border-black/10 relative z-10">
-                        {founder.socials?.linkedin && (
-                          <a href={founder.socials.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 border-2 border-black bg-white rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-gray-50 transition-colors">
-                            <Share2 className="w-5 h-5 text-black" />
-                          </a>
-                        )}
-                        {founder.socials?.twitter && (
-                          <a href={founder.socials.twitter} target="_blank" rel="noopener noreferrer" className="p-2 border-2 border-black bg-white rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-gray-50 transition-colors">
-                            <Globe className="w-5 h-5 text-black" />
-                          </a>
-                        )}
-                        {founder.socials?.instagram && (
-                          <a href={founder.socials.instagram} target="_blank" rel="noopener noreferrer" className="p-2 border-2 border-black bg-white rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-gray-50 transition-colors">
-                            <ExternalLink className="w-5 h-5 text-black" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 border-b-4 border-black bg-[#FFD700]">
+          <div className="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF5500] text-white font-black text-xs sm:text-sm uppercase tracking-widest border-2 border-black mb-6 shadow-[3px_3px_0_#000]">
+              <Flame className="w-4 h-4 fill-white" /> 4 Years In Hostel • 0 MNC Desks
             </div>
 
-            {/* Brand & Marketing */}
-            <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-12 text-center">Brand & Marketing</h2>
-              <motion.div 
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: "-100px" }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-              >
-                {founders.filter(f => !f.name.includes('Krishlay') && !f.name.includes('Ayushman')).map((founder, index) => (
-                  <motion.div key={founder.id || founder.name} variants={itemVariants} className="flex">
-                    <div className="modern-card p-8 w-full h-full flex flex-col group relative overflow-hidden">
-                      <div className="flex items-start justify-between mb-8 relative z-10">
-                        <div className="flex items-center gap-6">
-                          <div className="w-20 h-20 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-[4px_4px_0px_rgba(0,0,0,1)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
-                            <span className="text-2xl font-bold text-black tracking-widest">
-                              {founder.name.split(' ').map((n: string) => n[0]).join('')}
-                            </span>
-                          </div>
-                          <div>
-                            <h3 className="text-2xl font-bold mb-1">{founder.name}</h3>
-                            <p className="font-bold text-sm mb-1">{founder.role}</p>
-                            <span className="inline-block px-2 py-0.5 border-2 border-black bg-white rounded-full text-xs font-bold shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                              {founder.department}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="font-medium leading-relaxed mb-8 flex-grow relative z-10">
-                        {founder.bio}
-                      </p>
-                      
-                      <div className="mb-8 relative z-10">
-                        <h4 className="text-xs font-black uppercase tracking-tight tracking-wider mb-3">Superpowers</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {founder.skills?.map((skill: string) => (
-                            <span key={skill} className="px-3 py-1 border-2 border-black bg-white rounded-full text-xs font-bold shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-4 mt-auto pt-6 border-t border-black/10 relative z-10">
-                        {founder.socials?.linkedin && (
-                          <a href={founder.socials.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 border-2 border-black bg-white rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-gray-50 transition-colors">
-                            <Share2 className="w-5 h-5 text-black" />
-                          </a>
-                        )}
-                        {founder.socials?.twitter && (
-                          <a href={founder.socials.twitter} target="_blank" rel="noopener noreferrer" className="p-2 border-2 border-black bg-white rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-gray-50 transition-colors">
-                            <Globe className="w-5 h-5 text-black" />
-                          </a>
-                        )}
-                        {founder.socials?.instagram && (
-                          <a href={founder.socials.instagram} target="_blank" rel="noopener noreferrer" className="p-2 border-2 border-black bg-white rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-gray-50 transition-colors">
-                            <ExternalLink className="w-5 h-5 text-black" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-24 relative z-10">
-          <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-8">Ready to work with our team?</h2>
-            <p className="text-xl font-medium mb-10">
-              Get direct access to our founding team's expertise. We're ready to architect your next phase of growth.
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-6 leading-[0.95]">
+              Meet the <span className="bg-black text-white px-3 py-1 border-4 border-black inline-block mt-2">Founders</span>
+            </h1>
+
+            <p className="text-lg sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 border-4 border-black shadow-[6px_6px_0_#000] text-black/90 leading-relaxed">
+              Two BTech engineers who realized 4 years of late-night hostel innovation was too powerful to waste in corporate cubicles. We build and scale brands with engineering discipline.
             </p>
-            <Link href="/book-call" className="btn-primary text-xl mt-8">
-              Book a Strategy Call
-            </Link>
           </div>
         </section>
 
+        {/* Founders Cards Section */}
+        <section className="py-20 md:py-32 bg-white border-b-4 border-black">
+          <div className="w-full px-5 sm:px-8 md:px-16 lg:px-28 xl:px-40 max-w-5xl mx-auto">
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-100px" }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
+            >
+              {founders.map((founder, index) => (
+                <motion.div key={founder.id || founder.name} variants={itemVariants} className="flex">
+                  <div className={`p-6 sm:p-8 border-4 border-black ${index === 0 ? 'bg-white shadow-[8px_8px_0_0_#FF5500]' : 'bg-[#FFD700] shadow-[8px_8px_0_0_#000]'} w-full flex flex-col group relative overflow-hidden`}>
+                    
+                    <div className="flex items-center gap-5 mb-6 relative z-10">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-black overflow-hidden bg-white shadow-[4px_4px_0_0_#000] shrink-0">
+                        <img src={founder.avatar} alt={founder.name} className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <span className="inline-block px-2.5 py-1 border-2 border-black bg-black text-white text-xs font-black uppercase tracking-wider mb-2 shadow-[2px_2px_0_0_#000]">
+                          {founder.role}
+                        </span>
+                        <h3 className="text-2xl sm:text-3xl font-black uppercase text-black leading-tight">
+                          {founder.name}
+                        </h3>
+                        <p className="text-xs font-bold text-black/60 uppercase mt-0.5">{founder.department}</p>
+                      </div>
+                    </div>
+                    
+                    <p className="font-bold text-sm sm:text-base leading-relaxed mb-6 flex-grow relative z-10 text-black/85">
+                      {founder.bio}
+                    </p>
+                    
+                    <div className="mb-8 relative z-10">
+                      <h4 className="text-xs font-black uppercase tracking-wider text-black/60 mb-3">Core Capabilities</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {founder.skills?.map((skill: string) => (
+                          <span key={skill} className="px-2.5 py-1 border-2 border-black bg-white text-black text-xs font-black uppercase shadow-[2px_2px_0_0_#000]">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="pt-6 border-t-2 border-black/20 mt-auto relative z-10 flex items-center justify-between">
+                      {founder.socials?.linkedin && (
+                        <a 
+                          href={founder.socials.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-flex items-center gap-2 font-black text-xs sm:text-sm uppercase tracking-wider bg-black text-white px-4 py-2 border-2 border-black hover:bg-[#FF5500] hover:text-white transition-colors shadow-[2px_2px_0_0_#000]"
+                        >
+                          <LinkedinIcon className="w-4 h-4 text-[#0077B5]" />
+                          LinkedIn Profile ↗
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Bottom CTA */}
+            <div className="mt-16 text-center">
+              <Link
+                href="/book-call"
+                className="inline-flex items-center gap-3 bg-[#FF5500] text-white font-black text-lg sm:text-xl uppercase px-8 sm:px-12 py-5 border-4 border-black shadow-[6px_6px_0_0_#FFD700] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+              >
+                Work Directly With Us
+                <ArrowRight className="w-6 h-6" />
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
+
       <Footer />
-      <FloatingCTA />
-    </>
+    </div>
   );
 }

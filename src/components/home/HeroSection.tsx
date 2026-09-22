@@ -24,7 +24,7 @@ const floatingIcons = [
 ];
 
 const founders = [
-  { name: "Krishlay", role: "Tech & AI", avatar: "/founder-krishlay.png" },
+  { name: "Kishalay", role: "Tech & AI", avatar: "/founder-krishlay.png" },
   { name: "Ayushman", role: "Engineering & Growth", avatar: "/founder-ayushman.png" },
 ];
 
@@ -36,7 +36,7 @@ export default function HeroSection() {
   const opacityParallax = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32 bg-white text-black border-b-4 border-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-32 bg-white text-black border-b-4 border-black">
 
       {/* Dynamic Animated Text Background */}
       <AnimatedTextBackground />
@@ -54,32 +54,32 @@ export default function HeroSection() {
         </motion.div>
       ))}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16">
         <motion.div
           className="text-center"
           style={{ y: yParallax, opacity: opacityParallax }}
         >
-          {/* Founding Badge */}
+          {/* Founding Badge with Hostel Story Hook */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-5 py-2 border-4 border-black bg-[#FFD700] text-black font-black uppercase text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 border-4 border-black bg-[#FF5500] text-white font-black uppercase text-xs sm:text-sm tracking-wider shadow-[4px_4px_0px_#000] mb-6 sm:mb-8"
           >
-            <span className="w-2 h-2 bg-black animate-pulse" />
-            Now Accepting Founding Clients — 10 Spots Only
+            <span className="w-2 h-2 bg-[#FFD700] animate-ping" />
+            🔥 4 Years in Hostel • 2 Founders • 10 Spots Only
           </motion.div>
 
-          {/* Main Heading */}
+          {/* Main Heading: White + Orange + Black + Yellow */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tighter mb-8 text-white"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tighter mb-6 sm:mb-8 text-white"
           >
             Your Brand.
             <br />
-            <span className="text-black bg-[#FFD700] px-3 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#000]">
+            <span className="text-black bg-[#FFD700] px-3 sm:px-4 py-1 inline-block mt-2 border-4 border-black shadow-[4px_4px_0px_#FF5500]">
               Built Right.
             </span>
             <br />
@@ -91,9 +91,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-white font-bold leading-relaxed mb-12 drop-shadow-md bg-black/40 backdrop-blur-sm p-4 border-2 border-white/20"
+            className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-white font-bold leading-relaxed mb-10 sm:mb-12 drop-shadow-md bg-black/50 backdrop-blur-sm p-4 sm:p-5 border-2 border-white/20"
           >
-            2 BTech CS founders who chose marketing over MNCs. We bring engineering precision to every campaign — no fluff, no junior account managers, just founders doing the work.
+            From 4 years in engineering hostel rooms to scaling modern brands. We combine hardcore software engineering with viral creative strategy — zero interns, zero corporate fluff.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -101,14 +101,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 sm:mb-20 w-full max-w-md sm:max-w-none mx-auto"
           >
-            <Link href="/book-call" className="btn-primary w-full sm:w-auto">
+            <Link href="/book-call" className="btn-primary w-full sm:w-auto text-center justify-center">
               Claim Your Founding Spot
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
 
-            <Link href="/services" className="btn-accent w-full sm:w-auto">
+            <Link href="/services" className="btn-accent w-full sm:w-auto text-center justify-center">
               <Play className="w-5 h-5 mr-2" fill="currentColor" />
               See What We Do
             </Link>
@@ -121,19 +121,19 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="border-4 border-black shadow-[8px_8px_0px_#000] max-w-xl mx-auto bg-white"
           >
-            <div className="border-b-4 border-black px-6 py-3 bg-black">
+            <div className="border-b-4 border-black px-4 sm:px-6 py-2.5 bg-black">
               <p className="text-white font-black text-xs uppercase tracking-widest text-center">
-                👥 Meet The 2 Founders — BTech CS — Zero Interns
+                👥 Meet Kishalay & Ayushman — 4 Yrs Hostel • Zero Interns
               </p>
             </div>
             <div className="grid grid-cols-2 divide-x-4 divide-black">
               {founders.map((f, i) => (
-                <div key={i} className="p-4 md:p-6 text-center group hover:bg-[#FFD700] transition-colors duration-150 flex flex-col items-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 border-4 border-black rounded-full overflow-hidden mx-auto mb-3 bg-white shadow-[3px_3px_0px_#000]">
+                <div key={i} className="p-4 sm:p-6 text-center group hover:bg-[#FFD700] transition-colors duration-150 flex flex-col items-center">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 border-4 border-black rounded-full overflow-hidden mx-auto mb-3 bg-white shadow-[3px_3px_0px_#000]">
                     <img src={f.avatar} alt={f.name} className="w-full h-full object-cover" />
                   </div>
-                  <p className="font-black text-sm md:text-base uppercase tracking-wider leading-tight text-black">{f.name}</p>
-                  <p className="font-bold text-xs bg-black text-white px-2 py-0.5 mt-1">{f.role}</p>
+                  <p className="font-black text-sm sm:text-base uppercase tracking-wider leading-tight text-black">{f.name}</p>
+                  <p className="font-bold text-[11px] sm:text-xs bg-black text-white px-2 py-0.5 mt-1">{f.role}</p>
                 </div>
               ))}
             </div>

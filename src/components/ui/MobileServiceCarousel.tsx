@@ -63,12 +63,12 @@ export default function MobileServiceCarousel() {
       {/* Draggable container */}
       <motion.div
         ref={containerRef}
-        className="cursor-grab active:cursor-grabbing w-full overflow-hidden"
+        className="cursor-grab active:cursor-grabbing w-full overflow-hidden touch-pan-y"
       >
         <motion.div
           drag="x"
           dragConstraints={{ right: 0, left: -((mockServices.length * 300) - (windowWidth || 400) + 48) }}
-          className="flex gap-4 px-6"
+          className="flex gap-4 px-6 touch-pan-y"
           onDragStart={() => triggerHaptic("light")}
           onDragEnd={() => triggerHaptic("medium")}
         >
