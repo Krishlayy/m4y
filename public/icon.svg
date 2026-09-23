@@ -1,0 +1,18 @@
+
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid Black Background with Heavy Border -->
+  <rect width="512" height="512" rx="96" fill="#000000" />
+  
+  <!-- Outer Neobrutalist Gold Accent Box -->
+  <rect x="32" y="32" width="448" height="448" rx="72" fill="none" stroke="#FFD700" stroke-width="24" />
+  
+  <!-- Electric Orange Inner Badge -->
+  <rect x="64" y="64" width="384" height="384" rx="48" fill="#FF5500" stroke="#000000" stroke-width="20" />
+  
+  <!-- Stylized M4Y Bold Text with Drop Shadow -->
+  <!-- Shadow -->
+  <text x="264" y="324" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="200" text-anchor="middle" fill="#000000" letter-spacing="-10">M4Y</text>
+  
+  <!-- Text Fill -->
+  <text x="256" y="316" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="200" text-anchor="middle" fill="#FFD700" letter-spacing="-10">M4Y</text>
+</svg>
