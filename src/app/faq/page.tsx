@@ -16,12 +16,12 @@ export default function FAQPage() {
       <main className="min-h-screen bg-white text-[#0A0A0A] overflow-hidden">
         
         {/* Header Section */}
-        <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 border-b border-black/10 bg-gray-50">
+        <section className="relative pt-32 pb-16 md:pt-44 md:pb-20 border-b border-black/10 bg-gray-50">
           <div className="w-full px-6 md:px-16 lg:px-32 xl:px-40 max-w-[1400px] mx-auto text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-6xl md:text-8xl lg:text-[100px] font-black uppercase tracking-tight mb-8 leading-[0.9]"
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight mb-8 leading-[1.05]"
             >
               Frequently <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF3B00] to-[#FFD700]">Asked Questions</span>
