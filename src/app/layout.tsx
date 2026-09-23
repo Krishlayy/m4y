@@ -59,11 +59,13 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     icons: {
       icon: [
-        { url: "/favicon.ico", sizes: "any" },
-        { url: "/icon.svg", type: "image/svg+xml" },
-        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+        { url: "/favicon-32x32.png?v=m4y2026", sizes: "32x32", type: "image/png" },
+        { url: "/favicon.ico?v=m4y2026", sizes: "any" },
+        { url: "/icon.svg?v=m4y2026", type: "image/svg+xml" },
+        { url: "/icon.png?v=m4y2026", sizes: "512x512", type: "image/png" },
       ],
-      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+      shortcut: ["/favicon-32x32.png?v=m4y2026"],
+      apple: [{ url: "/apple-touch-icon.png?v=m4y2026", sizes: "180x180", type: "image/png" }],
     },
     openGraph: {
       title,
@@ -164,9 +166,12 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico?v=m4y2026" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m4y2026" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m4y2026" />
+        <link rel="icon" href="/icon.svg?v=m4y2026" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=m4y2026" />
+        <link rel="shortcut icon" href="/favicon-32x32.png?v=m4y2026" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6460610795977293"
