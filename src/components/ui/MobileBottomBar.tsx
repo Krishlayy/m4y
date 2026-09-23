@@ -4,7 +4,7 @@ import { Phone, MessageCircle } from "lucide-react";
 
 export default function MobileBottomBar() {
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t-4 border-black bg-white">
+    <div className="md:hidden print:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t-4 border-black bg-white">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/919258735381"

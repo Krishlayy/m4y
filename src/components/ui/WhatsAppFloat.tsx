@@ -15,7 +15,7 @@ export default function WhatsAppFloat() {
       transition={{ delay: 2, type: "spring", stiffness: 260, damping: 20 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="hidden md:flex fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full bg-[#25D366] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] items-center justify-center transition-shadow"
+      className="hidden md:flex print:hidden fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full bg-[#25D366] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] items-center justify-center transition-shadow"
     >
       {/* Pulse ring */}
       <span className="absolute inline-flex w-full h-full rounded-full bg-[#25D366] opacity-50 animate-ping" />
