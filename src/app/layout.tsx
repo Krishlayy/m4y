@@ -53,6 +53,9 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: getSiteUrl(),
     },
+    verification: {
+      google: "googlef57b3505063dc6e2",
+    },
     openGraph: {
       title,
       description,
