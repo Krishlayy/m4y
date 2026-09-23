@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/ui/SmoothScroll";
 import EasterEgg from "@/components/ui/EasterEgg";
 import MobileBottomBar from "@/components/ui/MobileBottomBar";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import GoogleScripts from "@/components/analytics/GoogleScripts";
 import "./globals.css";
 
 const inter = Inter({
@@ -157,6 +158,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6460610795977293"
+          crossOrigin="anonymous"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schemaData),
@@ -164,6 +170,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen font-sans bg-white text-[#000000] selection:bg-[#FFD700] selection:text-[#000000] overflow-x-hidden pb-16 md:pb-0">
+        <GoogleScripts />
         <SplashScreen />
         <EasterEgg />
         <SmoothScroll>{children}</SmoothScroll>
