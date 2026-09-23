@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog';
 import { caseStudies } from '@/data/case-studies';
+import { services } from '@/data/services';
 import { getSiteUrl } from '@/lib/site-url';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -45,5 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...caseStudyRoutes];
+  const serviceRoutes = services.map((s) => ({
+    url: `${baseUrl}/services/${s.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...caseStudyRoutes];
 }

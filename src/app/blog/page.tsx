@@ -8,9 +8,30 @@ import { getPublishedBlogs } from '@/lib/public-data';
 // Force dynamic if needed, or rely on revalidation. We'll use default caching for now (it'll build statically but update based on config)
 export const revalidate = 60;
 
-export const metadata = {
-  title: 'Blog & Insights | M4Y Digital Agency',
-  description: 'Marketing strategies, growth hacks, and industry insights from the M4Y team.',
+import { Metadata } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
+
+export const metadata: Metadata = {
+  title: 'Digital Marketing Blog & Insights — Growth Guides | M4Y',
+  description: 'Actionable digital marketing insights, SEO strategies, performance marketing guides, AI growth hacks, and social media trends from the experts at M4Y.',
+  keywords: [
+    'digital marketing blog',
+    'marketing strategies',
+    'SEO guides India',
+    'performance marketing tips',
+    'AI marketing blog',
+    'social media strategy blog',
+    'M4Y insights',
+  ],
+  openGraph: {
+    title: 'Digital Marketing Blog & Growth Insights | M4Y',
+    description: 'Actionable digital marketing insights, SEO strategies, performance ad guides, and AI marketing hacks.',
+    url: `${getSiteUrl()}/blog`,
+    images: [{ url: '/logo.png', width: 800, height: 600, alt: 'M4Y Blog' }],
+  },
+  alternates: {
+    canonical: `${getSiteUrl()}/blog`,
+  },
 }; // revalidate every 60 seconds
 
 export default async function BlogPage() {

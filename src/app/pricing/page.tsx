@@ -2,9 +2,30 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Pricing | M4Y - Marketing 4 You',
-  description: 'Transparent pricing with no surprises. Honest rates from the founders of M4Y.',
+import { Metadata } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
+
+export const metadata: Metadata = {
+  title: 'Digital Marketing Packages & Pricing — Transparent Rates | M4Y',
+  description: 'Transparent digital marketing pricing starting at ₹15,000/mo. Honest performance marketing, SEO, social media, and web development packages with zero hidden fees.',
+  keywords: [
+    'digital marketing pricing',
+    'digital marketing packages India',
+    'SEO package pricing',
+    "social media marketing cost",
+    'affordable marketing agency',
+    'performance marketing cost India',
+    'M4Y pricing',
+  ],
+  openGraph: {
+    title: 'Digital Marketing Packages & Pricing | M4Y',
+    description: 'Transparent digital marketing packages starting at ₹15,000/mo. Performance, SEO, Social & Web Dev with zero hidden fees.',
+    url: `${getSiteUrl()}/pricing`,
+    images: [{ url: '/logo.png', width: 800, height: 600, alt: 'M4Y Pricing' }],
+  },
+  alternates: {
+    canonical: `${getSiteUrl()}/pricing`,
+  },
 };
 
 export default function PricingPage() {

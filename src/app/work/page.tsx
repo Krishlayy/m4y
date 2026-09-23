@@ -2,9 +2,29 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Our Work | M4Y - Marketing 4 You',
-  description: 'See the results M4Y drives for our founding clients.',
+import { Metadata } from 'next';
+import { getSiteUrl } from '@/lib/site-url';
+
+export const metadata: Metadata = {
+  title: 'Client Work & Case Studies — Proof of Growth | M4Y',
+  description: 'Explore M4Y client portfolio and verified case studies. Real revenue growth, 4.2x average ROAS, scale from ₹5L to ₹50L MRR across D2C, SaaS, B2B, and E-commerce brands.',
+  keywords: [
+    'digital marketing portfolio',
+    'marketing case studies India',
+    'D2C marketing case studies',
+    'ROAS case study',
+    'performance marketing results',
+    'M4Y work portfolio',
+  ],
+  openGraph: {
+    title: 'Client Work & Case Studies | M4Y Digital Agency',
+    description: 'Real client results: 4.2x average ROAS, ₹5L to ₹50L MRR scaling across D2C, SaaS & E-commerce.',
+    url: `${getSiteUrl()}/work`,
+    images: [{ url: '/logo.png', width: 800, height: 600, alt: 'M4Y Portfolio' }],
+  },
+  alternates: {
+    canonical: `${getSiteUrl()}/work`,
+  },
 };
 
 export default function WorkPage() {
