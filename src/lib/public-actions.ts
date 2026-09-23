@@ -88,7 +88,35 @@ async function dispatchLeadAlert(title: string, details: Record<string, string |
       }),
     });
   } catch (err) {
-    console.error("Webhook notification error:", err);
+    console.error("Lead alert webhook error (ignored):", err);
+  }
+}
+
+// 4. WhatsApp Auto-Responder / Webhook Dispatcher
+async function dispatchWhatsAppAlert(details: {
+  name: string;
+  email: string;
+  phone?: string;
+  company?: string;
+  budget?: string;
+  message?: string;
+  source?: string;
+}) {
+  const whatsappWebhook = process.env.WHATSAPP_WEBHOOK_URL;
+  if (!whatsappWebhook) return;
+
+  try {
+    await fetch(whatsappWebhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event: "new_lead",
+        lead: details,
+        timestamp: new Date().toISOString(),
+      }),
+    });
+  } catch (err) {
+    console.error("WhatsApp webhook error (ignored):", err);
   }
 }
 
@@ -183,6 +211,16 @@ ${data.message}
       Message: data.message,
     });
 
+    dispatchWhatsAppAlert({
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      company: data.company,
+      budget: data.budget,
+      message: data.message,
+      source: "Contact Form",
+    });
+
     return { success: true };
   } catch (error) {
     console.error("Failed to submit contact inquiry", error);
@@ -257,6 +295,15 @@ export async function submitLead(formData: FormData) {
       Company: data.company,
       Revenue: data.revenue,
       Goal: data.goal,
+    });
+
+    dispatchWhatsAppAlert({
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      budget: data.revenue,
+      message: data.goal,
+      source: "Book Call Form",
     });
 
     return { success: true };
@@ -342,6 +389,16 @@ export async function submitStrategyCall(formData: FormData) {
       Challenge: data.challenge,
     });
 
+    dispatchWhatsAppAlert({
+      name: data.name,
+      email: "N/A",
+      phone: data.phone,
+      company: data.business,
+      budget: data.industry,
+      message: data.challenge,
+      source: "Strategy Call Booking",
+    });
+
     return { success: true };
   } catch (error) {
     console.error("Failed to submit strategy call", error);
@@ -391,6 +448,12 @@ export async function submitEmailCapture(formData: FormData) {
 
     dispatchLeadAlert("New Lead Magnet Subscriber", {
       Email: email.trim(),
+    });
+
+    dispatchWhatsAppAlert({
+      name: "Lead Magnet Subscriber",
+      email: email.trim(),
+      source: "Lead Magnet Download",
     });
 
     return { success: true };
