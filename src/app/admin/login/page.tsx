@@ -18,35 +18,31 @@ export default function AdminLogin() {
     setError("");
 
     try {
-      const cleanEmail = email.trim();
+      const cleanEmail = email.trim().toLowerCase();
+      const cleanPassword = password.trim();
+
       const res = await signIn("credentials", {
         email: cleanEmail,
-        password: password,
+        password: cleanPassword,
         redirect: false,
       });
 
       if (res?.error) {
-        setError("Invalid email or password. Please check your credentials.");
+        setError("Invalid email or password. Please verify your credentials.");
+        setIsLoading(false);
       } else {
-        // Full browser navigation ensures cookies and middleware sync without cache delay
+        // Successful login: navigate to admin dashboard
         window.location.href = "/admin/dashboard";
       }
     } catch (err: any) {
       if (err?.name === "CredentialsSignin" || err?.type === "CredentialsSignin") {
         setError("Invalid email or password.");
+        setIsLoading(false);
       } else {
-        // If signIn redirect was triggered
+        // Successful redirection
         window.location.href = "/admin/dashboard";
       }
-    } finally {
-      setIsLoading(false);
     }
-  };
-
-  const handleQuickFill = () => {
-    setEmail("admin@marketing4you.com");
-    setPassword("password123");
-    setError("");
   };
 
   return (
@@ -70,21 +66,6 @@ export default function AdminLogin() {
           </p>
         </div>
 
-        {/* Quick autofill helper badge */}
-        <div className="mb-6 bg-[#FFF8E7] border-2 border-black p-3 text-xs font-bold text-black flex items-center justify-between gap-2 shadow-[2px_2px_0_#FF5500]">
-          <div>
-            <span className="font-black uppercase text-[#FF5500]">Default Login:</span>
-            <div className="font-mono text-[11px] text-black/80 mt-0.5">admin@marketing4you.com</div>
-          </div>
-          <button
-            type="button"
-            onClick={handleQuickFill}
-            className="px-2.5 py-1 bg-black text-[#FFD700] font-black text-[11px] uppercase border border-black hover:bg-[#FF5500] hover:text-white transition-colors cursor-pointer"
-          >
-            Auto-Fill
-          </button>
-        </div>
-
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           {error && (
             <div className="bg-red-50 border-2 border-red-600 text-red-700 p-3 text-xs font-bold flex items-center gap-2">
@@ -103,8 +84,9 @@ export default function AdminLogin() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                autoComplete="email"
                 className="w-full pl-10 pr-4 py-3 bg-white border-2 border-black font-bold text-sm text-black focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0_#FF5500] transition-shadow placeholder:text-black/30"
-                placeholder="admin@marketing4you.com"
+                placeholder="name@agency.com"
               />
             </div>
           </div>
@@ -120,13 +102,14 @@ export default function AdminLogin() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                autoComplete="current-password"
                 className="w-full pl-10 pr-10 py-3 bg-white border-2 border-black font-bold text-sm text-black focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0_#FF5500] transition-shadow placeholder:text-black/30"
                 placeholder="••••••••••••"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-black/50 hover:text-black"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-black/50 hover:text-black cursor-pointer"
                 tabIndex={-1}
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}

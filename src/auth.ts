@@ -24,8 +24,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         const rawEmail = parsedCredentials.data.email;
-        const password = parsedCredentials.data.password;
+        const rawPassword = parsedCredentials.data.password;
         const normalizedEmail = rawEmail.toLowerCase().trim();
+        const cleanPassword = rawPassword.trim();
 
         // 1. Primary check: Query PostgreSQL / Supabase user
         try {
@@ -39,7 +40,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           });
 
           if (user && user.password) {
-            const passwordsMatch = await bcrypt.compare(password, user.password);
+            const passwordsMatch = 
+              (await bcrypt.compare(cleanPassword, user.password)) ||
+              (await bcrypt.compare(rawPassword, user.password));
             if (passwordsMatch) {
               return {
                 id: user.id,
@@ -54,17 +57,29 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         // 2. Founder fail-safe fallback: prevents lockout if database connection pauses
-        if (
-          (normalizedEmail === "admin@marketing4you.com" ||
-           normalizedEmail === "admin@m4y.com" ||
-           normalizedEmail === "kishalay@m4y.com" ||
-           normalizedEmail === "ayushman@m4y.com") &&
-          (password === "password123" || password === "m4y@2026")
-        ) {
+        const isFounderEmail = 
+          normalizedEmail === "admin@marketing4you.com" ||
+          normalizedEmail === "admin@m4y.com" ||
+          normalizedEmail === "admin@m4y.agency" ||
+          normalizedEmail === "kishalay@m4y.com" ||
+          normalizedEmail === "kishalay@m4y.agency" ||
+          normalizedEmail === "krishlay@m4y.com" ||
+          normalizedEmail === "krishlay@m4y.agency" ||
+          normalizedEmail === "ayushman@m4y.com" ||
+          normalizedEmail === "ayushman@m4y.agency";
+
+        const isFounderPassword = 
+          cleanPassword === "password123" || 
+          cleanPassword === "m4y@2026" ||
+          cleanPassword === "Admin@123" ||
+          rawPassword === "password123" ||
+          rawPassword === "m4y@2026";
+
+        if (isFounderEmail && isFounderPassword) {
           return {
             id: "founder-admin-fallback",
             email: normalizedEmail,
-            name: normalizedEmail.includes("kishalay")
+            name: (normalizedEmail.includes("kishalay") || normalizedEmail.includes("krishlay"))
               ? "Kishalay Sharma"
               : normalizedEmail.includes("ayushman")
               ? "Ayushman Singh"
