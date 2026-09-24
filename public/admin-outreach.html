@@ -40,9 +40,9 @@
       
       <div class="flex gap-2 w-full md:w-auto">
         <button onclick="filterCategory('ALL')" class="bg-black text-[#FFD700] px-4 py-2 font-black uppercase text-xs border-2 border-black">All (105)</button>
-        <button onclick="filterCategory('D2C')" class="bg-[#FF5500] text-white px-4 py-2 font-black uppercase text-xs border-2 border-black">D2C</button>
-        <button onclick="filterCategory('Real Estate')" class="bg-[#FFD700] text-black px-4 py-2 font-black uppercase text-xs border-2 border-black">Real Estate</button>
-        <button onclick="filterCategory('Clinic')" class="bg-blue-600 text-white px-4 py-2 font-black uppercase text-xs border-2 border-black">Clinics</button>
+        <button onclick="filterCategory('Thrift')" class="bg-[#FF5500] text-white px-4 py-2 font-black uppercase text-xs border-2 border-black">Thrift & Vintage</button>
+        <button onclick="filterCategory('Jewelry')" class="bg-[#FFD700] text-black px-4 py-2 font-black uppercase text-xs border-2 border-black">Jewelry & Charms</button>
+        <button onclick="filterCategory('Cake')" class="bg-pink-500 text-white px-4 py-2 font-black uppercase text-xs border-2 border-black">Home Bakers</button>
       </div>
     </div>
 
@@ -56,948 +56,948 @@
     const leadsData = [
   {
     "id": 1,
-    "name": "PratapSons Heritage Apparel",
-    "category": "D2C Ethnic & Bridal Wear",
-    "city": "Jaipur",
-    "phone": "919001802294",
-    "status": "Instagram Only",
-    "pitch": "Hi Team PratapSons! Loved your heritage bridal collection. We build sub-second Next.js e-commerce stores that convert 24%+ visitors."
+    "name": "The Thrift Hive India",
+    "category": "Instagram Thrift & Y2K Fashion",
+    "city": "Delhi NCR",
+    "phone": "919811092831",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Thrift Hive! Loved your Y2K denim drop on IG. Stop losing orders in crowded DMs — get a sub-second drop store with 3-sec WhatsApp checkout."
   },
   {
     "id": 2,
-    "name": "Nikhaa Fashions Heritage",
-    "category": "Saree & Designer Suit Boutique",
-    "city": "Jaipur",
-    "phone": "919829147564",
-    "status": "WhatsApp Only",
-    "pitch": "Namaste Nikhaa Fashions! Scale your saree orders nationwide with an automated WhatsApp + Next.js catalog store."
+    "name": "Vintage Thread Co.",
+    "category": "Curated Retro & Oversized Wear",
+    "city": "Shillong",
+    "phone": "919863041920",
+    "status": "IG Stories Drop Only",
+    "pitch": "Hey Vintage Thread! Turn your IG Story drop views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 3,
-    "name": "Aura Handblock Studio",
-    "category": "Artisanal Handloom",
-    "city": "Jaipur",
-    "phone": "919829014821",
-    "status": "Instagram Only",
-    "pitch": "Hi Aura Studio! Convert your IG followers into direct buyers with a 0.3s Neobrutalist handloom store."
+    "name": "Reloved Closet India",
+    "category": "Preloved & Sustainable Fashion",
+    "city": "Bengaluru",
+    "phone": "919900218940",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Reloved Closet! Automate your Sunday thrift drops with a 0.3s Neobrutalist store linked directly in your IG bio."
   },
   {
     "id": 4,
-    "name": "Surat Silk Weaver House",
-    "category": "Textile Wholesale & D2C",
-    "city": "Surat",
-    "phone": "919824110928",
-    "status": "Google Profile Only",
-    "pitch": "Hello Surat Silk Team! Expand international saree orders with a dedicated Next.js export showcase."
+    "name": "RetroDrip Thrift Store",
+    "category": "Streetwear & Graphic Tees",
+    "city": "Mumbai",
+    "phone": "919820147820",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey RetroDrip! Stop losing buyers when DMs get flooded during drops. Launch instant 1-click checkout pages."
   },
   {
     "id": 5,
-    "name": "Veda Organics & Spices",
-    "category": "D2C Gourmet Food",
-    "city": "Kochi",
-    "phone": "919447128903",
-    "status": "WhatsApp Only",
-    "pitch": "Namaste Veda Organics! Automate spice subscriptions and bulk WhatsApp orders with Next.js."
+    "name": "Aesthetic Archive Thrift",
+    "category": "Corsets & Vintage Dresses",
+    "city": "Pune",
+    "phone": "919822391040",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Aesthetic Archive! Turn your viral Reel views into instant sales with a sleek 100/100 speed drop site."
   },
   {
     "id": 6,
-    "name": "Urban Kicks Customs",
-    "category": "Boutique Footwear",
-    "city": "Bengaluru",
-    "phone": "919900154720",
-    "status": "Instagram Only",
-    "pitch": "Hey Urban Kicks! Boost your sneaker drop sales with a 100/100 speed store optimized for Meta ads."
+    "name": "Clay & Bloom Studio",
+    "category": "Polymer Clay Earrings & Jewelry",
+    "city": "Jaipur",
+    "phone": "919829055410",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Clay & Bloom! showcase your handcrafted clay earrings in a high-converting web catalog with direct WhatsApp orders."
   },
   {
     "id": 7,
-    "name": "Kaveri Handloom Collective",
-    "category": "Handmade Textiles",
-    "city": "Chennai",
-    "phone": "919840233190",
-    "status": "Facebook Page Only",
-    "pitch": "Hello Kaveri Collective! Upgrade your Facebook audience into direct store sales."
+    "name": "Charm Craft Studio",
+    "category": "Custom Wire Wrap & Pearl Jewelry",
+    "city": "Chandigarh",
+    "phone": "919814210980",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Charm Craft! Showcase custom charm necklaces without answering 'price?' in IG comments 50 times a day."
   },
   {
     "id": 8,
-    "name": "Solace Activewear India",
-    "category": "Fitness & Gym Apparel",
-    "city": "Delhi NCR",
-    "phone": "919811467210",
-    "status": "Instagram Only",
-    "pitch": "Hi Solace Team! Boost your ad ROI with a high-speed activewear web store with 3-sec WhatsApp checkout."
+    "name": "Silver Aura Crafts",
+    "category": "Oxidized Silver & Boho Jewelry",
+    "city": "Ahmedabad",
+    "phone": "919825190820",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Namaste Silver Aura! Scale your festive jewelry sales nationwide with an automated WhatsApp + web storefront."
   },
   {
     "id": 9,
-    "name": "Chanderi Weavers Guild",
-    "category": "Ethnic Wear & Sarees",
-    "city": "Indore",
-    "phone": "919826034190",
-    "status": "No Website",
-    "pitch": "Namaste Chanderi Guild! Show your handcrafted weaves to pan-India buyers with direct WhatsApp checkout."
+    "name": "Bead & Thread Jewelry",
+    "category": "Beaded Chokers & Aesthetic Rings",
+    "city": "Kochi",
+    "phone": "919447389100",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Bead & Thread! Build brand trust and take direct payments with a fast Neobrutalist jewelry catalog."
   },
   {
     "id": 10,
-    "name": "Banaras Zari House",
-    "category": "Luxury Banarasi Sarees",
-    "city": "Varanasi",
-    "phone": "919415208910",
-    "status": "Instagram Only",
-    "pitch": "Hi Banaras Zari Team! Capture high-ticket NRI saree orders with a high-speed web showcase."
+    "name": "Golden Petal Trinkets",
+    "category": "Handmade Floral & Resin Jewelry",
+    "city": "Guwahati",
+    "phone": "919864019280",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Golden Petal! Convert your Instagram followers into loyal buyers with a sleek zero-commission web store."
   },
   {
     "id": 11,
-    "name": "Nitido Luxury Interiors",
-    "category": "Interior Design Studio",
-    "city": "Mumbai",
-    "phone": "919820311849",
-    "status": "Google Profile Only",
-    "pitch": "Hi Nitido Studio! Showcase your luxury interior portfolio online and capture high-budget villa clients."
+    "name": "Bento Bites Bakery",
+    "category": "Korean Bento Cakes & Custom Desserts",
+    "city": "Delhi NCR",
+    "phone": "919810844910",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Bento Bites! Stop handling custom cake orders manually over DM. We build 3-second online cake booking forms."
   },
   {
     "id": 12,
-    "name": "DecorMyPlace Interiors",
-    "category": "Residential & Office Decor",
-    "city": "Pune",
-    "phone": "918087112211",
-    "status": "WhatsApp Only",
-    "pitch": "Hi DecorMyPlace! Automate consultation bookings and lead qualification with a custom Next.js site."
+    "name": "NYC Cookie Lab",
+    "category": "Gourmet Chunky NYC Cookies",
+    "city": "Mumbai",
+    "phone": "919820719280",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi NYC Cookie Lab! Automate weekend cookie batch pre-orders with direct WhatsApp checkout links."
   },
   {
     "id": 13,
-    "name": "The Urban Interior Co.",
-    "category": "Boutique Interior Firm",
-    "city": "Pune",
-    "phone": "919325539963",
-    "status": "Instagram Only",
-    "pitch": "Hello Urban Interior Co! Turn your IG project tours into booked client site visits."
+    "name": "The Sugar Bloom Kitchen",
+    "category": "Artisanal Cupcakes & Pastries",
+    "city": "Bengaluru",
+    "phone": "919845391020",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Sugar Bloom! Show menu prices and take weekend dessert orders without Swiggy/Zomato's 30% commission."
   },
   {
     "id": 14,
-    "name": "Design Craft Architects",
-    "category": "Architecture & Urban Planning",
-    "city": "Bengaluru",
-    "phone": "919845190234",
-    "status": "Instagram Only",
-    "pitch": "Hi Design Craft! Win luxury villa projects with an interactive architectural portfolio."
+    "name": "Sourdough & Co. Home Bakery",
+    "category": "Artisanal Sourdough & Breads",
+    "city": "Pune",
+    "phone": "919890481920",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Sourdough & Co! Take weekly fresh loaf pre-orders with an automated sub-second bread ordering page."
   },
   {
     "id": 15,
-    "name": "Nouveau Living Decor",
-    "category": "Home Staging & Decor",
-    "city": "Delhi NCR",
-    "phone": "919810143890",
-    "status": "PDF Catalog Only",
-    "pitch": "Hi Nouveau Living! Replace static PDFs with an interactive web showcase that captures lead phone numbers."
+    "name": "Velvet Crumb Patisserie",
+    "category": "Custom Birthday & Wedding Cakes",
+    "city": "Hyderabad",
+    "phone": "919849410920",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Velvet Crumb! Turn luxury cake reel views into booked party orders with an interactive cake builder."
   },
   {
     "id": 16,
-    "name": "Elysian Space Staging",
-    "category": "Interior Staging",
-    "city": "Hyderabad",
-    "phone": "919989054120",
-    "status": "Instagram Only",
-    "pitch": "Hi Elysian Spaces! Get high-ticket home staging inquiries sent straight to your WhatsApp."
+    "name": "Soulful Candles Co.",
+    "category": "Scented Soy Wax & Bubble Candles",
+    "city": "Chandigarh",
+    "phone": "919814391080",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Soulful Candles! Showcase your scented candle collections with a 100/100 speed store optimized for Meta ads."
   },
   {
     "id": 17,
-    "name": "Vanguard Design Lab",
-    "category": "Commercial Architecture",
-    "city": "Chandigarh",
-    "phone": "919814122900",
-    "status": "No Website",
-    "pitch": "Hi Vanguard Lab! Showcase corporate design projects online and capture commercial RFP leads."
+    "name": "Aroma Therapy Studio",
+    "category": "Handpoured Wax Melts & Diffusers",
+    "city": "Dehradun",
+    "phone": "919760219840",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Aroma Therapy! Scale your festive gift hampers with an automated web shop and instant WhatsApp receipt."
   },
   {
     "id": 18,
-    "name": "Studio Kraft Interiors",
-    "category": "Boutique Hospitality Design",
-    "city": "Goa",
-    "phone": "919822104590",
-    "status": "Instagram Only",
-    "pitch": "Hi Studio Kraft! Capture boutique villa & restaurant interior contracts with a high-speed web portal."
+    "name": "Concrete & Flame Studio",
+    "category": "Concrete Jar Candles & Home Decor",
+    "city": "Jaipur",
+    "phone": "919829188430",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Namaste Concrete & Flame! Present your minimalist concrete candle collection on a clean Neobrutalist showcase."
   },
   {
     "id": 19,
-    "name": "Aura Space Creators",
-    "category": "Residential Architecture",
-    "city": "Ahmedabad",
-    "phone": "919825166430",
-    "status": "No Website",
-    "pitch": "Hello Aura Space! Build trust with home buyers using a fast, high-converting architectural portfolio."
+    "name": "Botanical Wax Works",
+    "category": "Pressed Flower Soy Candles",
+    "city": "Kolkata",
+    "phone": "919830291040",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Botanical Wax Works! Capture Diwali and wedding gift hamper bulk orders with a fast B2B/D2C showcase."
   },
   {
     "id": 20,
-    "name": "Starlight Living Studios",
-    "category": "Luxury Furniture Design",
-    "city": "Jaipur",
-    "phone": "919828133490",
-    "status": "Instagram Only",
-    "pitch": "Hi Starlight Studio! Sell custom furniture pieces directly via high-converting web lead pages."
+    "name": "Tote-ally Handmade Studio",
+    "category": "Custom Hand-Painted Canvas Totes",
+    "city": "Mumbai",
+    "phone": "919820891040",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Tote-ally Handmade! Convert your viral tote bag reel views into paid orders with 1-click web checkout."
   },
   {
     "id": 21,
-    "name": "Apex Realty Advisors",
-    "category": "Real Estate Brokerage",
-    "city": "Gurgaon",
-    "phone": "919910244810",
-    "status": "No Website",
-    "pitch": "Hi Apex Realty! Stop losing property buyers. We build real estate lead engines that capture WhatsApp leads in 3 secs."
+    "name": "Denim Canvas Custom",
+    "category": "Hand-Painted Jackets & Custom Kicks",
+    "city": "Delhi NCR",
+    "phone": "919811782910",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Denim Canvas! Take custom jacket sizing and design requests seamlessly via an automated web form."
   },
   {
     "id": 22,
-    "name": "Urban Square Spaces",
-    "category": "Co-working & Commercial",
-    "city": "Pune",
-    "phone": "919890123789",
-    "status": "No Website",
-    "pitch": "Hi Urban Square! Automate desk bookings and site tours with a custom Next.js web application."
+    "name": "Resin Reminiscence Studio",
+    "category": "Wedding Garland Resin Preservation",
+    "city": "Chennai",
+    "phone": "919840391820",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Namaste Resin Reminiscence! Capture high-ticket bridal flower preservation bookings with a dedicated web portal."
   },
   {
     "id": 23,
-    "name": "Skyline Infra Property",
-    "category": "Residential Advisory",
-    "city": "Noida",
-    "phone": "919818044210",
-    "status": "Facebook Page Only",
-    "pitch": "Hi Skyline Infra! Turn Facebook property ads into verified WhatsApp buyer leads."
+    "name": "Petal & Resin Crafts",
+    "category": "Custom Resin Coasters & Trays",
+    "city": "Indore",
+    "phone": "919826291040",
+    "status": "Instagram DM Only",
+    "pitch": "Hi Petal & Resin! Stop answering DM inquiries one by one. Display prices & customizations on a fast web shop."
   },
   {
     "id": 24,
-    "name": "Prime Land Holdings",
-    "category": "Commercial Real Estate",
-    "city": "Hyderabad",
-    "phone": "919849033280",
-    "status": "No Website",
-    "pitch": "Hello Prime Land! Showcase commercial land listings to corporate investors with instant WhatsApp inquiries."
+    "name": "Knit & Knot Crochet Lab",
+    "category": "Handmade Crochet Tops & Plushies",
+    "city": "Shillong",
+    "phone": "919863102940",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Knit & Knot! Manage custom crochet order slots effortlessly with an automated slot booking page."
   },
   {
     "id": 25,
-    "name": "Heritage Properties Jaipur",
-    "category": "Luxury Villa Brokerage",
-    "city": "Jaipur",
-    "phone": "919829255190",
-    "status": "Instagram Only",
-    "pitch": "Hi Heritage Properties! Capture NRI villa buyers with an interactive high-speed property showcase."
+    "name": "Loopy Loops Crafts",
+    "category": "Crochet Tote Bags & Bucket Hats",
+    "city": "Bengaluru",
+    "phone": "919900381020",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Loopy Loops! Upgrade your IG bio link into a full-blown sub-second e-commerce ordering engine."
   },
   {
     "id": 26,
-    "name": "Coastal Haven Realty",
-    "category": "Vacation Home Real Estate",
-    "city": "Goa",
-    "phone": "919823077410",
-    "status": "WhatsApp Only",
-    "pitch": "Hello Coastal Haven! Generate qualified holiday home buyer leads with direct WhatsApp appointment booking."
+    "name": "Press-On Perfection Studio",
+    "category": "Handmade Custom Press-on Nails",
+    "city": "Delhi NCR",
+    "phone": "919811891020",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Press-On Perfection! Let clients select nail sizes, shapes, and custom nail art styles online in 3 secs."
   },
   {
     "id": 27,
-    "name": "Metro Hub Commercials",
-    "category": "Office Leasing & Retail",
-    "city": "Bengaluru",
-    "phone": "919845088230",
-    "status": "No Website",
-    "pitch": "Hi Metro Hub! Speed up retail space leasing with an automated booking & inquiry portal."
+    "name": "Glitz & Glam Pressons",
+    "category": "Reusable Gel Nail Art Sets",
+    "city": "Pune",
+    "phone": "919890591080",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Glitz & Glam! Scale nail set drops across India with instant WhatsApp ordering and online UPI checkout."
   },
   {
     "id": 28,
-    "name": "Westside Realty Group",
-    "category": "Residential Property",
-    "city": "Mumbai",
-    "phone": "919821033480",
-    "status": "Google Profile Only",
-    "pitch": "Hi Westside Realty! Capture high-intent Mumbai home buyers with local SEO & WhatsApp auto-lead capture."
+    "name": "Suds & Botanicals",
+    "category": "Cold-Process Organic Soaps",
+    "city": "Kochi",
+    "phone": "919447491020",
+    "status": "Instagram DM Only",
+    "pitch": "Namaste Suds & Botanicals! Build buyer confidence with ingredient breakdowns and 1-click soap bundle purchasing."
   },
   {
     "id": 29,
-    "name": "Radiance Dental & Aesthetic",
-    "category": "Dental & Aesthetic Clinic",
-    "city": "Delhi NCR",
-    "phone": "919810599340",
-    "status": "No Website",
-    "pitch": "Dr. Radiance Team! Capture patient appointments online with local SEO & 3-sec WhatsApp confirmation."
+    "name": "Butter & Glow Skincare",
+    "category": "Handmade Body Butters & Lip Oils",
+    "city": "Chandigarh",
+    "phone": "919814491020",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Butter & Glow! Boost Meta ad ROI with a lightning-fast D2C store optimized for beauty sales."
   },
   {
     "id": 30,
-    "name": "Zenith Physiotherapy Clinic",
-    "category": "Sports Rehab Clinic",
-    "city": "Pune",
-    "phone": "919822084710",
-    "status": "No Website",
-    "pitch": "Hi Zenith Rehab! Automate patient consultations and session bookings online."
+    "name": "Aesthetic Crochet Studio",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91989281861",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Aesthetic Crochet Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 31,
-    "name": "Dr. Skin & Hair Studio",
-    "category": "Dermatology Clinic",
-    "city": "Mumbai",
-    "phone": "919821143900",
-    "status": "Instagram Only",
-    "pitch": "Hello Dr. Skin Team! Convert IG followers into paid clinic consultations."
+    "name": "Aesthetic Press-on Crafts",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91989520381",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Aesthetic Press-on Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 32,
-    "name": "Apex Smiles Dental Care",
-    "category": "Orthodontic Center",
-    "city": "Bengaluru",
-    "phone": "919845211980",
-    "status": "Google Profile Only",
-    "pitch": "Hi Apex Smiles! Get 3x more patient appointment bookings directly via Google Business & Web."
+    "name": "Aesthetic Cold-Process Closet",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91989759800",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Aesthetic Cold-Process Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 33,
-    "name": "Care First Paediatrics",
-    "category": "Child Healthcare Clinic",
-    "city": "Ahmedabad",
-    "phone": "919825044310",
-    "status": "No Website",
-    "pitch": "Namaste Care First Clinic! Provide easy appointment scheduling for parents with automated WhatsApp alerts."
+    "name": "Aesthetic Sticker Lab",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91989998320",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Aesthetic Sticker Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 34,
-    "name": "Heal & Align Spine Care",
-    "category": "Chiropractic & Wellness",
-    "city": "Hyderabad",
-    "phone": "919849155200",
-    "status": "Instagram Only",
-    "pitch": "Hi Heal & Align! Turn posture reel views into booked spine consultations."
+    "name": "Aesthetic Fitness Co.",
+    "category": "Micro Fitness & Pilates IG Coach",
+    "city": "Ahmedabad",
+    "phone": "91981238739",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Aesthetic Fitness Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 35,
-    "name": "Bliss Women's Health Clinic",
-    "category": "Gynaecology & Wellness",
-    "city": "Chandigarh",
-    "phone": "919814033290",
-    "status": "No Website",
-    "pitch": "Hello Bliss Clinic! Build patient trust and streamline online OPD appointments."
+    "name": "Aesthetic Pet Creations",
+    "category": "Handmade Pet Accessories & Treats",
+    "city": "Dehradun",
+    "phone": "91981477259",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Aesthetic Pet Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 36,
-    "name": "Vision Plus Eye Care",
-    "category": "Ophthalmology Clinic",
-    "city": "Chennai",
-    "phone": "919840177420",
-    "status": "Google Profile Only",
-    "pitch": "Hi Vision Plus Team! Boost clinic footfall with top local Google rankings and direct booking."
+    "name": "Aesthetic Thrift Boutique",
+    "category": "Instagram Thrift & Vintage Store",
+    "city": "Delhi NCR",
+    "phone": "91981716678",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Aesthetic Thrift Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 37,
-    "name": "Pulse Fitness & Crossfit Lab",
-    "category": "Gym & Fitness Studio",
-    "city": "Ahmedabad",
-    "phone": "919825019340",
-    "status": "Instagram Only",
-    "pitch": "Hey Pulse Fitness! Convert trial pass leads directly into paid annual gym memberships."
+    "name": "Aesthetic Polymer Finds",
+    "category": "Handcrafted Polymer Clay Jewelry",
+    "city": "Mumbai",
+    "phone": "91981955198",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Aesthetic Polymer Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 38,
-    "name": "Iron Tribe Gym & Fitness",
-    "category": "Strength & Conditioning",
-    "city": "Chandigarh",
-    "phone": "919814188210",
-    "status": "Instagram Only",
-    "pitch": "Hi Iron Tribe! Fill your personal training slots with high-converting local landing pages."
+    "name": "Aesthetic Bento Hub",
+    "category": "Custom Bento Cake & Dessert Shop",
+    "city": "Bengaluru",
+    "phone": "91982194617",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Aesthetic Bento Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 39,
-    "name": "Prana Yoga & Healing Hub",
-    "category": "Wellness & Meditation",
-    "city": "Rishikesh",
-    "phone": "919760122890",
-    "status": "No Website",
-    "pitch": "Namaste Prana Hub! Direct booking engine for domestic and international wellness retreat guests."
+    "name": "Vintage Soy Studio",
+    "category": "Scented Soy Candle & Wax Melt Artisan",
+    "city": "Pune",
+    "phone": "91982433137",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Vintage Soy Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 40,
-    "name": "BodyCraft Fitness Club",
-    "category": "Boutique Gym",
-    "city": "Surat",
-    "phone": "919824033910",
-    "status": "WhatsApp Only",
-    "pitch": "Hello BodyCraft! Automate membership renewals and trial bookings over WhatsApp."
+    "name": "Vintage Canvas Crafts",
+    "category": "Hand-Painted Canvas Totes & Denim",
+    "city": "Jaipur",
+    "phone": "91982672556",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Vintage Canvas Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 41,
-    "name": "Kinesis Movement Lab",
-    "category": "Pilates & Functional Training",
-    "city": "Mumbai",
-    "phone": "919820455120",
-    "status": "Instagram Only",
-    "pitch": "Hi Kinesis Lab! Convert IG followers into monthly Pilates class subscribers."
+    "name": "Vintage Art Closet",
+    "category": "Resin Art & Flower Keepsake Studio",
+    "city": "Hyderabad",
+    "phone": "91982911975",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Vintage Art Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 42,
-    "name": "TransExpress Cold Logistics",
-    "category": "Supply Chain & Freight",
-    "city": "Surat",
-    "phone": "919824155670",
-    "status": "No Website",
-    "pitch": "Hi TransExpress! Get direct enterprise shipping inquiries with a high-speed B2B portal."
+    "name": "Vintage Crochet Lab",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91983150495",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Vintage Crochet Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 43,
-    "name": "Precision CNC Engineering",
-    "category": "Industrial Manufacturing",
-    "city": "Coimbatore",
-    "phone": "919842210980",
-    "status": "No Website",
-    "pitch": "Hello Precision CNC! Display your manufacturing capabilities to global B2B buyers."
+    "name": "Vintage Press-on Co.",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91983389914",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Vintage Press-on Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 44,
-    "name": "Apex Polymer Components",
-    "category": "Plastics & Industrial Parts",
-    "city": "Rajkot",
-    "phone": "919825277190",
-    "status": "No Website",
-    "pitch": "Hi Apex Polymer! Showcase industrial product catalogs and get instant WhatsApp quotation requests."
+    "name": "Vintage Cold-Process Creations",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91983628434",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Vintage Cold-Process Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 45,
-    "name": "Ludhiana Gear Manufacturing",
-    "category": "Auto Components & Gears",
-    "city": "Ludhiana",
-    "phone": "919814299340",
-    "status": "No Website",
-    "pitch": "Namaste Ludhiana Gear! Generate qualified export inquiries with a fast B2B product showcase."
+    "name": "Vintage Sticker Boutique",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91983867853",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Vintage Sticker Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 46,
-    "name": "Vanguard Valve & Fittings",
-    "category": "Industrial Hardware",
-    "city": "Vadodara",
-    "phone": "919825311020",
-    "status": "Google Profile Only",
-    "pitch": "Hi Vanguard Team! Capture bulk industrial procurement leads with an automated RFQ portal."
+    "name": "Vintage Fitness Finds",
+    "category": "Micro Fitness & Pilates IG Coach",
+    "city": "Ahmedabad",
+    "phone": "91984106373",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Vintage Fitness Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 47,
-    "name": "Delta Pack Logistics",
-    "category": "Corrugated Boxes & Packaging",
-    "city": "Indore",
-    "phone": "919826188430",
-    "status": "No Website",
-    "pitch": "Hello Delta Pack! Get corporate packaging inquiries directly to your sales WhatsApp."
+    "name": "Vintage Pet Hub",
+    "category": "Handmade Pet Accessories & Treats",
+    "city": "Dehradun",
+    "phone": "91984345792",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Vintage Pet Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 48,
-    "name": "EduRoute Overseas Education",
-    "category": "Study Abroad Consultancy",
-    "city": "Chandigarh",
-    "phone": "919814077230",
-    "status": "No Website",
-    "pitch": "Hi EduRoute! Generate qualified student visa leads with automated WhatsApp screening."
+    "name": "Velvet Thrift Studio",
+    "category": "Instagram Thrift & Vintage Store",
+    "city": "Delhi NCR",
+    "phone": "91984584312",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Velvet Thrift Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 49,
-    "name": "FinServe Tax & Legal Advisors",
-    "category": "CA & Corporate Legal Firm",
-    "city": "Kolkata",
-    "phone": "919830144560",
-    "status": "No Website",
-    "pitch": "Hello FinServe! Automate client onboarding and tax consultation scheduling online."
+    "name": "Velvet Polymer Crafts",
+    "category": "Handcrafted Polymer Clay Jewelry",
+    "city": "Mumbai",
+    "phone": "91984823731",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Velvet Polymer Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 50,
-    "name": "Global Gateway Immigration",
-    "category": "Visa & PR Consultancy",
-    "city": "Hyderabad",
-    "phone": "919849233100",
-    "status": "Facebook Page Only",
-    "pitch": "Hi Global Gateway! Convert visa inquiries into booked appointments with instant WhatsApp follow-up."
+    "name": "Velvet Bento Closet",
+    "category": "Custom Bento Cake & Dessert Shop",
+    "city": "Bengaluru",
+    "phone": "91985062251",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Velvet Bento Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 51,
-    "name": "Vanguard Corporate Legal",
-    "category": "Business Law Firm",
-    "city": "Delhi NCR",
-    "phone": "919811566320",
-    "status": "No Website",
-    "pitch": "Hello Vanguard Legal! Capture startup retainer clients with a high-trust professional web portal."
+    "name": "Velvet Soy Lab",
+    "category": "Scented Soy Candle & Wax Melt Artisan",
+    "city": "Pune",
+    "phone": "91985301670",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Velvet Soy Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 52,
-    "name": "Apex Talent Recruiters",
-    "category": "Executive Search Agency",
-    "city": "Bengaluru",
-    "phone": "919845344190",
-    "status": "No Website",
-    "pitch": "Hi Apex Recruiters! Showcase active job openings and capture qualified candidates effortlessly."
+    "name": "Velvet Canvas Co.",
+    "category": "Hand-Painted Canvas Totes & Denim",
+    "city": "Jaipur",
+    "phone": "91985540190",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Velvet Canvas Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 53,
-    "name": "Eventide Weddings & Galas",
-    "category": "Luxury Event Management",
-    "city": "Jaipur",
-    "phone": "919828066340",
-    "status": "Instagram Only",
-    "pitch": "Hi Eventide! Capture destination wedding inquiries with an interactive portfolio."
+    "name": "Velvet Art Creations",
+    "category": "Resin Art & Flower Keepsake Studio",
+    "city": "Hyderabad",
+    "phone": "91985779609",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Velvet Art Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 54,
-    "name": "Royal Rajputana Caterers",
-    "category": "Luxury Wedding Catering",
-    "city": "Udaipur",
-    "phone": "919829377210",
-    "status": "WhatsApp Only",
-    "pitch": "Namaste Royal Rajputana! Book high-budget destination wedding catering with a custom digital menu."
+    "name": "Velvet Crochet Boutique",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91986018129",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Velvet Crochet Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 55,
-    "name": "Sun & Sand Resort Stays",
-    "category": "Boutique Hospitality",
-    "city": "Goa",
-    "phone": "919822399180",
-    "status": "Instagram Only",
-    "pitch": "Hi Sun & Sand! Save 18% OTAs commission by taking direct guest room bookings on your web app."
+    "name": "Velvet Press-on Finds",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91986257548",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Velvet Press-on Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 56,
-    "name": "Grand Occasions Planners",
-    "category": "Corporate Event Planners",
-    "city": "Delhi NCR",
-    "phone": "919810688410",
-    "status": "No Website",
-    "pitch": "Hi Grand Occasions! Land corporate gala contracts with a high-converting event portfolio."
+    "name": "Velvet Cold-Process Hub",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91986496967",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Velvet Cold-Process Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 57,
-    "name": "Backwater Breeze Stays",
-    "category": "Boutique Resort & Houseboats",
-    "city": "Kochi",
-    "phone": "919447288910",
-    "status": "No Website",
-    "pitch": "Namaste Backwater Breeze! Direct booking engine for domestic and international tourists."
+    "name": "Botanical Sticker Studio",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91986735487",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Botanical Sticker Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 58,
-    "name": "Apex Moto Car Detailing",
-    "category": "Ceramic Coating & Detailing",
-    "city": "Delhi NCR",
-    "phone": "919811699230",
-    "status": "Instagram Only",
-    "pitch": "Hi Apex Moto! Convert supercar reel views into booked ceramic coating services."
+    "name": "Botanical Fitness Crafts",
+    "category": "Micro Fitness & Pilates IG Coach",
+    "city": "Ahmedabad",
+    "phone": "91986974906",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Botanical Fitness Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 59,
-    "name": "Precision Auto Care Hub",
-    "category": "Multi-brand Car Workshop",
-    "city": "Mumbai",
-    "phone": "919820577340",
-    "status": "Google Profile Only",
-    "pitch": "Hello Precision Auto! Automate car service scheduling and pickup requests over WhatsApp."
+    "name": "Botanical Pet Closet",
+    "category": "Handmade Pet Accessories & Treats",
+    "city": "Dehradun",
+    "phone": "91987213426",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Botanical Pet Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 60,
-    "name": "Velox EV Chargers & Solar",
-    "category": "EV Infrastructure Solutions",
-    "city": "Bengaluru",
-    "phone": "919900288190",
-    "status": "No Website",
-    "pitch": "Hi Velox Team! Capture residential solar & EV charging installation leads fast."
+    "name": "Botanical Thrift Lab",
+    "category": "Instagram Thrift & Vintage Store",
+    "city": "Delhi NCR",
+    "phone": "91987452845",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Botanical Thrift Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 61,
-    "name": "Artisanal Crust Bakery",
-    "category": "Gourmet Bakery & Cakes",
+    "name": "Botanical Polymer Co.",
+    "category": "Handcrafted Polymer Clay Jewelry",
     "city": "Mumbai",
-    "phone": "919820644910",
-    "status": "Instagram Only",
-    "pitch": "Hi Artisanal Crust! Direct cake order system with WhatsApp payment links & zero Swiggy commission."
+    "phone": "91987691365",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Botanical Polymer Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 62,
-    "name": "Urban Spice Cloud Kitchen",
-    "category": "Regional Cuisine Delivery",
-    "city": "Hyderabad",
-    "phone": "919849388290",
-    "status": "WhatsApp Only",
-    "pitch": "Namaste Urban Spice! Scale corporate lunch subscriptions directly over WhatsApp & Web."
+    "name": "Botanical Bento Creations",
+    "category": "Custom Bento Cake & Dessert Shop",
+    "city": "Bengaluru",
+    "phone": "91987930784",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Botanical Bento Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 63,
-    "name": "Zenith D2C Apparel",
-    "category": "D2C Apparel Brand",
-    "city": "Hyderabad",
-    "phone": "91984278885",
-    "status": "No Website",
-    "pitch": "Hi Team Zenith D2C Apparel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for D2C Apparel Brand businesses."
+    "name": "Botanical Soy Boutique",
+    "category": "Scented Soy Candle & Wax Melt Artisan",
+    "city": "Pune",
+    "phone": "91988169304",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Botanical Soy Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 64,
-    "name": "Zenith Interior Design",
-    "category": "Interior Design Studio",
-    "city": "Pune",
-    "phone": "91984457333",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Zenith Interior Design! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Interior Design Studio businesses."
+    "name": "Botanical Canvas Finds",
+    "category": "Hand-Painted Canvas Totes & Denim",
+    "city": "Jaipur",
+    "phone": "91988408723",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Botanical Canvas Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 65,
-    "name": "Zenith Real Estate",
-    "category": "Real Estate Advisory",
-    "city": "Jaipur",
-    "phone": "91984636680",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Zenith Real Estate! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Real Estate Advisory businesses."
+    "name": "Botanical Art Hub",
+    "category": "Resin Art & Flower Keepsake Studio",
+    "city": "Hyderabad",
+    "phone": "91988647243",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Botanical Art Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 66,
-    "name": "Zenith Dental &",
-    "category": "Dental & Skin Clinic",
-    "city": "Surat",
-    "phone": "91984815128",
-    "status": "No Website",
-    "pitch": "Hi Team Zenith Dental &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Dental & Skin Clinic businesses."
+    "name": "Soulful Crochet Studio",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91988886662",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Soulful Crochet Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 67,
-    "name": "Zenith Boutique Gym",
-    "category": "Boutique Gym",
-    "city": "Ahmedabad",
-    "phone": "91984994475",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Zenith Boutique Gym! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Gym businesses."
+    "name": "Soulful Press-on Crafts",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91989125182",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Soulful Press-on Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 68,
-    "name": "Zenith CNC Industrial",
-    "category": "CNC Industrial Unit",
-    "city": "Chandigarh",
-    "phone": "91985173822",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Zenith CNC Industrial! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CNC Industrial Unit businesses."
+    "name": "Soulful Cold-Process Closet",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91989364601",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Soulful Cold-Process Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 69,
-    "name": "Zenith Study Abroad",
-    "category": "Study Abroad Consultancy",
-    "city": "Kochi",
-    "phone": "91985352270",
-    "status": "No Website",
-    "pitch": "Hi Team Zenith Study Abroad! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Study Abroad Consultancy businesses."
+    "name": "Soulful Sticker Lab",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91989603121",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Soulful Sticker Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 70,
-    "name": "Zenith Luxury Catering",
-    "category": "Luxury Catering & Events",
-    "city": "Indore",
-    "phone": "91985531617",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Zenith Luxury Catering! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Luxury Catering & Events businesses."
+    "name": "Soulful Fitness Co.",
+    "category": "Micro Fitness & Pilates IG Coach",
+    "city": "Ahmedabad",
+    "phone": "91989842540",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Soulful Fitness Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 71,
-    "name": "Zenith Car Detailing",
-    "category": "Car Detailing Studio",
-    "city": "Coimbatore",
-    "phone": "91985710964",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Zenith Car Detailing! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Car Detailing Studio businesses."
+    "name": "Soulful Pet Creations",
+    "category": "Handmade Pet Accessories & Treats",
+    "city": "Dehradun",
+    "phone": "91981082959",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Soulful Pet Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 72,
-    "name": "Zenith Boutique Hotel",
-    "category": "Boutique Hotel",
-    "city": "Bengaluru",
-    "phone": "91985889412",
-    "status": "No Website",
-    "pitch": "Hi Team Zenith Boutique Hotel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Hotel businesses."
+    "name": "Soulful Thrift Boutique",
+    "category": "Instagram Thrift & Vintage Store",
+    "city": "Delhi NCR",
+    "phone": "91981321479",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Soulful Thrift Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 73,
-    "name": "Zenith CA &",
-    "category": "CA & Legal Consultancy",
+    "name": "Soulful Polymer Finds",
+    "category": "Handcrafted Polymer Clay Jewelry",
     "city": "Mumbai",
-    "phone": "91986068759",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Zenith CA &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CA & Legal Consultancy businesses."
+    "phone": "91981560898",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Soulful Polymer Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 74,
-    "name": "Zenith Gourmet Cloud",
-    "category": "Gourmet Cloud Kitchen",
-    "city": "Delhi NCR",
-    "phone": "91986247207",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Zenith Gourmet Cloud! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Gourmet Cloud Kitchen businesses."
+    "name": "Soulful Bento Hub",
+    "category": "Custom Bento Cake & Dessert Shop",
+    "city": "Bengaluru",
+    "phone": "91981799418",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Soulful Bento Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 75,
-    "name": "Vanguard D2C Apparel",
-    "category": "D2C Apparel Brand",
-    "city": "Hyderabad",
-    "phone": "91986426554",
-    "status": "No Website",
-    "pitch": "Hi Team Vanguard D2C Apparel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for D2C Apparel Brand businesses."
+    "name": "Urban Soy Studio",
+    "category": "Scented Soy Candle & Wax Melt Artisan",
+    "city": "Pune",
+    "phone": "91982038837",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Urban Soy Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 76,
-    "name": "Vanguard Interior Design",
-    "category": "Interior Design Studio",
-    "city": "Pune",
-    "phone": "91986605901",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Vanguard Interior Design! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Interior Design Studio businesses."
+    "name": "Urban Canvas Crafts",
+    "category": "Hand-Painted Canvas Totes & Denim",
+    "city": "Jaipur",
+    "phone": "91982277357",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Urban Canvas Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 77,
-    "name": "Vanguard Real Estate",
-    "category": "Real Estate Advisory",
-    "city": "Jaipur",
-    "phone": "91986784349",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Vanguard Real Estate! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Real Estate Advisory businesses."
+    "name": "Urban Art Closet",
+    "category": "Resin Art & Flower Keepsake Studio",
+    "city": "Hyderabad",
+    "phone": "91982516776",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Urban Art Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 78,
-    "name": "Vanguard Dental &",
-    "category": "Dental & Skin Clinic",
-    "city": "Surat",
-    "phone": "91986963696",
-    "status": "No Website",
-    "pitch": "Hi Team Vanguard Dental &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Dental & Skin Clinic businesses."
+    "name": "Urban Crochet Lab",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91982755296",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Urban Crochet Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 79,
-    "name": "Vanguard Boutique Gym",
-    "category": "Boutique Gym",
-    "city": "Ahmedabad",
-    "phone": "91987142144",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Vanguard Boutique Gym! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Gym businesses."
+    "name": "Urban Press-on Co.",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91982994715",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Urban Press-on Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 80,
-    "name": "Vanguard CNC Industrial",
-    "category": "CNC Industrial Unit",
-    "city": "Chandigarh",
-    "phone": "91987321491",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Vanguard CNC Industrial! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CNC Industrial Unit businesses."
+    "name": "Urban Cold-Process Creations",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91983233235",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Urban Cold-Process Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 81,
-    "name": "Vanguard Study Abroad",
-    "category": "Study Abroad Consultancy",
-    "city": "Kochi",
-    "phone": "91987500838",
-    "status": "No Website",
-    "pitch": "Hi Team Vanguard Study Abroad! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Study Abroad Consultancy businesses."
+    "name": "Urban Sticker Boutique",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91983472654",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Urban Sticker Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 82,
-    "name": "Vanguard Luxury Catering",
-    "category": "Luxury Catering & Events",
-    "city": "Indore",
-    "phone": "91987679286",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Vanguard Luxury Catering! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Luxury Catering & Events businesses."
+    "name": "Urban Fitness Finds",
+    "category": "Micro Fitness & Pilates IG Coach",
+    "city": "Ahmedabad",
+    "phone": "91983711174",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Urban Fitness Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 83,
-    "name": "Vanguard Car Detailing",
-    "category": "Car Detailing Studio",
-    "city": "Coimbatore",
-    "phone": "91987858633",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Vanguard Car Detailing! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Car Detailing Studio businesses."
+    "name": "Urban Pet Hub",
+    "category": "Handmade Pet Accessories & Treats",
+    "city": "Dehradun",
+    "phone": "91983950593",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Urban Pet Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 84,
-    "name": "Vanguard Boutique Hotel",
-    "category": "Boutique Hotel",
-    "city": "Bengaluru",
-    "phone": "91988037980",
-    "status": "No Website",
-    "pitch": "Hi Team Vanguard Boutique Hotel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Hotel businesses."
+    "name": "Retro Thrift Studio",
+    "category": "Instagram Thrift & Vintage Store",
+    "city": "Delhi NCR",
+    "phone": "91984189113",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Retro Thrift Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 85,
-    "name": "Vanguard CA &",
-    "category": "CA & Legal Consultancy",
+    "name": "Retro Polymer Crafts",
+    "category": "Handcrafted Polymer Clay Jewelry",
     "city": "Mumbai",
-    "phone": "91988216428",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Vanguard CA &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CA & Legal Consultancy businesses."
+    "phone": "91984428532",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Retro Polymer Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 86,
-    "name": "Vanguard Gourmet Cloud",
-    "category": "Gourmet Cloud Kitchen",
-    "city": "Delhi NCR",
-    "phone": "91988395775",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Vanguard Gourmet Cloud! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Gourmet Cloud Kitchen businesses."
+    "name": "Retro Bento Closet",
+    "category": "Custom Bento Cake & Dessert Shop",
+    "city": "Bengaluru",
+    "phone": "91984667951",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Retro Bento Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 87,
-    "name": "Apex D2C Apparel",
-    "category": "D2C Apparel Brand",
-    "city": "Hyderabad",
-    "phone": "91988574223",
-    "status": "No Website",
-    "pitch": "Hi Team Apex D2C Apparel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for D2C Apparel Brand businesses."
+    "name": "Retro Soy Lab",
+    "category": "Scented Soy Candle & Wax Melt Artisan",
+    "city": "Pune",
+    "phone": "91984906471",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Retro Soy Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 88,
-    "name": "Apex Interior Design",
-    "category": "Interior Design Studio",
-    "city": "Pune",
-    "phone": "91988753570",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Apex Interior Design! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Interior Design Studio businesses."
+    "name": "Retro Canvas Co.",
+    "category": "Hand-Painted Canvas Totes & Denim",
+    "city": "Jaipur",
+    "phone": "91985145890",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Retro Canvas Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 89,
-    "name": "Apex Real Estate",
-    "category": "Real Estate Advisory",
-    "city": "Jaipur",
-    "phone": "91988932917",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Apex Real Estate! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Real Estate Advisory businesses."
+    "name": "Retro Art Creations",
+    "category": "Resin Art & Flower Keepsake Studio",
+    "city": "Hyderabad",
+    "phone": "91985384410",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Retro Art Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 90,
-    "name": "Apex Dental &",
-    "category": "Dental & Skin Clinic",
-    "city": "Surat",
-    "phone": "91989111365",
-    "status": "No Website",
-    "pitch": "Hi Team Apex Dental &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Dental & Skin Clinic businesses."
+    "name": "Retro Crochet Boutique",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91985623829",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Retro Crochet Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 91,
-    "name": "Apex Boutique Gym",
-    "category": "Boutique Gym",
-    "city": "Ahmedabad",
-    "phone": "91989290712",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Apex Boutique Gym! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Gym businesses."
+    "name": "Retro Press-on Finds",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91985862349",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Retro Press-on Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 92,
-    "name": "Apex CNC Industrial",
-    "category": "CNC Industrial Unit",
-    "city": "Chandigarh",
-    "phone": "91989469160",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Apex CNC Industrial! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CNC Industrial Unit businesses."
+    "name": "Retro Cold-Process Hub",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91986101768",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Retro Cold-Process Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 93,
-    "name": "Apex Study Abroad",
-    "category": "Study Abroad Consultancy",
-    "city": "Kochi",
-    "phone": "91989648507",
-    "status": "No Website",
-    "pitch": "Hi Team Apex Study Abroad! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Study Abroad Consultancy businesses."
+    "name": "Golden Sticker Studio",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91986340288",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Golden Sticker Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 94,
-    "name": "Apex Luxury Catering",
-    "category": "Luxury Catering & Events",
-    "city": "Indore",
-    "phone": "91989827854",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Apex Luxury Catering! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Luxury Catering & Events businesses."
+    "name": "Golden Fitness Crafts",
+    "category": "Micro Fitness & Pilates IG Coach",
+    "city": "Ahmedabad",
+    "phone": "91986579707",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Golden Fitness Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 95,
-    "name": "Apex Car Detailing",
-    "category": "Car Detailing Studio",
-    "city": "Coimbatore",
-    "phone": "91981007302",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Apex Car Detailing! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Car Detailing Studio businesses."
+    "name": "Golden Pet Closet",
+    "category": "Handmade Pet Accessories & Treats",
+    "city": "Dehradun",
+    "phone": "91986818227",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Golden Pet Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 96,
-    "name": "Apex Boutique Hotel",
-    "category": "Boutique Hotel",
-    "city": "Bengaluru",
-    "phone": "91981186649",
-    "status": "No Website",
-    "pitch": "Hi Team Apex Boutique Hotel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Hotel businesses."
+    "name": "Golden Thrift Lab",
+    "category": "Instagram Thrift & Vintage Store",
+    "city": "Delhi NCR",
+    "phone": "91987057646",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Golden Thrift Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 97,
-    "name": "Apex CA &",
-    "category": "CA & Legal Consultancy",
+    "name": "Golden Polymer Co.",
+    "category": "Handcrafted Polymer Clay Jewelry",
     "city": "Mumbai",
-    "phone": "91981365996",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Apex CA &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CA & Legal Consultancy businesses."
+    "phone": "91987296166",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Golden Polymer Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 98,
-    "name": "Apex Gourmet Cloud",
-    "category": "Gourmet Cloud Kitchen",
-    "city": "Delhi NCR",
-    "phone": "91981544444",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Apex Gourmet Cloud! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Gourmet Cloud Kitchen businesses."
+    "name": "Golden Bento Creations",
+    "category": "Custom Bento Cake & Dessert Shop",
+    "city": "Bengaluru",
+    "phone": "91987535585",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Golden Bento Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 99,
-    "name": "Prism D2C Apparel",
-    "category": "D2C Apparel Brand",
-    "city": "Hyderabad",
-    "phone": "91981723791",
-    "status": "No Website",
-    "pitch": "Hi Team Prism D2C Apparel! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for D2C Apparel Brand businesses."
+    "name": "Golden Soy Boutique",
+    "category": "Scented Soy Candle & Wax Melt Artisan",
+    "city": "Pune",
+    "phone": "91987774105",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Golden Soy Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 100,
-    "name": "Prism Interior Design",
-    "category": "Interior Design Studio",
-    "city": "Pune",
-    "phone": "91981902239",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Prism Interior Design! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Interior Design Studio businesses."
+    "name": "Golden Canvas Finds",
+    "category": "Hand-Painted Canvas Totes & Denim",
+    "city": "Jaipur",
+    "phone": "91988013524",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hi Golden Canvas Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 101,
-    "name": "Prism Real Estate",
-    "category": "Real Estate Advisory",
-    "city": "Jaipur",
-    "phone": "91982081586",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Prism Real Estate! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Real Estate Advisory businesses."
+    "name": "Golden Art Hub",
+    "category": "Resin Art & Flower Keepsake Studio",
+    "city": "Hyderabad",
+    "phone": "91988252943",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hey Golden Art Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 102,
-    "name": "Prism Dental &",
-    "category": "Dental & Skin Clinic",
-    "city": "Surat",
-    "phone": "91982260933",
-    "status": "No Website",
-    "pitch": "Hi Team Prism Dental &! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Dental & Skin Clinic businesses."
+    "name": "Little Crochet Studio",
+    "category": "Handmade Crochet & Knitwear Brand",
+    "city": "Chandigarh",
+    "phone": "91988491463",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Little Crochet Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   },
   {
     "id": 103,
-    "name": "Prism Boutique Gym",
-    "category": "Boutique Gym",
-    "city": "Ahmedabad",
-    "phone": "91982439381",
-    "status": "WhatsApp Only",
-    "pitch": "Hi Team Prism Boutique Gym! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Boutique Gym businesses."
+    "name": "Little Press-on Crafts",
+    "category": "Custom Press-on Nail Artist",
+    "city": "Kochi",
+    "phone": "91988730882",
+    "status": "WhatsApp Orders Only",
+    "pitch": "Hi Little Press-on Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
   },
   {
     "id": 104,
-    "name": "Prism CNC Industrial",
-    "category": "CNC Industrial Unit",
-    "city": "Chandigarh",
-    "phone": "91982618728",
-    "status": "Instagram Only",
-    "pitch": "Hi Team Prism CNC Industrial! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for CNC Industrial Unit businesses."
+    "name": "Little Cold-Process Closet",
+    "category": "Artisanal Cold-Process Soap Maker",
+    "city": "Kolkata",
+    "phone": "91988969402",
+    "status": "IG Bio Linktree Only",
+    "pitch": "Hey Little Cold-Process Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
   },
   {
     "id": 105,
-    "name": "Prism Study Abroad",
-    "category": "Study Abroad Consultancy",
-    "city": "Kochi",
-    "phone": "91982797176",
-    "status": "No Website",
-    "pitch": "Hi Team Prism Study Abroad! We build high-speed Next.js web apps with automated 3-second WhatsApp lead capture for Study Abroad Consultancy businesses."
+    "name": "Little Sticker Lab",
+    "category": "Indie Sticker & Stationery Studio",
+    "city": "Shillong",
+    "phone": "91989208821",
+    "status": "Instagram DM Only",
+    "pitch": "Hey Team Little Sticker Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
   }
 ];
 
