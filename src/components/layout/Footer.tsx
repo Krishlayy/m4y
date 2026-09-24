@@ -90,6 +90,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/playbook" className="text-white/90 hover:text-[#FFD700] transition-colors flex items-center gap-2">
+                  <span className="text-[#FF5500]">↳</span> 10k Lead Playbook
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-white/90 hover:text-[#FFD700] transition-colors flex items-center gap-2">
                   <span className="text-[#FF5500]">↳</span> Our Story & Founders
                 </Link>

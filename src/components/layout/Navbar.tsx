@@ -18,6 +18,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Services", href: "/services" },
+    { name: "Playbook", href: "/playbook" },
+    { name: "Book Call", href: "/book-call" },
     { name: "Founders", href: "/founders" },
     { name: "Pricing", href: "/pricing" },
     { name: "Work", href: "/work" },

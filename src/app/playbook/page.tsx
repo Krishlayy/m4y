@@ -75,7 +75,7 @@ export default function PlaybookPage() {
             <span className="bg-black text-[#FFD700] px-3 py-1 text-xs font-black uppercase border-2 border-black">Master Edition</span>
           </div>
           <p className="text-base md:text-lg font-bold leading-relaxed mb-6">
-            This playbook provides the exact 8-chapter master blueprint used by **M4Y Growth Engineering** to generate over 10,000 qualified leads at ultra-low acquisition costs (₹15–₹45 per lead) while converting 24%+ of website visitors into high-intent buyers.
+            This playbook provides the exact 8-chapter master blueprint used by <strong>M4Y Growth Engineering</strong> to generate over 10,000 qualified leads at ultra-low acquisition costs (₹15–₹45 per lead) while converting 24%+ of website visitors into high-intent buyers.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t-2 border-black/20 text-center">
             <div>
@@ -212,8 +212,8 @@ M4Y Target Web Conversion Rate = 18.5% – 28.2% (vs Industry Avg 2.3%)`}</pre>
           <h2 className="text-3xl md:text-5xl font-black uppercase text-black mb-4 leading-none">
             Need This Built For Your Business?
           </h2>
-          <p className="text-lg md:text-xl font-bold mb-8 text-black max-w-2xl mx-auto">
-            Speak directly with founders **Kishalay Sharma** &amp; **Ayushman Singh**. We build your Next.js web application, setup ManyChat &amp; WhatsApp webhooks, and launch your paid ad engine.
+          <p className="text-lg md:text-[#FFD700] font-bold mb-8 text-black max-w-2xl mx-auto">
+            Speak directly with founders <strong>Kishalay Sharma</strong> &amp; <strong>Ayushman Singh</strong>. We build your Next.js web application, setup ManyChat &amp; WhatsApp webhooks, and launch your paid ad engine.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -390,7 +390,7 @@ M4Y Target Web Conversion Rate = 18.5% – 28.2% (vs Industry Avg 2.3%)`}</pre>
             Ready to Scale Your Lead Engine?
           </h2>
           <p className="text-lg md:text-2xl font-bold mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed print:text-black">
-            Work directly with founders **Kishalay Sharma** &amp; **Ayushman Singh**. We engineer your web platform, automate your Instagram/WhatsApp funnels, and run your paid acquisition.
+            Work directly with founders <strong>Kishalay Sharma</strong> &amp; <strong>Ayushman Singh</strong>. We engineer your web platform, automate your Instagram/WhatsApp funnels, and run your paid acquisition.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 print:hidden">
