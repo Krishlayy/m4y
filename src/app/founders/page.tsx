@@ -5,7 +5,6 @@ import Footer from "@/components/layout/Footer";
 import { founders } from "@/data/founders";
 import { motion } from "framer-motion";
 import { ExternalLink, Flame, ArrowRight } from "lucide-react";
-import { LinkedinIcon } from "@/components/ui/BrandIcons";
 import Link from "next/link";
 
 const containerVariants = {
@@ -25,39 +24,46 @@ const itemVariants = {
 
 export default function FoundersPage() {
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black pt-20 flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black pt-28 md:pt-36 flex flex-col overflow-x-hidden">
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="flex-grow w-full">
         {/* Hero Section */}
-        <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 border-b-4 border-black bg-[#FFD700]">
-          <div className="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+        <section className="relative py-16 md:py-24 border-b-4 border-black bg-[#FFD700]">
+          <div className="max-w-5xl mx-auto px-5 sm:px-8 text-center flex flex-col items-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF5500] text-white font-black text-xs sm:text-sm uppercase tracking-widest border-2 border-black mb-6 shadow-[3px_3px_0_#000]">
               <Flame className="w-4 h-4 fill-white" /> Technical Leadership • Unmatched Speed
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-6 leading-[0.95]">
-              Meet the <span className="bg-black text-white px-3 py-1 border-4 border-black inline-block mt-2">Founders</span>
-            </h1>
+            <div className="w-full mb-8 text-center">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-none">
+                Meet the
+              </h1>
+              <div className="mt-3 flex justify-center">
+                <span className="bg-black text-white px-4 sm:px-6 py-2 border-4 border-black inline-block text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight shadow-[4px_4px_0_#FF5500]">
+                  Founders
+                </span>
+              </div>
+            </div>
 
-            <p className="text-lg sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto bg-white p-6 border-4 border-black shadow-[6px_6px_0_#000] text-black/90 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold max-w-3xl w-full mx-auto bg-white p-6 sm:p-8 border-4 border-black shadow-[8px_8px_0_#000] text-black/90 leading-relaxed mt-2">
               Two software engineers who combine deep technical architecture with high-converting creative strategy. We partner with ambitious brands to build predictable, scalable revenue engines.
             </p>
           </div>
         </section>
 
         {/* Founders Cards Section */}
-        <section className="py-20 md:py-32 bg-white border-b-4 border-black">
-          <div className="w-full px-5 sm:px-8 md:px-16 lg:px-28 xl:px-40 max-w-5xl mx-auto">
+        <section className="py-16 md:py-24 bg-white border-b-4 border-black">
+          <div className="w-full px-5 sm:px-8 max-w-5xl mx-auto">
             <motion.div 
               variants={containerVariants}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-100px" }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 w-full"
             >
               {founders.map((founder, index) => (
-                <motion.div key={founder.id || founder.name} variants={itemVariants} className="flex">
+                <motion.div key={founder.id || founder.name} variants={itemVariants} className="flex w-full">
                   <div className={`p-6 sm:p-8 border-4 border-black ${index === 0 ? 'bg-white shadow-[8px_8px_0_0_#FF5500]' : 'bg-[#FFD700] shadow-[8px_8px_0_0_#000]'} w-full flex flex-col group relative overflow-hidden`}>
                     
                     <div className="flex items-center gap-5 mb-6 relative z-10">
@@ -98,7 +104,7 @@ export default function FoundersPage() {
                           rel="noopener noreferrer" 
                           className="inline-flex items-center gap-2 font-black text-xs sm:text-sm uppercase tracking-wider bg-black text-white px-4 py-2 border-2 border-black hover:bg-[#FF5500] hover:text-white transition-colors shadow-[2px_2px_0_0_#000]"
                         >
-                          <LinkedinIcon className="w-4 h-4 text-[#0077B5]" />
+                          <ExternalLink className="w-4 h-4" />
                           LinkedIn Profile ↗
                         </a>
                       )}
@@ -107,17 +113,25 @@ export default function FoundersPage() {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
+        </section>
 
-            {/* Bottom CTA */}
-            <div className="mt-16 text-center">
-              <Link
-                href="/book-call"
-                className="inline-flex items-center gap-3 bg-[#FF5500] text-white font-black text-lg sm:text-xl uppercase px-8 sm:px-12 py-5 border-4 border-black shadow-[6px_6px_0_0_#FFD700] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-              >
-                Work Directly With Us
-                <ArrowRight className="w-6 h-6" />
-              </Link>
-            </div>
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 bg-[#FF5500] text-white text-center">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8 flex flex-col items-center w-full">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-none">
+              Work Directly With Kishalay & Ayushman.
+            </h2>
+            <p className="text-lg sm:text-xl font-bold mb-10 text-white/90 max-w-2xl">
+              No account managers. No junior handoffs. Direct execution from the founders who build your tech and scale your growth.
+            </p>
+            <Link 
+              href="/book-call" 
+              className="inline-flex items-center gap-3 bg-[#FFD700] text-black text-xl sm:text-2xl font-black uppercase px-8 sm:px-12 py-5 sm:py-6 border-4 border-black shadow-[8px_8px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+            >
+              Book a Founder Call
+              <ArrowRight className="w-6 h-6" />
+            </Link>
           </div>
         </section>
       </main>

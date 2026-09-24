@@ -51,10 +51,10 @@ export default function WorkPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#FFD700] selection:text-black pt-24 flex flex-col">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#FFD700] selection:text-black pt-28 md:pt-36 flex flex-col overflow-x-hidden">
       <Navbar />
       
-      <main className="flex-grow">
+      <main className="flex-grow w-full">
         {/* Hero */}
         <section className="px-6 py-32 text-center border-b-4 border-white">
           <div className="max-w-4xl mx-auto">

@@ -65,10 +65,10 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-24 flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-28 md:pt-36 flex flex-col overflow-x-hidden">
       <Navbar />
       
-      <main className="flex-grow">
+      <main className="flex-grow w-full">
         {/* Hero */}
         <section className="px-6 py-24 md:py-32 border-b-4 border-black bg-[#FFD700]">
           <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
