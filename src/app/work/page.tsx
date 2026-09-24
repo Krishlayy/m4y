@@ -51,7 +51,7 @@ export default function WorkPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#FFD700] selection:text-black pt-28 md:pt-36 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#FFD700] selection:text-black pt-32 md:pt-44 flex flex-col overflow-x-hidden">
       <Navbar />
       
       <main className="flex-grow w-full">

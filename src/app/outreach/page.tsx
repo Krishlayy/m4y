@@ -993,7 +993,7 @@ export default function OutreachPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-mono selection:bg-[#FF5500] selection:text-white pt-28 md:pt-36 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white font-mono selection:bg-[#FF5500] selection:text-white pt-32 md:pt-44 flex flex-col overflow-x-hidden">
       <Navbar />
 
       {/* Header */}

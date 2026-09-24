@@ -38,7 +38,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-28 md:pt-36 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-32 md:pt-44 flex flex-col overflow-x-hidden">
       <Navbar />
       
       <main className="flex-grow w-full">
@@ -60,11 +60,11 @@ export default function AboutPage() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="w-full mb-8 text-center"
             >
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none text-black">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-tight text-black max-w-full break-words">
                 Two Engineers Who
               </h1>
               <div className="mt-3 flex justify-center">
-                <span className="text-white bg-black px-4 sm:px-6 py-2 border-4 border-black inline-block text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight shadow-[4px_4px_0_#FF5500]">
+                <span className="text-white bg-black px-4 sm:px-6 py-2 border-4 border-black inline-block text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight shadow-[4px_4px_0_#FF5500] max-w-full break-words">
                   Refused To Settle.
                 </span>
               </div>

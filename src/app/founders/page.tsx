@@ -24,7 +24,7 @@ const itemVariants = {
 
 export default function FoundersPage() {
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black pt-28 md:pt-36 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black pt-32 md:pt-44 flex flex-col overflow-x-hidden">
       <Navbar />
 
       <main className="flex-grow w-full">
@@ -36,11 +36,11 @@ export default function FoundersPage() {
             </div>
 
             <div className="w-full mb-8 text-center">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-none">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-tight max-w-full break-words">
                 Meet the
               </h1>
-              <div className="mt-3 flex justify-center">
-                <span className="bg-black text-white px-4 sm:px-6 py-2 border-4 border-black inline-block text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight shadow-[4px_4px_0_#FF5500]">
+              <div className="mt-4 flex justify-center max-w-full overflow-hidden">
+                <span className="bg-black text-white px-4 sm:px-6 py-2 border-4 border-black inline-block text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight shadow-[4px_4px_0_#FF5500] max-w-full break-words">
                   Founders
                 </span>
               </div>

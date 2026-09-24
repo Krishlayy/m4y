@@ -13,7 +13,7 @@ export default function PlaybookPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-mono selection:bg-[#FF5500] selection:text-white pt-28 md:pt-36 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-mono selection:bg-[#FF5500] selection:text-white pt-32 md:pt-44 flex flex-col overflow-x-hidden">
       {/* Hide Navbar during print */}
       <div className="print:hidden">
         <Navbar />
