@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M4Y — Trendy Newspaper Edit Instagram Video Exporter & Downloader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@700;900&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #050505;
+      color: #ffffff;
+    }
+    .neobrutal-box {
+      border: 4px solid #000000;
+      box-shadow: 6px 6px 0px #FF5500;
+    }
+  </style>
+</head>
+<body class="min-h-screen py-10 px-4 flex flex-col items-center justify-center">
+
+  {/* Header */}
+  <div class="max-w-4xl w-full text-center mb-8">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF5500] text-white font-black text-xs uppercase tracking-widest border-2 border-white mb-3 shadow-[3px_3px_0_#000]">
+      🎬 15-SECOND INSTAGRAM REEL VIDEO RENDERER & EXPORTER
+    </div>
+    <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white">
+      M4Y <span class="bg-[#FFD700] text-black px-3 py-1 border-4 border-white inline-block">Newspaper Video Reel</span>
+    </h1>
+    <p class="text-gray-400 font-bold text-sm mt-2">
+      Click "Render & Download Video" below to generate your ready-to-post 9:16 Instagram video file!
+    </p>
+  </div>
+
+  {/* Player & Exporter Grid */}
+  <div class="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    
+    {/* Left Column: Canvas Renderer & Video Viewport */}
+    <div class="lg:col-span-6 flex flex-col items-center">
+      <div class="relative w-[340px] sm:w-[380px] h-[670px] bg-black border-8 border-white rounded-[32px] overflow-hidden shadow-[12px_12px_0_#FF5500] flex flex-col items-center justify-between p-4">
+        
+        {/* Top Status */}
+        <div class="w-full flex items-center justify-between text-xs font-mono font-bold text-white z-20 bg-black/80 p-2 rounded-lg border border-white/20">
+          <span class="flex items-center gap-2 text-[#FFD700]">
+            <span id="recDot" class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+            <span id="statusText">READY TO RECORD</span>
+          </span>
+          <span id="timerText">00:00 / 00:15</span>
+        </div>
+
+        {/* 9:16 HTML5 Canvas Engine */}
+        <canvas id="reelCanvas" width="720" height="1280" class="w-full h-full object-contain rounded-xl my-2 border-2 border-white/20"></canvas>
+
+        {/* Render Controls */}
+        <div class="w-full flex flex-col gap-2 z-20">
+          <button id="btnRecord" onclick="startVideoRender()" class="w-full bg-[#25D366] text-black font-black text-sm uppercase py-3 px-4 border-2 border-black shadow-[4px_4px_0_#fff] hover:bg-green-400 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            📥 Render & Download Video File (.webm / .mp4)
+          </button>
+          <div class="flex items-center justify-between gap-2">
+            <button onclick="previewAnimation()" class="flex-1 bg-[#FF5500] text-white font-black text-xs uppercase py-2 px-3 border border-white hover:bg-orange-600">
+              ▶ Preview Animation
+            </button>
+            <button onclick="stopRender()" class="bg-gray-800 text-white font-black text-xs uppercase py-2 px-3 border border-white/30 hover:bg-gray-700">
+              ⏹ Stop
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {/* Right Column: Frame Graphics & Video Script */}
+    <div class="lg:col-span-6 space-y-6">
+
+      {/* Frame 1 Graphic Display */}
+      <div class="bg-black p-5 border-4 border-white shadow-[8px_8px_0_#FF5500]">
+        <div class="flex items-center justify-between mb-3">
+          <span class="bg-[#FFD700] text-black font-black text-xs uppercase px-2.5 py-1 border border-black">
+            📸 Newspaper Edit Scene 1 Graphic
+          </span>
+          <span class="text-xs font-bold text-gray-400">9:16 Vertical Story Format</span>
+        </div>
+        <img src="/m4y_newspaper_scene1.jpg" alt="M4Y Newspaper Scene 1" class="w-full h-auto rounded border-2 border-white object-cover max-h-[320px]" onError="this.src='/m4y_newspaper_reel_graphic.jpg';"/>
+      </div>
+
+      {/* Video Text Script */}
+      <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0_#FFD700]">
+        <h3 class="text-xl font-black uppercase tracking-tight mb-3">
+          📰 15-Second Trendy On-Screen Text Script
+        </h3>
+        <div class="space-y-3 text-xs font-mono">
+          <div class="p-2.5 bg-gray-100 border-l-4 border-red-600">
+            <strong>0s - 3.5s:</strong> "BREAKING NEWS: TRADITIONAL AGENCIES EXPOSED! 🚨 90% of brands burn ad budgets on manual spreadsheets & junior interns."
+          </div>
+          <div class="p-2.5 bg-gray-100 border-l-4 border-[#FF5500]">
+            <strong>3.5s - 7s:</strong> "2 SOFTWARE GRADUATES REFUSE CORPORATE JOBS! ⚡ Kishalay & Ayushman launch M4Y: 100% direct founder execution."
+          </div>
+          <div class="p-2.5 bg-gray-100 border-l-4 border-green-600">
+            <strong>7s - 11s:</strong> "CONFIRMED REPORT: 0.3s NEXT.JS STORES GENERATE 4.2X HIGHER ROAS! 📈 Sub-second speed + 3-sec WhatsApp capture."
+          </div>
+          <div class="p-2.5 bg-gray-100 border-l-4 border-amber-500">
+            <strong>11s - 15s:</strong> "SPECIAL EDITION: ONLY 10 FOUNDING SPOTS REMAINING! 🔥 Tap link in bio 👉 m4y.world/book-call"
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const canvas = document.getElementById('reelCanvas');
+    const ctx = canvas.getContext('2d');
+    let mediaRecorder = null;
+    let recordedChunks = [];
+    let isRendering = false;
+    let animFrameId = null;
+    let startTime = 0;
+
+    function drawScene(elapsedSeconds) {
+      // Clear canvas with Vintage Newsprint background
+      ctx.fillStyle = '#F4EBD9';
+      ctx.fillRect(0, 0, 720, 1280);
+
+      // Newsprint Grain Lines
+      ctx.strokeStyle = '#E2D5BE';
+      ctx.lineWidth = 1;
+      for (let y = 0; y < 1280; y += 24) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(720, y);
+        ctx.stroke();
+      }
+
+      // Outer Vintage Border
+      ctx.strokeStyle = '#000000';
+      ctx.lineWidth = 12;
+      ctx.strokeRect(20, 20, 680, 1240);
+
+      // Newspaper Masthead
+      ctx.fillStyle = '#000000';
+      ctx.font = 'bold 24px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('THE M4Y DAILY GAZETTE • SPECIAL DISRUPTION ISSUE', 360, 75);
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(40, 95);
+      ctx.lineTo(680, 95);
+      ctx.stroke();
+
+      // Determine active scene based on time
+      const sec = elapsedSeconds % 15;
+
+      if (sec < 3.5) {
+        // Scene 1: TRADITIONAL AGENCIES EXPOSED
+        ctx.fillStyle = '#CC0000';
+        ctx.font = '900 32px sans-serif';
+        ctx.fillText('🚨 SCAM ALERT 🚨', 360, 220);
+
+        ctx.fillStyle = '#000000';
+        ctx.font = '900 54px serif';
+        ctx.fillText('BREAKING NEWS:', 360, 320);
+        
+        ctx.fillStyle = '#FF5500';
+        ctx.fillRect(60, 370, 600, 80);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '900 58px serif';
+        ctx.fillText('AGENCIES EXPOSED!', 360, 430);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '700 36px serif';
+        ctx.fillText('90% of brands burn ad budgets', 360, 600);
+        ctx.fillText('on manual spreadsheets &', 360, 660);
+        ctx.fillText('junior account interns.', 360, 720);
+
+      } else if (sec < 7.0) {
+        // Scene 2: 2 SOFTWARE GRADUATES REFUSE CUBICLES
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(60, 180, 600, 60);
+        ctx.fillStyle = '#FFD700';
+        ctx.font = '900 28px monospace';
+        ctx.fillText('⚡ THE ENGINEER REVOLUTION', 360, 220);
+
+        ctx.fillStyle = '#000000';
+        ctx.font = '900 52px serif';
+        ctx.fillText('2 CS GRADUATES', 360, 340);
+        ctx.fillText('REFUSE CUBICLES!', 360, 410);
+
+        ctx.fillStyle = '#FF5500';
+        ctx.fillRect(60, 480, 600, 90);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '900 42px sans-serif';
+        ctx.fillText('100% DIRECT FOUNDER EXECUTION', 360, 540);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '700 34px serif';
+        ctx.fillText('Kishalay & Ayushman launch M4Y:', 360, 680);
+        ctx.fillText('Zero interns. High-velocity code.', 360, 740);
+
+      } else if (sec < 11.0) {
+        // Scene 3: 0.3s NEXT.JS STORES GENERATE 4.2X ROAS
+        ctx.fillStyle = '#008837';
+        ctx.font = '900 32px sans-serif';
+        ctx.fillText('📈 VERIFIED DATA REPORT', 360, 220);
+
+        ctx.fillStyle = '#FFD700';
+        ctx.fillRect(40, 280, 640, 100);
+        ctx.fillStyle = '#000000';
+        ctx.font = '900 56px serif';
+        ctx.fillText('0.3s NEXT.JS STORES', 360, 350);
+
+        ctx.fillStyle = '#000000';
+        ctx.font = '900 52px serif';
+        ctx.fillText('GENERATE 4.2X ROAS!', 360, 470);
+
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(80, 560, 560, 70);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '700 32px monospace';
+        ctx.fillText('✔ Sub-Second Mobile Load Speed', 360, 605);
+
+        ctx.fillStyle = '#25D366';
+        ctx.fillRect(80, 660, 560, 70);
+        ctx.fillStyle = '#000000';
+        ctx.font = '700 32px monospace';
+        ctx.fillText('✔ 3-Sec WhatsApp Lead Capture', 360, 705);
+
+      } else {
+        // Scene 4: ONLY 10 FOUNDING SPOTS LEFT
+        ctx.fillStyle = '#FF5500';
+        ctx.font = '900 34px sans-serif';
+        ctx.fillText('🔥 SPECIAL EDITION OFFER', 360, 220);
+
+        ctx.fillStyle = '#000000';
+        ctx.font = '900 56px serif';
+        ctx.fillText('ONLY 10 SPOTS LEFT', 360, 330);
+        ctx.fillText('FOR LAUNCH PRICING', 360, 400);
+
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(60, 520, 600, 110);
+        ctx.fillStyle = '#FFD700';
+        ctx.font = '900 42px sans-serif';
+        ctx.fillText('👉 CLAIM YOUR SPOT NOW', 360, 590);
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '700 32px monospace';
+        ctx.fillText('m4y.world/book-call', 360, 720);
+        ctx.fillText('Call: +91 92587 35381', 360, 770);
+      }
+
+      // Ticker Bar at Bottom
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 1180, 720, 100);
+      ctx.fillStyle = '#FFD700';
+      ctx.font = 'bold 26px monospace';
+      ctx.fillText('M4Y AGENCY • 2 CS FOUNDERS • 0.3S STORES • 4.2X ROAS', 360, 1240);
+    }
+
+    function animate(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) / 1000;
+
+      drawScene(elapsed);
+
+      const secStr = Math.floor(elapsed) < 10 ? '0' + Math.floor(elapsed) : Math.floor(elapsed);
+      document.getElementById('timerText').innerText = `00:${secStr} / 00:15`;
+
+      if (isRendering) {
+        if (elapsed >= 15) {
+          stopRender();
+          return;
+        }
+      }
+
+      animFrameId = requestAnimationFrame(animate);
+    }
+
+    function previewAnimation() {
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+      startTime = 0;
+      isRendering = false;
+      document.getElementById('statusText').innerText = 'PLAYING PREVIEW';
+      animFrameId = requestAnimationFrame(animate);
+    }
+
+    function startVideoRender() {
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+      recordedChunks = [];
+      startTime = 0;
+      isRendering = true;
+
+      document.getElementById('statusText').innerText = 'RECORDING VIDEO...';
+      document.getElementById('statusText').className = 'text-red-500 font-bold';
+
+      const stream = canvas.captureStream(30);
+      let options = { mimeType: 'video/webm;codecs=vp9' };
+      if (!MediaRecorder.isTypeSupported(options.mimeType)) {
+        options = { mimeType: 'video/webm' };
+      }
+
+      mediaRecorder = new MediaRecorder(stream, options);
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          recordedChunks.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(recordedChunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = 'm4y_newspaper_reel.webm';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+        }, 100);
+
+        document.getElementById('statusText').innerText = 'DOWNLOAD COMPLETE! 🎉';
+        document.getElementById('statusText').className = 'text-green-400 font-bold';
+      };
+
+      mediaRecorder.start();
+      animFrameId = requestAnimationFrame(animate);
+    }
+
+    function stopRender() {
+      if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+      }
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+      isRendering = false;
+      document.getElementById('statusText').innerText = 'READY TO RECORD';
+      document.getElementById('statusText').className = 'text-[#FFD700]';
+    }
+
+    // Initial draw frame 0
+    drawScene(0);
+  </script>
+</body>
+</html>
