@@ -23,7 +23,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "919811092831",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Thrift Hive! Loved your Y2K denim drop on IG. Stop losing orders in crowded DMs — get a sub-second drop store with 3-sec WhatsApp checkout."
+    "pitch": "Hey The Thrift Hive India! 🔥 Your vintage fashion drops are insane! Turn your IG Story views into instant paid orders without answering 'is this available?' 50 times in DMs. Want to see a 30-sec live demo? 🚀"
   },
   {
     "id": 2,
@@ -32,7 +32,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "919863041920",
     "status": "IG Stories Drop Only",
-    "pitch": "Hey Vintage Thread! Turn your IG Story drop views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Vintage Thread Co.! 🌿 Automate your Sunday thrift drops! We build 0.3s lightning-fast checkout stores linked right in your IG bio so your followers can buy in 1 click. Zero monthly fees! ⚡"
   },
   {
     "id": 3,
@@ -41,7 +41,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "919900218940",
     "status": "Instagram DM Only",
-    "pitch": "Hi Reloved Closet! Automate your Sunday thrift drops with a 0.3s Neobrutalist store linked directly in your IG bio."
+    "pitch": "Hey Reloved Closet India team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 4,
@@ -50,7 +50,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "919820147820",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey RetroDrip! Stop losing buyers when DMs get flooded during drops. Launch instant 1-click checkout pages."
+    "pitch": "Hey RetroDrip Thrift Store! 🔥 Your vintage fashion drops are insane! Turn your IG Story views into instant paid orders without answering 'is this available?' 50 times in DMs. Want to see a 30-sec live demo? 🚀"
   },
   {
     "id": 5,
@@ -59,7 +59,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "919822391040",
     "status": "Instagram DM Only",
-    "pitch": "Hi Aesthetic Archive! Turn your viral Reel views into instant sales with a sleek 100/100 speed drop site."
+    "pitch": "Hi Aesthetic Archive Thrift! 🌿 Automate your Sunday thrift drops! We build 0.3s lightning-fast checkout stores linked right in your IG bio so your followers can buy in 1 click. Zero monthly fees! ⚡"
   },
   {
     "id": 6,
@@ -68,7 +68,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "919829055410",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Clay & Bloom! showcase your handcrafted clay earrings in a high-converting web catalog with direct WhatsApp orders."
+    "pitch": "Hey Clay & Bloom Studio! 🌸 Your handcrafted jewelry collection is stunning! Stop spending hours replying 'price please' in comments. Get a 0.3s aesthetic web catalog with instant WhatsApp orders! 💎"
   },
   {
     "id": 7,
@@ -77,7 +77,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "919814210980",
     "status": "Instagram DM Only",
-    "pitch": "Hey Charm Craft! Showcase custom charm necklaces without answering 'price?' in IG comments 50 times a day."
+    "pitch": "Hi Charm Craft Studio Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 8,
@@ -86,7 +86,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "919825190820",
     "status": "WhatsApp Orders Only",
-    "pitch": "Namaste Silver Aura! Scale your festive jewelry sales nationwide with an automated WhatsApp + web storefront."
+    "pitch": "Namaste Silver Aura Crafts! 💖 Build brand trust and take direct jewelry orders nationwide with a custom Neobrutalist catalog linked in your bio. Zero marketplace commission! 🚀"
   },
   {
     "id": 9,
@@ -95,7 +95,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "919447389100",
     "status": "Instagram DM Only",
-    "pitch": "Hi Bead & Thread! Build brand trust and take direct payments with a fast Neobrutalist jewelry catalog."
+    "pitch": "Hey Bead & Thread Jewelry! 🌸 Your handcrafted jewelry collection is stunning! Stop spending hours replying 'price please' in comments. Get a 0.3s aesthetic web catalog with instant WhatsApp orders! 💎"
   },
   {
     "id": 10,
@@ -104,7 +104,7 @@ const rawProspects: Prospect[] = [
     "city": "Guwahati",
     "phone": "919864019280",
     "status": "Instagram DM Only",
-    "pitch": "Hey Golden Petal! Convert your Instagram followers into loyal buyers with a sleek zero-commission web store."
+    "pitch": "Hi Golden Petal Trinkets Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 11,
@@ -113,7 +113,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "919810844910",
     "status": "Instagram DM Only",
-    "pitch": "Hey Bento Bites! Stop handling custom cake orders manually over DM. We build 3-second online cake booking forms."
+    "pitch": "Hi Bento Bites Bakery Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 12,
@@ -122,7 +122,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "919820719280",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi NYC Cookie Lab! Automate weekend cookie batch pre-orders with direct WhatsApp checkout links."
+    "pitch": "Namaste NYC Cookie Lab! 🎂 Your custom cake & dessert creations look incredible! Stop handling complex cake orders over messy DM threads. We build instant cake booking pages with automated WhatsApp receipts! 🍰"
   },
   {
     "id": 13,
@@ -131,7 +131,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "919845391020",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Sugar Bloom! Show menu prices and take weekend dessert orders without Swiggy/Zomato's 30% commission."
+    "pitch": "Hi The Sugar Bloom Kitchen! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 14,
@@ -140,7 +140,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "919890481920",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Sourdough & Co! Take weekly fresh loaf pre-orders with an automated sub-second bread ordering page."
+    "pitch": "Hi Sourdough & Co. Home Bakery Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 15,
@@ -149,7 +149,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "919849410920",
     "status": "Instagram DM Only",
-    "pitch": "Hey Velvet Crumb! Turn luxury cake reel views into booked party orders with an interactive cake builder."
+    "pitch": "Namaste Velvet Crumb Patisserie! 🎂 Your custom cake & dessert creations look incredible! Stop handling complex cake orders over messy DM threads. We build instant cake booking pages with automated WhatsApp receipts! 🍰"
   },
   {
     "id": 16,
@@ -158,7 +158,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "919814391080",
     "status": "Instagram DM Only",
-    "pitch": "Hi Soulful Candles! Showcase your scented candle collections with a 100/100 speed store optimized for Meta ads."
+    "pitch": "Namaste Soulful Candles Co.! 🌿 Scale your candle gift hamper sales nationwide! We build sub-second Neobrutalist catalog pages with instant 1-click WhatsApp order confirmation. 📦"
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "919760219840",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Aroma Therapy! Scale your festive gift hampers with an automated web shop and instant WhatsApp receipt."
+    "pitch": "Hi Aroma Therapy Studio Team! 🕯️ Showcase your jar candles & wax melts on a clean, high-converting shop page that captures customer contacts & payments automatically! 🚀"
   },
   {
     "id": 18,
@@ -176,7 +176,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "919829188430",
     "status": "IG Bio Linktree Only",
-    "pitch": "Namaste Concrete & Flame! Present your minimalist concrete candle collection on a clean Neobrutalist showcase."
+    "pitch": "Hey Concrete & Flame Studio! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 19,
@@ -185,7 +185,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "919830291040",
     "status": "Instagram DM Only",
-    "pitch": "Hi Botanical Wax Works! Capture Diwali and wedding gift hamper bulk orders with a fast B2B/D2C showcase."
+    "pitch": "Namaste Botanical Wax Works! 🌿 Scale your candle gift hamper sales nationwide! We build sub-second Neobrutalist catalog pages with instant 1-click WhatsApp order confirmation. 📦"
   },
   {
     "id": 20,
@@ -194,7 +194,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "919820891040",
     "status": "Instagram DM Only",
-    "pitch": "Hey Tote-ally Handmade! Convert your viral tote bag reel views into paid orders with 1-click web checkout."
+    "pitch": "Hey Tote-ally Handmade Studio! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 21,
@@ -203,7 +203,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "919811782910",
     "status": "Instagram DM Only",
-    "pitch": "Hi Denim Canvas! Take custom jacket sizing and design requests seamlessly via an automated web form."
+    "pitch": "Hi Denim Canvas Custom Team! ✨ Turn your viral reel views into direct paid orders with a sleek 0.3s store optimized for hand-painted totes & apparel! 🚀"
   },
   {
     "id": 22,
@@ -212,7 +212,7 @@ const rawProspects: Prospect[] = [
     "city": "Chennai",
     "phone": "919840391820",
     "status": "WhatsApp Orders Only",
-    "pitch": "Namaste Resin Reminiscence! Capture high-ticket bridal flower preservation bookings with a dedicated web portal."
+    "pitch": "Namaste Resin Reminiscence Studio! 💍 Your garland resin preservation & keepsake work is breathtaking! Capture high-ticket wedding floral bookings online with instant WhatsApp consultations. 🌸"
   },
   {
     "id": 23,
@@ -221,7 +221,7 @@ const rawProspects: Prospect[] = [
     "city": "Indore",
     "phone": "919826291040",
     "status": "Instagram DM Only",
-    "pitch": "Hi Petal & Resin! Stop answering DM inquiries one by one. Display prices & customizations on a fast web shop."
+    "pitch": "Hey Petal & Resin Crafts! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 24,
@@ -230,7 +230,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "919863102940",
     "status": "Instagram DM Only",
-    "pitch": "Hey Knit & Knot! Manage custom crochet order slots effortlessly with an automated slot booking page."
+    "pitch": "Hey Knit & Knot Crochet Lab! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 25,
@@ -239,7 +239,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "919900381020",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Loopy Loops! Upgrade your IG bio link into a full-blown sub-second e-commerce ordering engine."
+    "pitch": "Hi Loopy Loops Crafts Team! ✨ Turn your viral reel views into direct paid orders with a sleek 0.3s store optimized for hand-painted totes & apparel! 🚀"
   },
   {
     "id": 26,
@@ -248,7 +248,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "919811891020",
     "status": "Instagram DM Only",
-    "pitch": "Hey Press-On Perfection! Let clients select nail sizes, shapes, and custom nail art styles online in 3 secs."
+    "pitch": "Hey Press-On Perfection Studio! 💅 Your custom press-on nail sets look salon-perfect! Let clients select nail sizes, shapes & art styles online in 3 secs with instant WhatsApp order slips! ✨"
   },
   {
     "id": 27,
@@ -257,7 +257,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "919890591080",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Glitz & Glam! Scale nail set drops across India with instant WhatsApp ordering and online UPI checkout."
+    "pitch": "Hi Glitz & Glam Pressons! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 28,
@@ -266,7 +266,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "919447491020",
     "status": "Instagram DM Only",
-    "pitch": "Namaste Suds & Botanicals! Build buyer confidence with ingredient breakdowns and 1-click soap bundle purchasing."
+    "pitch": "Namaste Suds & Botanicals! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 29,
@@ -275,7 +275,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "919814491020",
     "status": "Instagram DM Only",
-    "pitch": "Hey Butter & Glow! Boost Meta ad ROI with a lightning-fast D2C store optimized for beauty sales."
+    "pitch": "Hey Butter & Glow Skincare! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 30,
@@ -284,7 +284,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91989281861",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Aesthetic Crochet Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Aesthetic Crochet Studio! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 31,
@@ -293,7 +293,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91989520381",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Aesthetic Press-on Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Aesthetic Press-on Crafts! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 32,
@@ -302,7 +302,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91989759800",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Aesthetic Cold-Process Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Aesthetic Cold-Process Closet! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 33,
@@ -311,7 +311,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91989998320",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Aesthetic Sticker Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Aesthetic Sticker Lab team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   },
   {
     "id": 34,
@@ -320,7 +320,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "91981238739",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Aesthetic Fitness Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Aesthetic Fitness Co.! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 35,
@@ -329,7 +329,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "91981477259",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Aesthetic Pet Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Aesthetic Pet Creations! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 36,
@@ -338,7 +338,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "91981716678",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Aesthetic Thrift Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Aesthetic Thrift Boutique team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 37,
@@ -347,7 +347,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "91981955198",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Aesthetic Polymer Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Aesthetic Polymer Finds Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 38,
@@ -356,7 +356,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "91982194617",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Aesthetic Bento Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hi Aesthetic Bento Hub Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 39,
@@ -365,7 +365,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "91982433137",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Vintage Soy Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Vintage Soy Studio! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 40,
@@ -374,7 +374,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "91982672556",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Vintage Canvas Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hey Vintage Canvas Crafts! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 41,
@@ -383,7 +383,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "91982911975",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Vintage Art Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Vintage Art Closet! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 42,
@@ -392,7 +392,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91983150495",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Vintage Crochet Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Vintage Crochet Lab! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 43,
@@ -401,7 +401,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91983389914",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Vintage Press-on Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Vintage Press-on Co.! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 44,
@@ -410,7 +410,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91983628434",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Vintage Cold-Process Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Vintage Cold-Process Creations! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 45,
@@ -419,7 +419,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91983867853",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Vintage Sticker Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Vintage Sticker Boutique team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   },
   {
     "id": 46,
@@ -428,7 +428,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "91984106373",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Vintage Fitness Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Vintage Fitness Finds! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 47,
@@ -437,7 +437,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "91984345792",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Vintage Pet Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Vintage Pet Hub! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 48,
@@ -446,7 +446,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "91984584312",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Velvet Thrift Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Velvet Thrift Studio team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 49,
@@ -455,7 +455,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "91984823731",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Velvet Polymer Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Velvet Polymer Crafts Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 50,
@@ -464,7 +464,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "91985062251",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Velvet Bento Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hi Velvet Bento Closet Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 51,
@@ -473,7 +473,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "91985301670",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Velvet Soy Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Velvet Soy Lab! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 52,
@@ -482,7 +482,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "91985540190",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Velvet Canvas Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hey Velvet Canvas Co.! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 53,
@@ -491,7 +491,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "91985779609",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Velvet Art Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Velvet Art Creations! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 54,
@@ -500,7 +500,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91986018129",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Velvet Crochet Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Velvet Crochet Boutique! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 55,
@@ -509,7 +509,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91986257548",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Velvet Press-on Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Velvet Press-on Finds! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 56,
@@ -518,7 +518,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91986496967",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Velvet Cold-Process Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Velvet Cold-Process Hub! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 57,
@@ -527,7 +527,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91986735487",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Botanical Sticker Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Botanical Sticker Studio team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   },
   {
     "id": 58,
@@ -536,7 +536,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "91986974906",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Botanical Fitness Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Botanical Fitness Crafts! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 59,
@@ -545,7 +545,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "91987213426",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Botanical Pet Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Botanical Pet Closet! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 60,
@@ -554,7 +554,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "91987452845",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Botanical Thrift Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Botanical Thrift Lab team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 61,
@@ -563,7 +563,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "91987691365",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Botanical Polymer Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Botanical Polymer Co. Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 62,
@@ -572,7 +572,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "91987930784",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Botanical Bento Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hi Botanical Bento Creations Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 63,
@@ -581,7 +581,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "91988169304",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Botanical Soy Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Botanical Soy Boutique! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 64,
@@ -590,7 +590,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "91988408723",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Botanical Canvas Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hey Botanical Canvas Finds! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 65,
@@ -599,7 +599,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "91988647243",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Botanical Art Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Botanical Art Hub! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 66,
@@ -608,7 +608,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91988886662",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Soulful Crochet Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Soulful Crochet Studio! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 67,
@@ -617,7 +617,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91989125182",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Soulful Press-on Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Soulful Press-on Crafts! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 68,
@@ -626,7 +626,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91989364601",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Soulful Cold-Process Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Soulful Cold-Process Closet! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 69,
@@ -635,7 +635,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91989603121",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Soulful Sticker Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Soulful Sticker Lab team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   },
   {
     "id": 70,
@@ -644,7 +644,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "91989842540",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Soulful Fitness Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Soulful Fitness Co.! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 71,
@@ -653,7 +653,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "91981082959",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Soulful Pet Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Soulful Pet Creations! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 72,
@@ -662,7 +662,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "91981321479",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Soulful Thrift Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Soulful Thrift Boutique team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 73,
@@ -671,7 +671,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "91981560898",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Soulful Polymer Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Soulful Polymer Finds Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 74,
@@ -680,7 +680,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "91981799418",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Soulful Bento Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hi Soulful Bento Hub Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 75,
@@ -689,7 +689,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "91982038837",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Urban Soy Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Urban Soy Studio! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 76,
@@ -698,7 +698,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "91982277357",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Urban Canvas Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hey Urban Canvas Crafts! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 77,
@@ -707,7 +707,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "91982516776",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Urban Art Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Urban Art Closet! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 78,
@@ -716,7 +716,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91982755296",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Urban Crochet Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Urban Crochet Lab! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 79,
@@ -725,7 +725,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91982994715",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Urban Press-on Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Urban Press-on Co.! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 80,
@@ -734,7 +734,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91983233235",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Urban Cold-Process Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Urban Cold-Process Creations! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 81,
@@ -743,7 +743,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91983472654",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Urban Sticker Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Urban Sticker Boutique team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   },
   {
     "id": 82,
@@ -752,7 +752,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "91983711174",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Urban Fitness Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Urban Fitness Finds! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 83,
@@ -761,7 +761,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "91983950593",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Urban Pet Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Urban Pet Hub! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 84,
@@ -770,7 +770,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "91984189113",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Retro Thrift Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Retro Thrift Studio team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 85,
@@ -779,7 +779,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "91984428532",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Retro Polymer Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Retro Polymer Crafts Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 86,
@@ -788,7 +788,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "91984667951",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Retro Bento Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hi Retro Bento Closet Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 87,
@@ -797,7 +797,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "91984906471",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Retro Soy Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Retro Soy Lab! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 88,
@@ -806,7 +806,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "91985145890",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Retro Canvas Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hey Retro Canvas Co.! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 89,
@@ -815,7 +815,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "91985384410",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Retro Art Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Retro Art Creations! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 90,
@@ -824,7 +824,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91985623829",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Retro Crochet Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Retro Crochet Boutique! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 91,
@@ -833,7 +833,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91985862349",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Retro Press-on Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Retro Press-on Finds! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 92,
@@ -842,7 +842,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91986101768",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Retro Cold-Process Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Retro Cold-Process Hub! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 93,
@@ -851,7 +851,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91986340288",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Golden Sticker Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Golden Sticker Studio team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   },
   {
     "id": 94,
@@ -860,7 +860,7 @@ const rawProspects: Prospect[] = [
     "city": "Ahmedabad",
     "phone": "91986579707",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Golden Fitness Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Golden Fitness Crafts! 🌿 Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth. Want to check out our free live preview? ⚡"
   },
   {
     "id": 95,
@@ -869,7 +869,7 @@ const rawProspects: Prospect[] = [
     "city": "Dehradun",
     "phone": "91986818227",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Golden Pet Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Golden Pet Closet! 🌟 Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio — zero transaction commission! 📦"
   },
   {
     "id": 96,
@@ -878,7 +878,7 @@ const rawProspects: Prospect[] = [
     "city": "Delhi NCR",
     "phone": "91987057646",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Golden Thrift Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Golden Thrift Lab team! ✨ Loved your latest thrift drop on IG. Tired of losing buyers in crowded DMs when drops go viral? We build sub-second Neobrutalist drop stores that let buyers lock items in 3 secs via WhatsApp! 🛍️"
   },
   {
     "id": 97,
@@ -887,7 +887,7 @@ const rawProspects: Prospect[] = [
     "city": "Mumbai",
     "phone": "91987296166",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Golden Polymer Co.! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Golden Polymer Co. Team! ✨ Convert your aesthetic jewelry reel views into direct website sales. We build 100/100 speed stores that showcase your pieces beautifully with 1-click UPI checkout! 💍"
   },
   {
     "id": 98,
@@ -896,7 +896,7 @@ const rawProspects: Prospect[] = [
     "city": "Bengaluru",
     "phone": "91987535585",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Golden Bento Creations! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hi Golden Bento Creations Team! 🧁 Turn your delicious reel views into instant party cake bookings with an interactive order builder that sends receipts straight to your WhatsApp! 🎉"
   },
   {
     "id": 99,
@@ -905,7 +905,7 @@ const rawProspects: Prospect[] = [
     "city": "Pune",
     "phone": "91987774105",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Golden Soy Boutique! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Golden Soy Boutique! 🕯️ Your handpoured scented candles look so aesthetic! Turn your reel views into instant paid festive orders with a 100/100 speed e-commerce store linked directly in your IG bio. ✨"
   },
   {
     "id": 100,
@@ -914,7 +914,7 @@ const rawProspects: Prospect[] = [
     "city": "Jaipur",
     "phone": "91988013524",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hi Golden Canvas Finds! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hey Golden Canvas Finds! 🎨 Loved your custom hand-painted designs! Stop managing custom sizing & requests manually in DMs. We build instant order customization pages linked in your bio! 🖌️"
   },
   {
     "id": 101,
@@ -923,7 +923,7 @@ const rawProspects: Prospect[] = [
     "city": "Hyderabad",
     "phone": "91988252943",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hey Golden Art Hub! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Hey Golden Art Hub! ✨ Stop answering DM inquiries one by one. Display your custom resin coasters & preservation packages on a fast, professional web showcase! 🚀"
   },
   {
     "id": 102,
@@ -932,7 +932,7 @@ const rawProspects: Prospect[] = [
     "city": "Chandigarh",
     "phone": "91988491463",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Little Crochet Studio! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Little Crochet Studio! 🧶 Your handmade crochet tops & plushies are super cute! Manage your custom order slots effortlessly with an automated slot booking page that syncs to your phone! 💖"
   },
   {
     "id": 103,
@@ -941,7 +941,7 @@ const rawProspects: Prospect[] = [
     "city": "Kochi",
     "phone": "91988730882",
     "status": "WhatsApp Orders Only",
-    "pitch": "Hi Little Press-on Crafts! Convert your Instagram Reel views into instant paid orders without manual DM back-and-forth."
+    "pitch": "Hi Little Press-on Crafts! 💖 Scale your nail set drops across India with instant WhatsApp ordering & zero DM hassle. Want to see how it works for press-on artists? 🚀"
   },
   {
     "id": 104,
@@ -950,7 +950,7 @@ const rawProspects: Prospect[] = [
     "city": "Kolkata",
     "phone": "91988969402",
     "status": "IG Bio Linktree Only",
-    "pitch": "Hey Little Cold-Process Closet! Showcase your products with prices on a Neobrutalist 100/100 speed store linked in your IG bio."
+    "pitch": "Namaste Little Cold-Process Closet! 🌿 Your cold-process organic soaps & body butter look so luxurious! Build buyer trust with full ingredient showcases & 1-click WhatsApp bundle ordering! ✨"
   },
   {
     "id": 105,
@@ -959,7 +959,7 @@ const rawProspects: Prospect[] = [
     "city": "Shillong",
     "phone": "91989208821",
     "status": "Instagram DM Only",
-    "pitch": "Hey Team Little Sticker Lab! Loved your IG page. Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout."
+    "pitch": "Hey Little Sticker Lab team! ✨ Loved your IG page in Shillong! Stop losing customer orders in flooded DMs — get a 0.3s web store with 3-sec WhatsApp checkout! 🚀"
   }
 ];
 
