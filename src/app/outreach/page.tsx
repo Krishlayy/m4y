@@ -993,11 +993,11 @@ export default function OutreachPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-mono selection:bg-[#FF5500] selection:text-white pt-32 md:pt-44 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white font-mono selection:bg-[#FF5500] selection:text-white flex flex-col overflow-x-hidden">
       <Navbar />
 
       {/* Header */}
-      <section className="bg-[#FF5500] text-black border-b-4 border-white py-12 md:py-16 px-4">
+      <section className="bg-[#FF5500] text-black border-b-4 border-white pt-36 sm:pt-44 md:pt-52 pb-12 md:pb-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>

@@ -38,12 +38,12 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-32 md:pt-44 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black flex flex-col overflow-x-hidden">
       <Navbar />
       
       <main className="flex-grow w-full">
         {/* Hero Banner */}
-        <section className="w-full px-5 sm:px-8 py-16 md:py-24 border-b-4 border-black bg-[#FFD700]">
+        <section className="w-full px-5 sm:px-8 pt-36 sm:pt-44 md:pt-52 pb-16 md:pb-24 border-b-4 border-black bg-[#FFD700]">
           <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

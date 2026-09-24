@@ -94,12 +94,12 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black pt-32 md:pt-44 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#FFD700] selection:text-black flex flex-col overflow-x-hidden">
       <Navbar />
       
       <main className="flex-grow w-full">
         {/* Hero */}
-        <section className="px-6 py-24 text-center border-b-4 border-black bg-white">
+        <section className="px-6 pt-36 sm:pt-44 md:pt-52 pb-24 text-center border-b-4 border-black bg-white">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">
               Transparent Pricing.<br />No Surprises.

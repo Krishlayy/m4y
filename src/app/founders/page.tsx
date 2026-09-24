@@ -24,12 +24,12 @@ const itemVariants = {
 
 export default function FoundersPage() {
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black pt-32 md:pt-44 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black selection:bg-[#FFD700] selection:text-black flex flex-col overflow-x-hidden">
       <Navbar />
 
       <main className="flex-grow w-full">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 border-b-4 border-black bg-[#FFD700]">
+        <section className="relative pt-36 sm:pt-44 md:pt-52 pb-16 md:pb-24 border-b-4 border-black bg-[#FFD700]">
           <div className="max-w-5xl mx-auto px-5 sm:px-8 text-center flex flex-col items-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF5500] text-white font-black text-xs sm:text-sm uppercase tracking-widest border-2 border-black mb-6 shadow-[3px_3px_0_#000]">
               <Flame className="w-4 h-4 fill-white" /> Technical Leadership • Unmatched Speed

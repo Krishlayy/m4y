@@ -13,7 +13,7 @@ export default function PlaybookPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-mono selection:bg-[#FF5500] selection:text-white pt-32 md:pt-44 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black font-mono selection:bg-[#FF5500] selection:text-white flex flex-col overflow-x-hidden">
       {/* Hide Navbar during print */}
       <div className="print:hidden">
         <Navbar />
@@ -27,7 +27,7 @@ export default function PlaybookPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-[#FF5500] text-white py-16 md:py-24 px-4 border-b-4 border-black relative overflow-hidden print:bg-white print:text-black print:border-b-2 print:py-6">
+      <section className="bg-[#FF5500] text-white pt-36 sm:pt-44 md:pt-52 pb-16 md:pb-24 px-4 border-b-4 border-black relative overflow-hidden print:bg-white print:text-black print:border-b-2 print:py-6">
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-black text-[#FFD700] px-4 py-2 border-2 border-black font-black uppercase text-sm mb-6 shadow-[4px_4px_0_#000] print:border-black print:shadow-none">
             <BookOpen className="w-4 h-4" /> Official Growth & Acquisition Blueprint (2026 Edition)
