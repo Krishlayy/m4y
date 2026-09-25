@@ -55,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: getSiteUrl(),
     },
     verification: {
-      google: "googlef57b3505063dc6e2",
+      google: "W_bcLY9Kg2I-nvxXY-xbpHZBR4lLpV86Q-e9nrVIFfk",
     },
     icons: {
       icon: [
